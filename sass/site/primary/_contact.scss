@@ -1,0 +1,23 @@
+/*===============================
+=            CONTACT            =
+===============================*/
+
+.contact {
+
+	#primary {
+
+		 input[type="submit"] {
+			border-color: #F73639;
+			color: #F73639;
+			text-transform: uppercase;
+			font-size: 14px;
+			padding: 10px 15px;
+
+			&:hover {
+				background: #F73639;
+				color: white;
+			}
+		}
+	}
+}
+

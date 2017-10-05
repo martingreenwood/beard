@@ -1,0 +1,23 @@
+.widget {
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	
+	.widget-title {
+		margin-bottom: 15px;
+		font-size: 20px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style: none;
+		}
+	}
+
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,76 @@
+/*============================
+=            HOME            =
+============================*/
+
+.home {
+
+	#feature-image {
+		height: 100vh;
+		width: 100vw;
+		background-position: 50%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-bottom: 0
+	}
+
+	#primary {
+		background: #020202;
+		background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(225deg, #444, #020202);
+
+		h1, h2, h3, h4, h5, p, a {
+			color: white;
+		}
+
+		article {
+			padding: 60px 0;
+
+			.entry-content {
+				text-align: center;
+
+				h1 {
+					font-weight: 700;
+					font-size: 62px;
+					text-transform: uppercase;
+					margin: 0 0 30px 0;
+				}
+
+				p {
+					font-size: 19px;
+					color: #b7b7b7;
+					text-transform: uppercase;
+					font-weight: 700;
+				}
+			}
+		}
+
+		#offerings {
+			padding-bottom: 60px;
+
+			.offering {
+				text-align: center;
+				padding: 0 30px;
+
+				h2 {
+					font-weight: 700;
+					font-size: 32px;
+					text-transform: uppercase;
+					margin-bottom: 20px;
+					line-height: 1.2;
+				}
+				
+				a {
+					display: inline-block;
+					text-align: center;
+					padding: 8px 14px;
+					border: 1px solid #fff;
+					margin-top: 20px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
+

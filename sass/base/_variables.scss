@@ -1,0 +1,69 @@
+// Typography
+$base-font-family: "lato", sans-serif;;
+$heading-font-family: "nimbus-sans-condensed", sans-serif;
+$font-pre: $monospace;
+$font-code: $font-pre;
+
+// Font Sizes
+$base-font-size: 14px;
+
+// Line height
+$base-line-height: 1.625;
+$pre-line-height: $base-line-height;
+$heading-line-height: $base-line-height;
+$line-height-pre: $base-line-height;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$brand-primary: #c45084;
+$text-color: #000;
+$text-screen: $text-color;
+$text-input: $text-color;
+
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+$color-link: black;
+$link-hover: black;
+$link-visited: black;
+
+// Backgrounds
+$background-color: #ffffff;
+$background-hr: black;
+$background-button: transparent;
+$background-screen: black;
+$background-pre: #f9f9f9;
+$background-ins: #f9f9f9;
+$background-mark: #f9f9f9;
+
+// Font Colors
+$base-font-color: black;
+$action-color: black;
+
+// Border
+$base-border-color: black;
+$base-border: 1px solid $base-border-color;
+$border-input: black;
+$border-abbr: black;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Forms
+$form-box-shadow: inset 0 rgba(#000, 0);
+$form-box-shadow-focus: $form-box-shadow, 0 0 0 adjust-color($action-color, $lightness: 0, $alpha: 0);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+
+$bitgold-yellow: #ffbe10;
+$cubic-bezier: cubic-bezier(0.30,1.40,0.70,1);

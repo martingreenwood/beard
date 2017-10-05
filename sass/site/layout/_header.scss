@@ -1,0 +1,212 @@
+/*==============================
+=            LOADER            =
+==============================*/
+
+#loader {
+	background-image: url(assets/images/logo.svg);
+	background-repeat: no-repeat;
+	background-size: 200px;
+	background-position: 50%;
+	
+	background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(225deg, #444, #020202);
+
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99999;
+	transition: all 500ms;
+
+	#loading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	#progress{
+		height: 10px;
+		background: $brand-primary;
+		position: absolute;
+		width: 0;                /* will be increased by JS */
+		top: 0;
+	}
+
+	#progstat{
+		font-size: 0.7em;
+		letter-spacing: 3px;
+		position: absolute;
+		top: 0;
+		margin-top: 20px;
+		width: 100%;
+		text-align:center;
+		color: $brand-primary;
+	}
+}
+
+/*==============================
+=            HEADER            =
+==============================*/
+
+#masthead {
+	// padding: 20px 0;
+	position: fixed;
+	z-index: 50;
+	width: 100%;
+	top: 0;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+	
+	.row {
+		// position: relative;
+	}
+
+	.site-branding {
+		float: left;
+		background: white;
+		border-radius: 50%;
+		position: absolute;
+		z-index: 99;
+		left: 40px;
+		top: 40px;
+
+		img {
+			width: 60px;
+			-webkit-transition: all 300ms ease-in-out;
+			-moz-transition: all 300ms ease-in-out;
+			-ms-transition: all 300ms ease-in-out;
+			-o-transition: all 300ms ease-in-out;
+			transition: all 300ms ease-in-out;
+
+			display: block;
+		}
+	}
+
+	&.scrolled {
+		// background: white;
+		
+		.site-branding {
+
+			img {
+				//width: 45px;
+			}
+		}
+	}
+}
+
+.morphext > .animated {
+    display: inline-block;
+    /* Overrides Animate.css 1s duration */
+}
+
+#js-rotating {
+	-vendor-animation-duration: 3s;
+}
+
+#sentence-wrapper{
+	position: fixed;
+	left: 50px;
+	bottom: 40px;
+
+	&.hide {
+		display: none;
+	}
+
+	h2 {
+		color: white;
+		font-size: 24px;
+		font-weight: 600;
+		margin: 0;
+
+		span {
+			font-weight: 900;
+		}
+	}
+
+	.sentence{
+		margin: 0;
+		text-align: left;
+	
+		span{
+			color: #fff;
+			font-size: 18px;
+			font-weight: normal;
+			display: block;
+		}
+
+		.words{
+			display: block;
+			width: 100vw;
+			
+			@include media($medium-screen-up) {
+				display: inline-block;
+				width: 500px;
+			}
+		}
+
+		.words-1 {
+
+			span {
+				position: absolute;
+				opacity: 0;
+				overflow: hidden;
+				color: #ffffff;
+				top: 10px;
+				-webkit-animation: rotateWord 18s linear infinite 0s;
+				-moz-animation: rotateWord 18s linear infinite 0s;
+				-o-animation: rotateWord 18s linear infinite 0s;
+				-ms-animation: rotateWord 18s linear infinite 0s;
+				animation: rotateWord 18s linear infinite 0s;
+				font-weight: 900;
+
+				&:nth-child(2) { 
+					-webkit-animation-delay: 3s; 
+					-moz-animation-delay: 3s; 
+					-o-animation-delay: 3s; 
+					-ms-animation-delay: 3s; 
+					animation-delay: 3s; 
+				}
+
+				&:nth-child(3) { 
+					-webkit-animation-delay: 6s; 
+					-moz-animation-delay: 6s; 
+					-o-animation-delay: 6s; 
+					-ms-animation-delay: 6s; 
+					animation-delay: 6s; 
+				}
+				
+				&:nth-child(4) { 
+					-webkit-animation-delay: 9s;
+					-moz-animation-delay: 9s; 
+					-o-animation-delay: 9s; 
+					-ms-animation-delay: 9s; 
+					animation-delay: 9s; 
+				}
+
+				&:nth-child(5) { 
+					-webkit-animation-delay: 12s; 
+					-moz-animation-delay: 12s; 
+					-o-animation-delay: 12s; 
+					-ms-animation-delay: 12s; 
+					animation-delay: 12s; 
+				}
+
+				&:nth-child(6) { 
+					-webkit-animation-delay: 15s;
+					-moz-animation-delay: 15s; 
+					-o-animation-delay: 15s; 
+					-ms-animation-delay: 15s; 
+					animation-delay: 15s; 
+				}
+			}
+		}
+	}
+}

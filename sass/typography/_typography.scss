@@ -1,0 +1,18 @@
+body,
+p,
+button,
+input,
+select,
+textarea {
+	color: #474747;
+	font-family: $base-font-family;
+	@include rem(font-size, 16px);
+	line-height: $base-line-height;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+@import "headings";
+
+@import "copy";

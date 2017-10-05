@@ -1,0 +1,29 @@
+/*=====================================
+=            BLOG - SINGLE            =
+=====================================*/
+
+.single {
+
+	#feature-image {
+		height: 25vh;
+	}
+
+	#wrapper {
+		background-color: #f7f7f7;
+		padding: 60px 0;
+
+		#primary {
+			background-color: transparent;
+		}
+
+		#secondary {
+
+			.widget {
+				
+				.search-submit {
+					display: none;
+				}
+			}
+		}
+	}
+}

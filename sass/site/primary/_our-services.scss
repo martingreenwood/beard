@@ -1,0 +1,138 @@
+/*================================
+=            SERVICES            =
+================================*/
+
+.our-services, .what-we-do {
+
+	#services {
+		// padding: 60px 0;
+		// background: #f7f7f7;
+
+		.service {
+			// border-bottom: 2px solid #D8DADC;
+			// padding: 0 0 60px 0;
+			// margin-bottom: 60px;
+			@include row;
+			background-repeat: no-repeat;
+			background-size: 50% auto;
+			background-position: bottom left;
+			min-height: 600px;
+			position: relative;
+
+			&:before {
+				opacity: 0;
+				content: '';
+				width: 50%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.7);
+				background-image: url(assets/images/add-circular-outlined-button.svg);
+				background-size: 40px;
+				background-position: center;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: 0;
+				left: 0;
+				-webkit-transition: all .25s ease-in-out;
+				   -moz-transition: all .25s ease-in-out;
+				    -ms-transition: all .25s ease-in-out;
+				     -o-transition: all .25s ease-in-out;
+				        transition: all .25s ease-in-out;
+			}
+
+			&:hover:before {
+				opacity: 1;
+			}
+
+			.ovewrlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+
+				a.more {
+					display: block;
+					height: 100%;
+					text-indent: -9999px;
+				}
+			}
+
+			&.even {
+				background-position: bottom right;	
+	
+				.text {
+					padding-right: 40px;
+				}
+
+				&:before {
+					left: auto;
+					right: 0;
+				}
+			}
+
+			.half {
+				height: 600px;
+				min-height: 600px;
+				float: left;
+				width: 50%;
+			}
+			
+			.text {
+				padding-left: 40px;
+			}
+
+			h1, h2 {
+				font-size: 62px;
+				margin: 0 0 20px 0;
+			}
+		}
+
+		.fulllist {
+			padding: 60px 0;
+			text-align: center;
+			background: #020202;
+			background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(225deg, #444, #020202);
+
+
+			h2, h3 {
+				font-size: 32px;
+				margin: 0;
+				color: white;
+			}
+
+			ul {
+				margin: 0;
+				list-style-type: none;
+
+				li {
+					margin-right: 20px;
+					text-transform: uppercase;
+					display: inline-block;
+					line-height: 1.2;
+					color: white;
+
+					&:after {
+						content: " • ";
+						color: white;
+						display: inline-block;
+						margin-left: 10px;
+						font-size: 8px;
+						position: absolute;
+						line-height: 18px;
+					}
+
+					&:last-of-type {
+						margin: 0;
+
+						&:after {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

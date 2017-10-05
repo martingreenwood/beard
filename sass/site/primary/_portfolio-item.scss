@@ -1,0 +1,37 @@
+/*======================================
+=            PORTFOLIO ITEM            =
+======================================*/
+
+.single-portfolio {
+
+	#primary {
+		padding: 60px 0 120px 0;
+
+		#images {
+
+			.item {
+				margin: 0 0 40px 0;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				img {
+					display: block;
+				}
+			}
+		}
+
+		article {
+
+			.entry-content {
+
+				h2 {
+					font-size: 32px;
+					margin: 0 0 20px 0;
+				}
+			}
+		}
+	}
+}
+

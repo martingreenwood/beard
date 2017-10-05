@@ -1,0 +1,120 @@
+/*===============================
+=            PRIMARY            =
+===============================*/
+
+#primary {
+	background: #fff;
+}
+
+.page-template-default {
+
+	#primary {
+		background: -webkit-linear-gradient(225deg, #e6e6e6, #fff); /* For Safari 5.1 to 6.0 */
+	    background: -o-linear-gradient(225deg, #e6e6e6, #fff); /* For Opera 11.1 to 12.0 */
+	    background: -moz-linear-gradient(225deg, #e6e6e6, #fff); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(225deg, #e6e6e6, #fff);
+
+		article {
+			padding: 60px 0;
+			text-align: center;
+
+			.entry-content {
+
+				h1, h2 {
+					font-size: 32px;
+					margin: 0 0 40px 0;
+				}
+
+				p {
+				}
+			}
+		}
+	}
+}
+
+/*====================================
+=            BRAND SLIDER            =
+====================================*/
+
+#brands {
+	padding: 40px 0;
+	background: #f7f7f7;
+}
+
+/*=====================================
+=            FEATURE IMAGE            =
+=====================================*/
+
+#feature-image {
+	height: 50vh;
+	position: relative;
+
+	.caption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-align: right;
+
+		.container {
+			margin-bottom: 60px;
+		}
+
+		.wrapper {
+			margin-bottom: 40px;
+			margin-right: 50px;
+			display: inline-block;
+		}
+
+		h1, h2 {
+			margin: 0;
+			color: black;
+		}
+
+		h1 {
+			font-size: 44px;
+			font-weight: 700;
+			margin: 0px;
+			line-height: 1;
+			text-transform: uppercase;
+		}
+
+		h2 {
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 3px;
+			line-height: 1.2;
+			text-transform: uppercase;
+		}
+
+		hr {
+			float: right;
+			width: 24px;
+			background: black;
+		}
+	}
+
+	&.white-text {
+		h1, h2 {
+			color: white;
+		}
+		hr {
+			background-color: white;
+		}
+	}
+}
+
+/*===========================
+=            MAP            =
+===========================*/
+
+#map {
+	width: 100%;
+	height: 400px;
+	//background-color: grey;
+
+	/* fixes potential theme css conflict */
+	img {
+	   max-width: inherit !important;
+	}
+
+}

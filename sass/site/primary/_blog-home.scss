@@ -1,0 +1,83 @@
+/*===================================
+=            BLOG - HOME            =
+===================================*/
+
+.blog, .archive, .search {
+
+	#main {
+
+		article {
+			margin-bottom: 0;
+			position: relative;
+
+			.entry-image {
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				width: 50%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				right: 0;
+
+				.overlay {
+					position: absolute;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background: rgba(0,0,0,0.3);
+					opacity: 0;
+					transition: 150ms ease-in-out;
+					background-image: url(assets/images/add-plus-button.svg);
+					background-size: 16px auto;
+					background-position: 50%;
+					background-repeat: no-repeat;
+				}
+			}
+
+			.entry-content {
+				background: white;
+				padding: 200px 0;
+				text-align: center;
+				float: left;
+				width: 50%;
+
+				h2 {
+					font-size: 25px;
+					margin-bottom: 0;
+				}
+
+				hr {
+					margin: 20px auto;
+					width: 25px;
+				}
+
+				p {
+					text-transform: uppercase;
+					font-weight: 600;
+					margin: 0;
+				}
+			}
+
+			&:nth-child(odd) {
+
+				.entry-image {
+					left: 0;
+					right: auto;
+				}
+
+				.entry-content {
+					float: right;
+				}
+			}
+
+			&:hover {
+				.entry-image {
+					.overlay {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
