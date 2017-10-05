@@ -8,8 +8,12 @@
  *
  * @package beard
  */
-
-?><!DOCTYPE html>
+?>
+<!-- 
+	Built by Martin Greenwood
+	Lead Developer @wearebeard
+-->
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
