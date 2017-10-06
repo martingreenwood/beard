@@ -59,17 +59,20 @@
 		$element.toggleClass(className, $document.scrollTop() >= 10);
 	});
 
-	// $(document).scroll( function() {
-	// 	var scrollTop = $(this).scrollTop() + 100; // 40px - Fixed nav height
-	// 	var closestElement = $(this).find('.section').filter( function() {
-	// 		return $(this).offset().top > scrollTop;      
-	// 	}).first();
+	var pfolioText = $(".pfolio .entry-content");
+	var pfolioTextOffset = $(".pfolio .entry-content").offset();
 
-	// 	if( closestElement.hasClass('dark'))
-	// 		$('.menu-icon').removeClass('dark').addClass('white');
-	// 	else
-	// 		$('.menu-icon').removeClass('white').addClass('dark');
-	// });
+	$(window).scroll(function() {
+		if ( $(window).scrollTop() > pfolioTextOffset.top ){
+			$(pfolioText)
+				.stop()
+				.animate({"marginTop": ($(window).scrollTop() - pfolioTextOffset.top + 40) + "px"}, "slow" );
+		} else {
+			$(pfolioText)
+				.stop()
+				.animate({"marginTop": 0} );
+		}
+	})
 
 })(jQuery);
 
