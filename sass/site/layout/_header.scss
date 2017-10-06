@@ -2,16 +2,17 @@
 =            LOADER            =
 ==============================*/
 
-#loader {
+#loader {	
+	background-color: #f9f9f9;
+	background-color: -webkit-linear-gradient(225deg, #fff, #f9f9f9); /* For Safari 5.1 to 6.0 */
+	background-color: -o-linear-gradient(225deg, #fff, #f9f9f9); /* For Opera 11.1 to 12.0 */
+	background-color: -moz-linear-gradient(225deg, #fff, #f9f9f9); /* For Firefox 3.6 to 15 */
+	background-color: linear-gradient(225deg, #fff, #f9f9f9);
+
 	background-image: url(assets/images/logo.svg);
 	background-repeat: no-repeat;
 	background-size: 200px;
 	background-position: 50%;
-	
-	background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(225deg, #444, #020202);
 
 	width: 100vw;
 	height: 100vh;

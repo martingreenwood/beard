@@ -56,7 +56,7 @@
 					</button>
 					<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 
-					<div id="sentence-wrapper" class="hide">
+					<div id="sentence-wrapper" class="animated fadeIn delay11 hide">
 						<?php 
 						$base_slogans = get_field( 'slogans', 'options' );
 						shuffle($base_slogans);
