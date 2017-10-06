@@ -4,8 +4,14 @@
 
 .single-portfolio {
 
+	#buffer, .buffer {
+		float: left;
+		width: 100%;
+		height: 40px;
+	}
+
 	#primary {
-		padding: 60px 0 120px 0;
+		padding: 60px 0 60px 0;
 
 		#images {
 
@@ -25,8 +31,9 @@
 		article {
 
 			.entry-content {
+				//position: fixed;
 
-				h2 {
+				h1, h2 {
 					font-size: 32px;
 					margin: 0 0 20px 0;
 				}

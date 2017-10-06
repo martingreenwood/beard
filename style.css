@@ -1107,11 +1107,11 @@ a:hover, a:active { outline: 0; }
 
 @media screen and (min-width: 600px) { .main-navigation a { font-size: 44px; } }
 
-.main-navigation a:hover { color: white; }
+.main-navigation a:hover { color: #c45084; }
 
-@media screen and (min-width: 600px) { .main-navigation a:after { content: ""; width: 0; height: 7px; background: white; margin-top: 2px; transition: all 300ms ease; vertical-align: middle; display: inline-table; } }
+@media screen and (min-width: 600px) { .main-navigation a:after { content: ""; width: 0; height: 7px; background: #c45084; margin-top: 2px; transition: all 300ms ease; vertical-align: middle; display: inline-table; } }
 
-.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .main-navigation .current_page_ancestor > a, .main-navigation .current-menu-ancestor > a { color: white; }
+.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .main-navigation .current_page_ancestor > a, .main-navigation .current-menu-ancestor > a { color: #c45084; }
 
 .main-navigation .current_page_item > a:after, .main-navigation .current-menu-item > a:after, .main-navigation .current_page_ancestor > a:after, .main-navigation .current-menu-ancestor > a:after { width: 100px; margin-left: 20px; }
 
@@ -1380,7 +1380,11 @@ a:hover, a:active { outline: 0; }
 
 #masthead .site-branding { float: left; background: white; border-radius: 50%; position: absolute; z-index: 99; left: 40px; top: 40px; }
 
-#masthead .site-branding img { width: 60px; -webkit-transition: all 300ms ease-in-out; -moz-transition: all 300ms ease-in-out; -ms-transition: all 300ms ease-in-out; -o-transition: all 300ms ease-in-out; transition: all 300ms ease-in-out; display: block; }
+#masthead .site-branding img { width: 60px; -webkit-transition: all 800ms ease-in-out; -moz-transition: all 800ms ease-in-out; -ms-transition: all 800ms ease-in-out; -o-transition: all 800ms ease-in-out; transition: all 800ms ease-in-out; display: block; }
+
+#masthead .site-branding img:hover { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); }
+
+#masthead .site-branding.open-menu img { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); }
 
 .morphext > .animated { display: inline-block; /* Overrides Animate.css 1s duration */ }
 
@@ -1488,6 +1492,8 @@ a:hover, a:active { outline: 0; }
 
 .home #primary #offerings .offering a { display: inline-block; text-align: center; padding: 8px 14px; border: 1px solid #fff; margin-top: 20px; text-transform: uppercase; }
 
+.home #primary #offerings .offering a:hover { background: #c45084; background: -webkit-linear-gradient(225deg, #c45084, #822c53); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(225deg, #c45084, #822c53); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(225deg, #c45084, #822c53); /* For Firefox 3.6 to 15 */ background: linear-gradient(225deg, #c45084, #822c53); border-color: #c45084; }
+
 /*================================
 =            SERVICES            =
 ================================*/
@@ -1586,7 +1592,9 @@ a:hover, a:active { outline: 0; }
 /*======================================
 =            PORTFOLIO ITEM            =
 ======================================*/
-.single-portfolio #primary { padding: 60px 0 120px 0; }
+.single-portfolio #buffer, .single-portfolio .buffer { float: left; width: 100%; height: 40px; }
+
+.single-portfolio #primary { padding: 60px 0 60px 0; }
 
 .single-portfolio #primary #images .item { margin: 0 0 40px 0; }
 
@@ -1594,7 +1602,7 @@ a:hover, a:active { outline: 0; }
 
 .single-portfolio #primary #images .item img { display: block; }
 
-.single-portfolio #primary article .entry-content h2 { font-size: 32px; margin: 0 0 20px 0; }
+.single-portfolio #primary article .entry-content h1, .single-portfolio #primary article .entry-content h2 { font-size: 32px; margin: 0 0 20px 0; }
 
 /*===================================
 =            BLOG - HOME            =
@@ -1622,7 +1630,7 @@ a:hover, a:active { outline: 0; }
 /*=====================================
 =            BLOG - SINGLE            =
 =====================================*/
-.single #feature-image { height: 25vh; }
+.single #feature-image { height: 50vh; }
 
 .single #wrapper { background-color: #f7f7f7; padding: 60px 0; }
 

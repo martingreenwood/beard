@@ -80,13 +80,32 @@
 
 		img {
 			width: 60px;
-			-webkit-transition: all 300ms ease-in-out;
-			-moz-transition: all 300ms ease-in-out;
-			-ms-transition: all 300ms ease-in-out;
-			-o-transition: all 300ms ease-in-out;
-			transition: all 300ms ease-in-out;
+			-webkit-transition: all 800ms ease-in-out;
+			-moz-transition: all 800ms ease-in-out;
+			-ms-transition: all 800ms ease-in-out;
+			-o-transition: all 800ms ease-in-out;
+			transition: all 800ms ease-in-out;
+
+			&:hover {
+				-webkit-transform: rotate(360deg);
+				-moz-transform: rotate(360deg);
+				-ms-transform: rotate(360deg);
+				-o-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
 
 			display: block;
+		}
+
+		&.open-menu {
+
+			img {
+				-webkit-transform: rotate(360deg);
+				-moz-transform: rotate(360deg);
+				-ms-transform: rotate(360deg);
+				-o-transform: rotate(360deg);
+				transform: rotate(360deg);
+			}
 		}
 	}
 

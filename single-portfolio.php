@@ -32,7 +32,7 @@ get_header(); ?>
 		</div>
 	</section>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area pfolio">
 		<main id="main" class="site-main container" role="main">
 		<section id="images" class="span8">
 			<?php $portfolio_gallery = get_field('portfolio_gallery'); if( $portfolio_gallery ): ?>
@@ -49,6 +49,7 @@ get_header(); ?>
 		endwhile;
 		?>
 		</main>
+		<div id="buffer"></div>
 	</div>
 
 	<div class="page_links">

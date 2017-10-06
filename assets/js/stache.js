@@ -83,6 +83,7 @@
 	$('.menu-toggle').on('click', function() {
 		$(this).toggleClass('open');
 		$("#sentence-wrapper").toggleClass('hide');
+		$(".site-branding").toggleClass('open-menu');
 		// $("#sentence-wrapper .words").toggleClass('words-1');
 	});
 
@@ -170,39 +171,25 @@ jQuery(window).on("orientationchange",function($){
 =            MASONRY            =
 ===============================*/
 
-var windw = this;
-
-$.fn.followTo = function ( elem ) {
-    var $this = this,
-        $window = $(windw),
-        $bumper = $(elem),
-        bumperPos = $bumper.offset().top,
-        thisHeight = $this.outerHeight(),
-        setPosition = function(){
-            if ($window.scrollTop() > (bumperPos - thisHeight)) {
-                $this.css({
-                    position: 'absolute',
-                    top: (bumperPos - thisHeight)
-                });
-            } else {
-                $this.css({
-                    position: 'fixed',
-                    //top: 0
-                });
-            }
-        };
-    $window.resize(function()
-    {
-        bumperPos = pos.offset().top;
-        thisHeight = $this.outerHeight();
-        setPosition();
-    });
-    $window.scroll(setPosition);
-    setPosition();
-};
-
 (function($) {
-	$('.single-portfolio .entry-content').followTo('#colophon');
+
+	// $(window).scroll( function() {
+		
+	// 	var wrapBottom = $('.pfolio .site-main').position().top+$('.pfolio .site-main').outerHeight(true),
+	// 		scrollPos = $(window).scrollTop();
+
+	// 		console.log(wrapBottom);
+	// 		console.log(scrollPos);
+
+	// 	if( scrollPos > wrapBottom ) {
+	// 		$('.single-portfolio .entry-content').css( {'position':'absolute','bottom':0+'px'});
+	// 	} else {
+	//     	$('.single-portfolio .entry-content').css( {'position':'fixed'});
+	// 	}
+	// });
+
+	// $('.single-portfolio .entry-content').followTo('#buffer');
+
 })(jQuery);
 
 /*===============================
