@@ -1579,6 +1579,8 @@ a:hover, a:active { outline: 0; }
 /*============================
 =            WORK            =
 ============================*/
+.recent-work #portfolio { background: white; }
+
 .recent-work #portfolio .container { padding: 0; }
 
 .recent-work #portfolio .grid-item .info { position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; opacity: 0; padding: 0; transition: all 150ms ease-in-out; box-sizing: border-box; }
@@ -1612,7 +1614,7 @@ a:hover, a:active { outline: 0; }
 
 .single-portfolio .pfolio { /* other CSS declarations ...*/ -webkit-transition: padding .3s linear; -moz-transition: padding .3s linear; -ms-transition: padding .3s linear; -o-transition: padding .3s linear; transition: padding .3s linear; }
 
-.single-portfolio #primary { padding: 60px 0 60px 0; }
+.single-portfolio #primary { padding: 60px 0 60px 0; background: white; }
 
 .single-portfolio #primary #images .item { margin: 0 0 40px 0; }
 
@@ -1625,6 +1627,8 @@ a:hover, a:active { outline: 0; }
 /*===================================
 =            BLOG - HOME            =
 ===================================*/
+.blog #main, .archive #main, .search #main { background: white; }
+
 .blog #main article, .archive #main article, .search #main article { margin-bottom: 0; position: relative; }
 
 .blog #main article .entry-image, .archive #main article .entry-image, .search #main article .entry-image { background-size: cover; background-position: center; background-repeat: no-repeat; width: 50%; height: 100%; position: absolute; top: 0; right: 0; }
@@ -1650,7 +1654,7 @@ a:hover, a:active { outline: 0; }
 =====================================*/
 .single #feature-image { height: 50vh; }
 
-.single #wrapper { background-color: #f7f7f7; padding: 60px 0; }
+.single #wrapper { background-color: #fff; padding: 60px 0; }
 
 .single #wrapper #primary { background-color: transparent; }
 
@@ -1659,6 +1663,8 @@ a:hover, a:active { outline: 0; }
 /*===============================
 =            CONTACT            =
 ===============================*/
+.contact #primary { background: white; }
+
 .contact #primary input[type="submit"] { border-color: #F73639; color: #F73639; text-transform: uppercase; font-size: 14px; padding: 10px 15px; }
 
 .contact #primary input[type="submit"]:hover { background: #F73639; color: white; }
