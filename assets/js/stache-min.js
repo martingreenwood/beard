@@ -63,15 +63,17 @@
 	var pfolioTextOffset = $(".pfolio .entry-content").offset();
 
 	$(window).scroll(function() {
-		if ( $(window).scrollTop() > pfolioTextOffset.top ){
-			$(pfolioText)
-				.stop()
-				.animate({"marginTop": ($(window).scrollTop() - pfolioTextOffset.top + 40) + "px"}, "slow" );
-		} else {
-			$(pfolioText)
-				.stop()
-				.animate({"marginTop": 0} );
-		}
+		// if (pfolioText,length) {
+			if ( $(window).scrollTop() > pfolioTextOffset.top ){
+				$(pfolioText)
+					.stop()
+					.animate({"marginTop": ($(window).scrollTop() - pfolioTextOffset.top + 40) + "px"}, "slow" );
+			} else {
+				$(pfolioText)
+					.stop()
+					.animate({"marginTop": 0} );
+			}
+		// }
 	})
 
 })(jQuery);
