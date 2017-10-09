@@ -6,16 +6,40 @@
 
 	#primary {
 		background: white;
+		padding: 60px 0;
+
+		.gform_wrapper {
+			
+			.gform_fields {
+				
+				.gfield {
+					&:first-of-type {
+						margin-top: 0;
+					}
+				}
+			}
+		}
+
+		article {
+			padding: 0;
+			text-align: left;
+		}
+
+		input, textarea {
+			border: 1px solid #ccc;
+			padding: 5px;
+		}
 
 		 input[type="submit"] {
-			border-color: #F73639;
-			color: #F73639;
+			border-color: #ccc;
+			color: #333;
 			text-transform: uppercase;
-			font-size: 14px;
-			padding: 10px 15px;
+			padding: 13px 16px;
+			line-height: 1;
 
 			&:hover {
-				background: #F73639;
+				background: $brand-primary;
+				border-color: $brand-primary;
 				color: white;
 			}
 		}

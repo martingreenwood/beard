@@ -9,7 +9,7 @@
 		background: white;
 
 		.members {
-			border-bottom: 1px solid #D8DADC;
+			border-bottom: 1px solid #ccc;
 			padding: 0 0 40px 0;
 			margin-bottom: 40px;
 			@include row;
@@ -45,7 +45,7 @@
 				h3 {
 					font-size: 16px;
 					color: #c1c1c1;
-					border-bottom: 1px solid #eeeeee;
+					border-bottom: 1px solid #ccc;
 					margin-bottom: 20px;
 					padding-bottom: 20px;
 				}
