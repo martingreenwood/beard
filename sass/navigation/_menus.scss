@@ -63,7 +63,7 @@
 				color: $brand-primary;
 
 				&:after {
-					width: 100px;
+					width: 75px;
 					margin-left: 20px;
 				}
 			}
@@ -91,7 +91,7 @@
 				width: 0;
 				height: 7px;
 				background: $brand-primary;
-				margin-top: 2px;
+				margin-top: -9px;
 				transition: all 300ms ease;
 				vertical-align: middle;
 				display: inline-table;
@@ -106,8 +106,8 @@
 		color: $brand-primary;
 
 		&:after {
-			width: 100px;
-			margin-left: 20px;
+			// width: 100px;
+			// margin-left: 20px;
 		}
 	}
 }
@@ -283,7 +283,7 @@
 		// }
 
 		span {
-			background-color: white;
+			background-color: white !important;
 		}
 
 		span:nth-child(1) {
@@ -311,6 +311,13 @@
 			width: 0%;
 			left: 50%;
 		}
+
+			&:hover {
+
+				span {
+					background: $brand-primary !important;
+				}
+			}
 	}
 }
 

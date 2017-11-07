@@ -4,14 +4,32 @@
 
 .recent-work {
 
+	#primary {
+		padding-top: 140px;
+	}
+
 	#portfolio {
 		background: white;
+		padding: 0;
 
 		.container {
 			padding: 0;
 		}
 
+		.grid {
+			width: 100%;
+			position: relative;
+		}
+
 		.grid-item {
+			position: relative;
+			float: left;
+			background-color: pink;
+
+			a {
+				display: block;
+				overflow: hidden;
+			}
 
 			.info {
 				position: absolute;
@@ -26,12 +44,12 @@
 				box-sizing: border-box;
 
 				.table {
-					background: white;
-					border: 10px solid white;
+					background: rgba(0,0,0,0.8);
+					// border: 10px solid white;
 					box-sizing: border-box;
 
 					h2 {
-						color: #000000;
+						color: #ffffff;
 						font-size: 20px;
 						font-weight: 400;
 						margin: 0;
@@ -43,7 +61,7 @@
 					}
 
 					h3 {
-						color: #000000;
+						color: #ffffff;
 						font-size: 16px;
 						font-weight: 400;
 						margin: 0;
@@ -54,7 +72,7 @@
 			&:hover {
 
 				.info {
-					padding: 25px;
+					padding: 0;
 					opacity: 1;
 				}
 			}
@@ -63,26 +81,122 @@
 		.grid-sizer,
 		.grid-item {
 			float: left;
-			width: calc(25% - 2px);
-			margin-bottom: 2px;
+			width: 50%;
+			overflow: hidden;
+			// height: 400px;
+			// margin-bottom: 20px;
 
 			img {
+				 /* Just in case there are inline attributes */
+				width: 100.5% !important;
+				height: auto !important;
 				display: block;
 			}
 		}
 
-		.grid-item--width25 { 
-			width: calc(25% - 2px); 
-		}
-		.grid-item--width50 { 
-			width: calc(50% - 2px); 
-		}
-		.grid-item--width75 { 
-			width: calc(75% - 2px); 
-		}
-		.grid-item--width100 { 
-			width: calc(100% - 2px); 
-		}
+		// .grid-item--width25 { 
+		// 	width: calc(100% - 20px); 
+
+		// 	@include media ($medium-screen-up) {
+		// 		width: calc(50% - 20px); 
+		// 	}
+
+		// 	@include media ($large-screen-up) {
+		// 		width: calc(25% - 20px); 
+		// 	}
+		// }		
+		// .grid-item--width50 { 
+		// 	width: calc(100% - 20px);
+
+		// 	@include media ($medium-screen-up) {
+		// 		width: calc(50% - 20px); 
+		// 	}
+
+		// 	@include media ($large-screen-up) {
+		// 		width: calc(50% - 20px); 
+		// 	}
+		// }
+		// .grid-item--width75 { 
+		// 	width: calc(100% - 20px); 
+
+		// 	@include media ($medium-screen-up) {
+		// 		width: calc(50% - 20px); 
+		// 	}
+
+		// 	@include media ($large-screen-up) {
+		// 		width: calc(75% - 20px); 
+		// 	}
+		// }
+		// .grid-item--width100 { 
+		// 	width: calc(100% - 20px); 
+		// }
+
+		// .grid-item--height300 { 
+		// 	height: 200px;
+
+		// 	@include media ($medium-screen-up) {
+		// 		height: 320px;
+		// 	}
+
+		// 	@include media ($large-screen-up) {
+		// 		height: 320px;
+		// 	}
+		// }
+		// .grid-item--height400 { 
+		// 	height: 300px;
+
+		// 	@include media ($medium-screen-up) {
+		// 		height: 400px;
+		// 	}
+
+		// 	@include media ($large-screen-up) {
+		// 		height: 400px;
+		// 	}
+		// }
+		// .grid-item--height500 { 
+		// 	height: 400px;
+
+		// 	@include media ($medium-screen-up) {
+		// 		height: 520px;
+		// 	}
+
+		// 	@include media ($large-screen-up) {
+		// 		height: 520px;
+		// 	}
+		// }
+		// .grid-item--height600 { 
+		// 	height: 400px;
+
+		// 	@include media ($medium-screen-up) {
+		// 		height: 620px;
+		// 	}
+
+		// 	@include media ($large-screen-up) {
+		// 		height: 620px;
+		// 	}
+		// }
+		// .grid-item--height700 { 
+		// 	height: 500px;
+
+		// 	@include media ($medium-screen-up) {
+		// 		height: 720px;
+		// 	}
+
+		// 	@include media ($large-screen-up) {
+		// 		height: 720px;
+		// 	}
+		// }
+		// .grid-item--height800 { 
+		// 	height: 600px;
+
+		// 	@include media ($medium-screen-up) {
+		// 		height: 820px;
+		// 	}
+
+		// 	@include media ($large-screen-up) {
+		// 		height: 820px;
+		// 	}
+		// }
 	}
 }
 

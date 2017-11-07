@@ -10,7 +10,7 @@ get_header(); ?>
 	<?php 
 	$featureimage = wp_get_attachment_url( get_post_thumbnail_id());
 	?>
-	<section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
+	<!-- <section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
 		<div class="caption table">
 			<div class="cell bottom">
 				<div class="wrapper">
@@ -20,7 +20,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container" role="main">

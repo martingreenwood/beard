@@ -18,7 +18,7 @@ get_header(); ?>
 	$pageID = get_id_by_slug('blog');
 	$featureimage = wp_get_attachment_url( get_post_thumbnail_id( $pageID ) );
 	?>
-	<section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
+	<!-- <section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
 		<div class="caption table">
 			<div class="cell bottom">
 				<div class="wrapper">
@@ -28,7 +28,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 
 	<div id="primary" class="content-area">

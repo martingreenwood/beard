@@ -4,7 +4,11 @@
 
 .our-services, .what-we-do {
 
-	#services {
+	#primary {
+		padding-top: 140px;
+	}
+
+	#sections {
 		// padding: 60px 0;
 		background: #ffffff;
 
@@ -12,12 +16,12 @@
 			// border-bottom: 2px solid #D8DADC;
 			// padding: 0 0 60px 0;
 			// margin-bottom: 60px;
-			@include row;
-			background-repeat: no-repeat;
-			background-size: 50% auto;
-			background-position: bottom left;
+			// @include row;
+			// background-repeat: no-repeat;
+			// background-size: 50% auto;
+			// background-position: bottom left;
 			min-height: 600px;
-			position: relative;
+			// position: relative;
 
 			&:before {
 				opacity: 0;
@@ -43,93 +47,93 @@
 				opacity: 1;
 			}
 
-			.ovewrlay {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
+			// .ovewrlay {
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left: 0;
+			// 	width: 100%;
+			// 	height: 100%;
 
-				a.more {
-					display: block;
-					height: 100%;
-					text-indent: -9999px;
-				}
-			}
+			// 	a.more {
+			// 		display: block;
+			// 		height: 100%;
+			// 		text-indent: -9999px;
+			// 	}
+			// }
 
-			&.even {
-				background-position: bottom right;	
+	// 		&.even {
+	// 			background-position: bottom right;	
 	
-				.text {
-					padding-right: 40px;
-				}
+	// 			.text {
+	// 				padding-right: 40px;
+	// 			}
 
-				&:before {
-					left: auto;
-					right: 0;
-				}
-			}
+	// 			&:before {
+	// 				left: auto;
+	// 				right: 0;
+	// 			}
+	// 		}
 
-			.half {
-				height: 600px;
-				min-height: 600px;
-				float: left;
-				width: 50%;
-			}
+	// 		.half {
+	// 			height: 600px;
+	// 			min-height: 600px;
+	// 			float: left;
+	// 			width: 50%;
+	// 		}
 			
-			.text {
-				padding-left: 40px;
-			}
+	// 		.text {
+	// 			padding-left: 40px;
+	// 		}
 
-			h1, h2 {
-				font-size: 62px;
-				margin: 0 0 20px 0;
-			}
+	// 		h1, h2 {
+	// 			font-size: 62px;
+	// 			margin: 0 0 20px 0;
+	// 		}
+		}
+	}
+
+	.fulllist {
+		padding: 60px 0;
+		text-align: center;
+		background: #020202;
+		background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(225deg, #444, #020202);
+
+
+		h2, h3 {
+			font-size: 32px;
+			margin: 0;
+			color: white;
 		}
 
-		.fulllist {
-			padding: 60px 0;
-			text-align: center;
-			background: #020202;
-			background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
-			background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
-			background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
-			background: linear-gradient(225deg, #444, #020202);
+		ul {
+			margin: 0;
+			list-style-type: none;
 
-
-			h2, h3 {
-				font-size: 32px;
-				margin: 0;
+			li {
+				margin-right: 20px;
+				text-transform: uppercase;
+				display: inline-block;
+				line-height: 1.2;
 				color: white;
-			}
 
-			ul {
-				margin: 0;
-				list-style-type: none;
-
-				li {
-					margin-right: 20px;
-					text-transform: uppercase;
-					display: inline-block;
-					line-height: 1.2;
+				&:after {
+					content: " • ";
 					color: white;
+					display: inline-block;
+					margin-left: 10px;
+					font-size: 8px;
+					position: absolute;
+					line-height: 18px;
+				}
+
+				&:last-of-type {
+					margin: 0;
 
 					&:after {
-						content: " • ";
-						color: white;
-						display: inline-block;
-						margin-left: 10px;
-						font-size: 8px;
-						position: absolute;
-						line-height: 18px;
-					}
-
-					&:last-of-type {
-						margin: 0;
-
-						&:after {
-							display: none;
-						}
+						display: none;
 					}
 				}
 			}

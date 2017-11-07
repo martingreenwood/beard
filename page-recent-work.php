@@ -17,7 +17,7 @@ get_header(); ?>
 	<?php 
 	$featureimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
 	?>
-	<section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
+<!-- 	<section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
 		<div class="caption table">
 			<div class="cell bottom">
 				<div class="wrapper">
@@ -27,7 +27,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container narrow" role="main">
@@ -45,28 +45,32 @@ get_header(); ?>
 
 	<div id="portfolio">
 		<div class="container">
-		<?php $i = 1; $team = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => -1 ) ); ?>
+		<?php $i = 1; $work = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => -1 ) ); ?>
 			<div class="grid">
-			<div class="grid-sizer"></div>
-			<?php while ( $team->have_posts() ) : $team->the_post(); ?>
-				<div class="grid-item grid-item--width<?php the_field( 'portfolio_width' ); ?>">
+			<!-- <div class="grid-sizer"></div> -->
+			<?php while ( $work->have_posts() ) : $work->the_post(); ?>
+				<?php $portfolio_image = get_field( 'portfolio_image' ); ?>
+				<div class="grid-item <?php the_field( 'portfolio_size' ); ?>">
 					<a href="<?php the_permalink(); ?>">
-					<?php $portfolio_image = get_field( 'portfolio_image' ); ?>
-					<img src="<?php echo $portfolio_image['url']; ?>" alt="<?php echo $portfolio_image['alt']; ?>" />
+					<!-- <img src="<?php echo $portfolio_image['url']; ?>" alt="<?php echo $portfolio_image['alt']; ?>" /> -->
+					<img src="http://placehold.it/900x600" alt=""> 
 
 					<div class="info">
 						<div class="table"><div class="cell middle">
 							<h2><?php the_title( ); ?></h2>
-							<?php $terms = wp_get_post_terms( get_the_id(), 'project-attribute', $args ); ?>
+							<?php $terms = wp_get_post_terms( get_the_id(), 'project-attribute' ); ?>
 							<hr>
 							<h3><?php echo $terms[0]->name; ?></h3>
 						</div></div>
 					</div>
 					</a>
 				</div>
-				
 				<?php //if($i % 3 == 0) {echo '</div><div class="members row">';} $i++; ?>
 			<?php endwhile; wp_reset_query(); ?>
+			</div>
+			<div id="fillers" style="display: none;">
+				<div class="filler">filt 1</div>
+				<div class="filler">filt 2</div>
 			</div>
 		</div>
 	</div>

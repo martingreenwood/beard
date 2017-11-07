@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="http://local.wearebeard.com/wp-content/uploads/2017/09/blog.jpg">
+	<!-- <section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="http://local.wearebeard.com/wp-content/uploads/2017/09/blog.jpg">
 		<div class="caption table">
 			<div class="cell bottom">
 				<div class="wrapper">
@@ -19,7 +19,7 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main " role="main">

@@ -19,18 +19,19 @@ get_header(); ?>
 	// } else {
 	// 	$lum_class = "white-text";
 	// }
+	$highlight_color = get_field( 'highlight_colour' );
 	?>
-	<section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
+	<!-- <section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
 		<div class="caption table">
 			<div class="cell bottom">
 				<div class="wrapper">
-					<h1 style="text-colour: <?php the_field( 'highlight_colour' ); ?>"><?php the_title(); ?></h1>
-					<hr style="backgrond-colour: <?php the_field( 'highlight_colour' ); ?>">
-					<h2 style="text-colour: <?php the_field( 'highlight_colour' ); ?>"><?php echo $terms[0]->name; ?></h2>
+					<h1 <?php if($highlight_color): ?>style="color: <?php echo $highlight_color; ?>"<?php endif; ?>><?php the_title(); ?></h1>
+					<hr <?php if($highlight_color): ?>style="background: <?php echo $highlight_color; ?>"<?php endif; ?>>
+					<h2 <?php if($highlight_color): ?>style="color: <?php echo $highlight_color; ?>"<?php endif; ?>><?php echo $terms[0]->name; ?></h2>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<div id="primary" class="content-area pfolio">
 		<main id="main" class="site-main container" role="main">

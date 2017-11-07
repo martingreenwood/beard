@@ -1,6 +1,6 @@
 {
     "key": "group_58dbb44f94f9f",
-    "title": "Services",
+    "title": "Section Builder",
     "fields": [
         {
             "key": "field_58dbb45d382d7",
@@ -121,6 +121,13 @@
                 "operator": "==",
                 "value": "39"
             }
+        ],
+        [
+            {
+                "param": "page_parent",
+                "operator": "==",
+                "value": "39"
+            }
         ]
     ],
     "menu_order": 0,
@@ -131,5 +138,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1507128483
+    "modified": 1507889083
 }

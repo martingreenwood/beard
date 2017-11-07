@@ -45,6 +45,134 @@
 =            FEATURE IMAGE            =
 =====================================*/
 
+#sections {
+	// padding: 60px 0;
+	background: #ffffff;
+
+	.service {
+		// border-bottom: 2px solid #D8DADC;
+		// padding: 0 0 60px 0;
+		// margin-bottom: 60px;
+		@include row;
+		min-height: 600px;
+		position: relative;
+		display: unset;
+
+		.wrapper {
+			height: 100%;
+			display: table;
+		}
+
+		.ovewrlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			a.more {
+				display: block;
+				height: 100%;
+				text-indent: -9999px;
+			}
+		}
+
+		&.even {
+			background-position: bottom right;	
+
+			.text {
+				padding-left: 100px;
+				padding-right: 40px;
+			}
+
+			&:before {
+				left: auto;
+				right: 0;
+			}
+		}
+
+		.half {
+			// height: auto;
+			min-height: 600px;
+			// float: left;
+			// width: 50%;
+
+			width: 50%;
+			height: 100%;
+			display: table-cell;
+
+			background-repeat: no-repeat;
+			background-size: 50% auto;
+			background-position: bottom left;
+			background-size: cover;
+
+		}
+		
+		.text {
+			padding: 40px;
+			padding-right: 100px;
+			background: white;
+		}
+
+		h1, h2 {
+			font-size: 62px;
+			margin: 0 0 20px 0;
+		}
+	}
+
+	.fulllist {
+		padding: 60px 0;
+		text-align: center;
+		background: #020202;
+		background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(225deg, #444, #020202);
+
+
+		h2, h3 {
+			font-size: 32px;
+			margin: 0;
+			color: white;
+		}
+
+		ul {
+			margin: 0;
+			list-style-type: none;
+
+			li {
+				margin-right: 20px;
+				text-transform: uppercase;
+				display: inline-block;
+				line-height: 1.2;
+				color: white;
+
+				&:after {
+					content: " • ";
+					color: white;
+					display: inline-block;
+					margin-left: 10px;
+					font-size: 8px;
+					position: absolute;
+					line-height: 18px;
+				}
+
+				&:last-of-type {
+					margin: 0;
+
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*=====================================
+=            FEATURE IMAGE            =
+=====================================*/
+
 #feature-image {
 	height: 50vh;
 	position: relative;
