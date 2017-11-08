@@ -1614,7 +1614,7 @@ a:hover, a:active { outline: 0; }
 
 .home #feature-image .elements .baloon { position: absolute; top: 11.4%; left: -10%; width: 7%; z-index: -1; animation: flythrough linear 90s infinite,  rise linear 90s infinite; }
 
-.home #feature-image .elements .camera { position: absolute; top: 55.4%; left: 10.5%; width: 3%; z-index: 5; animation: camswing linear 750ms infinite alternate; transform-origin: top 0px; }
+.home #feature-image .elements .camera { position: absolute; top: 55.4%; left: 10.5%; width: 3%; z-index: 5; animation: camswing linear 750ms infinite alternate; transform-origin: top center; }
 
 .home #feature-image .elements .tenticle-right { position: absolute; top: 69.4%; left: 67.5%; width: 7%; }
 
