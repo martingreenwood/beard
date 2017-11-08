@@ -95,7 +95,9 @@
 	$('.menu-toggle').on('click', function() {
 		$(this).toggleClass('open');
 		$("#sentence-wrapper").toggleClass('hide');
+		$("#feature-image .elements").toggleClass('menuopen');
 		$(".site-branding").toggleClass('open-menu');
+		$("body").toggleClass('noscroll');
 		// $("#sentence-wrapper .words").toggleClass('words-1');
 	});
 
@@ -110,6 +112,20 @@
 		    // Called after the entrance animation is executed.
 		}
 	});	
+
+})(jQuery);
+
+
+/*============================
+=            bio             =
+============================*/
+
+(function($) {
+
+	// $('.member').on('click', function() {
+		// $('.member.open').removeClass('open');
+		// $(this).toggleClass('open');
+	// });
 
 })(jQuery);
 

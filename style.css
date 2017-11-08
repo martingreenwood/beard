@@ -117,6 +117,79 @@ Text Domain: beard
   90% { opacity: 0; }
   to { opacity: 1; } }
 
+@keyframes camswing { 0% { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); } }
+
+@keyframes armswing { 0% { transform: rotate(0deg); }
+  100% { transform: rotate(3deg); } }
+
+@keyframes flythrough { 0% { left: -10%; }
+  100% { left: 100%; } }
+
+@keyframes drip { 0% { top: 72.4%; }
+  15% { top: 75.6%; }
+  25% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rg1 { 0% { top: 54.4%; }
+  13% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rg2 { 0% { top: 54.4%; }
+  11% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rg3 { 0% { top: 54.4%; }
+  14% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rg4 { 0% { top: 54.4%; }
+  13% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rg5 { 0% { top: 54.4%; }
+  11% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rg6 { 0% { top: 54.4%; }
+  14% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rfa { 0% { top: 54.4%; }
+  6% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rfb { 0% { top: 54.4%; }
+  6% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rfc { 0% { top: 54.4%; }
+  6% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rfd { 0% { top: 54.4%; }
+  6% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rfa { 0% { top: 54.4%; }
+  6% { top: 120%; }
+  50% { top: 120%; }
+  100% { top: 120%; } }
+
+@keyframes rise { 0% { top: 11.4%; }
+  100% { top: 0.4%; } }
+
 @keyframes rotateWordsFirst { 0% { opacity: 1;
     animation-timing-function: ease-in;
     height: 0px; }
@@ -1146,7 +1219,7 @@ a:hover, a:active { outline: 0; }
 
 .menu-icon.open:hover span { background: #c45084 !important; }
 
-.menu-main-container { position: fixed; width: 100vw; height: 100vh; left: 100%; top: 0; background: black; background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */ background: linear-gradient(225deg, #444, #020202); -webkit-transition: all .35s ease-in-out; -moz-transition: all .35s ease-in-out; -ms-transition: all .35s ease-in-out; -o-transition: all .35s ease-in-out; transition: all .35s ease-in-out; }
+.menu-main-container { position: fixed; width: 100vw; height: 100vh; left: 100%; top: 0; background: rgba(0, 0, 0, 0.8); -webkit-transition: all .35s ease-in-out; -moz-transition: all .35s ease-in-out; -ms-transition: all .35s ease-in-out; -o-transition: all .35s ease-in-out; transition: all .35s ease-in-out; }
 
 .slogan { position: fixed; opacity: 0; color: white; bottom: 40px; left: 50px; font-weight: 400; -webkit-transition-delay: 2s; transition-delay: 2s; -webkit-transition: all .25s ease-in-out; -moz-transition: all .25s ease-in-out; -ms-transition: all .25s ease-in-out; -o-transition: all .25s ease-in-out; transition: all .25s ease-in-out; }
 
@@ -1390,7 +1463,7 @@ a:hover, a:active { outline: 0; }
 /*==============================
 =            HEADER            =
 ==============================*/
-#masthead { position: fixed; z-index: 50; width: 100%; top: 0; -webkit-transition: all 300ms ease-in-out; -moz-transition: all 300ms ease-in-out; -ms-transition: all 300ms ease-in-out; -o-transition: all 300ms ease-in-out; transition: all 300ms ease-in-out; }
+#masthead { position: fixed; z-index: 50; width: 100%; top: 0; z-index: 51; -webkit-transition: all 300ms ease-in-out; -moz-transition: all 300ms ease-in-out; -ms-transition: all 300ms ease-in-out; -o-transition: all 300ms ease-in-out; transition: all 300ms ease-in-out; }
 
 #masthead .site-branding { float: left; background: white; border-radius: 50%; position: absolute; z-index: 99; left: 40px; top: 40px; }
 
@@ -1438,6 +1511,8 @@ a:hover, a:active { outline: 0; }
 /*===============================
 =            PRIMARY            =
 ===============================*/
+.noscroll { overflow: hidden; }
+
 #primary { background: #fff; }
 
 .page-template-default #primary { background: -webkit-linear-gradient(225deg, #e6e6e6, #fff); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(225deg, #e6e6e6, #fff); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(225deg, #e6e6e6, #fff); /* For Firefox 3.6 to 15 */ background: linear-gradient(225deg, #e6e6e6, #fff); }
@@ -1525,7 +1600,45 @@ a:hover, a:active { outline: 0; }
 /*============================
 =            HOME            =
 ============================*/
-.home #feature-image { height: 100vh; width: 100vw; background-position: 50%; background-size: cover; background-repeat: no-repeat; margin-bottom: 0; }
+.home #feature-image { height: 100vh; width: 100%; background-position: 50%; background-size: cover; background-repeat: no-repeat; margin-bottom: 0; background: #E1E1E1; overflow: hidden; }
+
+.home #feature-image.menuopen img { filter: brightness(0); }
+
+.home #feature-image img { display: block; }
+
+.home #feature-image .wrap { position: relative; }
+
+.home #feature-image .elements { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 50; }
+
+.home #feature-image .elements .rock { position: absolute; top: 0; z-index: 1; }
+
+.home #feature-image .elements .baloon { position: absolute; top: 11.4%; left: -10%; width: 7%; z-index: -1; animation: flythrough linear 90s infinite,  rise linear 90s infinite; }
+
+.home #feature-image .elements .camera { position: absolute; top: 55.4%; left: 10.5%; width: 3%; z-index: 5; animation: camswing linear 750ms infinite alternate; transform-origin: top 0px; }
+
+.home #feature-image .elements .tenticle-right { position: absolute; top: 69.4%; left: 67.5%; width: 7%; }
+
+.home #feature-image .elements .drip { position: absolute; top: 72.4%; left: 42%; width: 1%; z-index: 1; animation: drip linear 6500ms infinite; animation-delay: 3s; }
+
+.home #feature-image .elements .flr { position: absolute; top: 54.4%; left: 16.5%; width: 2%; }
+
+.home #feature-image .elements .rgl-1 { position: absolute; top: 54.4%; left: 16.5%; width: 2%; animation: rg1 linear 15s infinite; animation-delay: 3s; }
+
+.home #feature-image .elements .rgl-2 { position: absolute; top: 54.4%; left: 16.5%; width: 2%; animation: rg2 linear 15s infinite; animation-delay: 3s; }
+
+.home #feature-image .elements .rgl-3 { position: absolute; top: 54.4%; left: 16.5%; width: 2%; animation: rg3 linear 15s infinite; animation-delay: 3s; }
+
+.home #feature-image .elements .rgl-4 { position: absolute; top: 54.4%; left: 72.5%; width: 2%; animation: rg4 linear 15s infinite; animation-delay: 8s; }
+
+.home #feature-image .elements .rgl-5 { position: absolute; top: 54.4%; left: 72.5%; width: 2%; animation: rg5 linear 15s infinite; animation-delay: 8s; }
+
+.home #feature-image .elements .rgl-6 { position: absolute; top: 54.4%; left: 72.5%; width: 2%; animation: rg6 linear 15s infinite; animation-delay: 8s; }
+
+.home #feature-image .elements .lr { position: absolute; top: 54.4%; left: 22.5%; width: 2%; }
+
+.home #feature-image .elements .rr { position: absolute; top: 54.4%; left: 72.5%; width: 2%; }
+
+.home #feature-image .elements .frr { position: absolute; top: 54.4%; left: 81.5%; width: 2%; }
 
 .home #primary { background: #020202; background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */ background: linear-gradient(225deg, #444, #020202); }
 
@@ -1615,7 +1728,7 @@ a:hover, a:active { outline: 0; }
 
 .our-team #team .members .member .image img { display: block; width: 100%; }
 
-.our-team #team .members .member:hover .info { padding: 0; opacity: 1; }
+.our-team #team .members .member.open .info { padding: 0; opacity: 1; }
 
 /*============================
 =            WORK            =

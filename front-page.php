@@ -9,9 +9,75 @@ get_header(); ?>
 
 
 	<?php 
-	$featureimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+	// $featureimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
 	?>
-	<section id="feature-image" class="section light parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>"></section>
+	<section id="feature-image" class="">
+		<div class="table">
+			<div class="cell middle">
+				<div class="wrap">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/background.jpg" alt="" style="display: block;">	
+
+					<div class="elements">
+						<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/hp/tree.png" alt="">
+						
+						<div class="rock">
+							<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/hp/rock.png" alt="">
+						</div>
+
+						<div class="baloon">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/balloon.png" alt="">
+						</div>
+
+						<div class="tenticle-right">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/tentacle-right.png" alt="">
+						</div>
+
+						<div class="camera">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/camera.png" alt="">
+						</div>
+						
+						<div class="drip">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/drip.png" alt="">
+						</div>
+
+						<div class="rgl-1">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rgl-1.png" alt="">
+						</div>
+						<div class="rgl-2">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rgl-2.png" alt="">
+						</div>
+						<div class="rgl-3">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rgl-3.png" alt="">
+						</div>
+
+						<div class="rgl-4">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rgl-4.png" alt="">
+						</div>
+						<div class="rgl-5">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rgl-5.png" alt="">
+						</div>
+						<div class="rgl-6">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rgl-6.png" alt="">
+						</div>
+
+
+						<div class="flr">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/flr.png" alt="">
+						</div>
+						<div class="lr">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/lr.png" alt="">
+						</div>
+						<div class="rr">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rr.png" alt="">
+						</div>
+						<div class="frr">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/frr.png" alt="">
+						</div>
+
+					</div>
+				</div>
+			</div></div>
+	</section>
 
 	<div id="primary" class="content-area section dark">
 		<main id="main" class="site-main container narrow" role="main">

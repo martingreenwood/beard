@@ -310,6 +310,102 @@
 	}
 }
 
+@keyframes camswing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+@keyframes armswing {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(3deg); }
+}
+
+@keyframes flythrough {
+    0% { left: -10%; }
+    100% { left: 100%; }
+}
+
+@keyframes drip {
+    0% { top: 72.4%; }
+    15% { top:75.6%; }
+    25% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+
+@keyframes rg1 {
+    0% { top: 54.4%; }
+   	13% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+@keyframes rg2 {
+    0% { top: 54.4%; }
+   	11% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+@keyframes rg3 {
+    0% { top: 54.4%; }
+   	14% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+
+@keyframes rg4 {
+    0% { top: 54.4%; }
+   	13% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+@keyframes rg5 {
+    0% { top: 54.4%; }
+   	11% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+@keyframes rg6 {
+    0% { top: 54.4%; }
+   	14% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+
+@keyframes rfa {
+    0% { top: 54.4%; }
+   	6% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+@keyframes rfb {
+    0% { top: 54.4%; }
+    6% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+@keyframes rfc {
+    0% { top: 54.4%; }
+    6% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+@keyframes rfd {
+    0% { top: 54.4%; }
+    6% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+@keyframes rfa {
+    0% { top: 54.4%; }
+    6% { top:120%; }
+    50% { top: 120%; }
+    100% { top: 120%; }
+}
+
+@keyframes rise {
+    0% { top: 11.4%; }
+    100% { top: 0.4%; }
+}
 
 // Create REM values with PX fall back
 //
