@@ -1242,7 +1242,7 @@ a:hover, a:active { outline: 0; }
 
 .main-navigation li { float: right; position: relative; transition: all 100ms ease-in-out; font-size: 20px; clear: both; }
 
-.main-navigation li:hover a, .main-navigation li:focus a { color: #000000; }
+.main-navigation li:hover a, .main-navigation li:focus a { color: white; }
 
 .main-navigation li:hover a:after, .main-navigation li:focus a:after { width: 75px; margin-left: 20px; }
 
@@ -1250,11 +1250,11 @@ a:hover, a:active { outline: 0; }
 
 @media screen and (min-width: 600px) { .main-navigation a { font-size: 44px; } }
 
-.main-navigation a:hover { color: #000000; }
+.main-navigation a:hover, .main-navigation a:visited { color: white; }
 
-@media screen and (min-width: 600px) { .main-navigation a:after { content: ""; width: 0; height: 7px; background: #000000; margin-top: -9px; transition: all 300ms ease; vertical-align: middle; display: inline-table; } }
+@media screen and (min-width: 600px) { .main-navigation a:after { content: ""; width: 0; height: 7px; background: white; margin-top: -9px; transition: all 300ms ease; vertical-align: middle; display: inline-table; } }
 
-.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .main-navigation .current_page_ancestor > a, .main-navigation .current-menu-ancestor > a { color: #000000; }
+.main-navigation .current_page_item > a, .main-navigation .current-menu-item > a, .main-navigation .current_page_ancestor > a, .main-navigation .current-menu-ancestor > a { color: white; }
 
 /* Small menu. */
 .menu-icon { display: block; }
@@ -1287,7 +1287,7 @@ a:hover, a:active { outline: 0; }
 
 .menu-icon.open span:nth-child(4) { top: 18px; width: 0%; left: 50%; }
 
-.menu-icon.open:hover span { background: #000000 !important; }
+.menu-icon.open:hover span { background: white !important; }
 
 .menu-main-container { position: fixed; width: 100vw; height: 100vh; left: 100%; top: 0; background: rgba(0, 0, 0, 0.8); -webkit-transition: all .35s ease-in-out; -moz-transition: all .35s ease-in-out; -ms-transition: all .35s ease-in-out; -o-transition: all .35s ease-in-out; transition: all .35s ease-in-out; }
 
@@ -1522,7 +1522,7 @@ a:hover, a:active { outline: 0; }
 /*==============================
 =            LOADER            =
 ==============================*/
-#loader { background-color: #f9f9f9; background-color: -webkit-linear-gradient(225deg, #fff, #f9f9f9); /* For Safari 5.1 to 6.0 */ background-color: -o-linear-gradient(225deg, #fff, #f9f9f9); /* For Opera 11.1 to 12.0 */ background-color: -moz-linear-gradient(225deg, #fff, #f9f9f9); /* For Firefox 3.6 to 15 */ background-color: linear-gradient(225deg, #fff, #f9f9f9); background-image: url(assets/images/logo.svg); background-repeat: no-repeat; background-size: 200px; background-position: 50%; width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: 99999; transition: all 500ms; }
+#loader { background-color: #f9f9f9; background-color: -webkit-linear-gradient(225deg, #fff, #f9f9f9); /* For Safari 5.1 to 6.0 */ background-color: -o-linear-gradient(225deg, #fff, #f9f9f9); /* For Opera 11.1 to 12.0 */ background-color: -moz-linear-gradient(225deg, #fff, #f9f9f9); /* For Firefox 3.6 to 15 */ background-color: linear-gradient(225deg, #fff, #f9f9f9); background-image: url(assets/images/wearebeard.svg); background-repeat: no-repeat; background-size: 50%; background-position: 50%; width: 100vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: 99999; transition: all 500ms; }
 
 #loader #loading { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
@@ -1583,6 +1583,8 @@ a:hover, a:active { outline: 0; }
 ===============================*/
 .noscroll { overflow: hidden; }
 
+#theme-my-login { margin: 100px auto; }
+
 #primary { background: #fff; }
 
 .page-template-default #primary { background: -webkit-linear-gradient(225deg, #e6e6e6, #fff); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(225deg, #e6e6e6, #fff); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(225deg, #e6e6e6, #fff); /* For Firefox 3.6 to 15 */ background: linear-gradient(225deg, #e6e6e6, #fff); }
@@ -1615,7 +1617,7 @@ a:hover, a:active { outline: 0; }
 
 #sections .service .half { width: 50%; display: table-cell; vertical-align: middle; }
 
-#sections .service .half img { display: block; }
+#sections .service .half img { display: block; width: 100%; }
 
 #sections .service .text { padding: 40px; padding-right: 100px; background: white; }
 
@@ -1879,9 +1881,11 @@ a:hover, a:active { outline: 0; }
 
 .recent-work #portfolio .grid-item:hover .info { padding: 0; opacity: 1; }
 
+.recent-work #portfolio .grid-item:hover img { filter: grayscale(0); }
+
 .recent-work #portfolio .grid-sizer, .recent-work #portfolio .grid-item { float: left; width: 50%; overflow: hidden; }
 
-.recent-work #portfolio .grid-sizer img, .recent-work #portfolio .grid-item img { /* Just in case there are inline attributes */ width: 100.5% !important; height: auto !important; display: block; }
+.recent-work #portfolio .grid-sizer img, .recent-work #portfolio .grid-item img { /* Just in case there are inline attributes */ width: 100.5% !important; height: auto !important; display: block; -webkit-transition: filter .25s linear; -moz-transition: filter .25s linear; -ms-transition: filter .25s linear; -o-transition: filter .25s linear; transition: filter .25s linear; }
 
 /*======================================
 =            PORTFOLIO ITEM            =
@@ -1940,8 +1944,6 @@ a:hover, a:active { outline: 0; }
 =            CONTACT            =
 ===============================*/
 .contact #primary { padding-top: 140px; padding-bottom: 60px; }
-
-.contact #primary { background: white; }
 
 .contact #primary .gform_wrapper .gform_fields .gfield:first-of-type { margin-top: 0; }
 

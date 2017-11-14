@@ -75,6 +75,10 @@
 					padding: 0;
 					opacity: 1;
 				}
+
+				img {
+					filter: grayscale(0);
+				}
 			}
 		}
 
@@ -91,6 +95,13 @@
 				width: 100.5% !important;
 				height: auto !important;
 				display: block;
+				//-webkit-filter: grayscale(1);
+				//filter: grayscale(1);
+				-webkit-transition: filter .25s linear;
+				   -moz-transition: filter .25s linear;
+				    -ms-transition: filter .25s linear;
+				     -o-transition: filter .25s linear;
+				        transition: filter .25s linear;
 			}
 		}
 

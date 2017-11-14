@@ -23,30 +23,66 @@ get_header(); ?>
 	</section> -->
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main container" role="main">
+		<main id="main" class="site-main container narrow" role="main">
 
-			<section class="contactdeets span6">
+			<?php
+			while ( have_posts() ) : the_post();
 
-				<?php
-				while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content', 'contact' );
 
-					get_template_part( 'template-parts/content', 'page' );
-
-				endwhile;
-				?>
-
-			</section>
-
-			<section class="contactform span6">
-				<h2>Send us an Email</h2>
-				<?php 
-				$form_object = get_field('contact_form');
-				gravity_form_enqueue_scripts($form_object['id'], true);
-				gravity_form($form_object['id'], false, false, false, '', true, 1); 
-				?>
-			</section>
+			endwhile;
+			?>
 
 		</main>
+	</div>
+
+	<div id="sections">
+
+		<div class="service odd">
+
+			<div class="wrapper">
+				<div class="table">
+					<div class="cell middle">
+
+						<div class="half">
+							<img src="http://placehold.it/900x900" alt="">
+						</div>
+						
+						<div class="half text contactdeets">
+							<?php the_content( ); ?>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="service odd">
+
+			<div class="wrapper">
+				<div class="table">
+					<div class="cell middle">
+
+						<div class="half text">
+							<h2>Send us an Email</h2>
+							<?php 
+							$form_object = get_field('contact_form');
+							gravity_form_enqueue_scripts($form_object['id'], true);
+							gravity_form($form_object['id'], false, false, false, '', true, 1); 
+							?>
+						</div>
+
+						<div class="half contactform">
+							<img src="http://placehold.it/900x900" alt="">
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
 	</div>
 
 	<?php 

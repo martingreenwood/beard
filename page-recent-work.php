@@ -50,20 +50,18 @@ get_header(); ?>
 			<!-- <div class="grid-sizer"></div> -->
 			<?php while ( $work->have_posts() ) : $work->the_post(); ?>
 				<?php $portfolio_image = get_field( 'portfolio_image' ); ?>
-				<div class="grid-item <?php the_field( 'portfolio_size' ); ?>">
+				<div class="grid-item">
 					<a href="<?php the_permalink(); ?>">
-					<!-- <img src="<?php echo $portfolio_image['url']; ?>" alt="<?php echo $portfolio_image['alt']; ?>" /> -->
-					<img src="http://placehold.it/900x600" alt=""> 
-
-					<div class="info">
-						<div class="table"><div class="cell middle">
-							<h2><?php the_title( ); ?></h2>
-							<?php $terms = wp_get_post_terms( get_the_id(), 'project-attribute' ); ?>
-							<hr>
-							<h3><?php echo $terms[0]->name; ?></h3>
-						</div></div>
-					</div>
-					</a>
+						<?php the_post_thumbnail( 'full' ) ?>
+						<div class="info">
+							<div class="table"><div class="cell middle">
+								<h2><?php the_title( ); ?></h2>
+								<?php $terms = wp_get_post_terms( get_the_id(), 'project-attribute' ); ?>
+								<hr>
+								<h3><?php echo $terms[0]->name; ?></h3>
+							</div></div>
+						</div>
+						</a>
 				</div>
 				<?php //if($i % 3 == 0) {echo '</div><div class="members row">';} $i++; ?>
 			<?php endwhile; wp_reset_query(); ?>
