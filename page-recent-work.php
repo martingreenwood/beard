@@ -68,10 +68,6 @@ get_header(); ?>
 				<?php //if($i % 3 == 0) {echo '</div><div class="members row">';} $i++; ?>
 			<?php endwhile; wp_reset_query(); ?>
 			</div>
-			<div id="fillers" style="display: none;">
-				<div class="filler">filt 1</div>
-				<div class="filler">filt 2</div>
-			</div>
 		</div>
 	</div>
 

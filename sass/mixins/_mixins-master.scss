@@ -332,6 +332,13 @@
     50% { top: 120%; }
     100% { top: 120%; }
 }
+@keyframes dripm {
+    0% { top: 72.4%; }
+    15% { top:75.6%; }
+    25% { top:160%; }
+    50% { top: 160%; }
+    100% { top: 160%; }
+}
 
 @keyframes rg1 {
     0% { top: 54.4%; }
@@ -339,11 +346,23 @@
     50% { top: 120%; }
     100% { top: 120%; }
 }
+@keyframes rg1m {
+    0% { top: 54.4%; }
+   	13% { top:160%; }
+    50% { top: 160%; }
+    100% { top: 160%; }
+}
 @keyframes rg2 {
     0% { top: 54.4%; }
    	11% { top:120%; }
     50% { top: 120%; }
     100% { top: 120%; }
+}
+@keyframes rg2mn {
+    0% { top: 54.4%; }
+   	11% { top:160%; }
+    50% { top: 160%; }
+    100% { top: 160%; }
 }
 @keyframes rg3 {
     0% { top: 54.4%; }
@@ -351,12 +370,23 @@
     50% { top: 120%; }
     100% { top: 120%; }
 }
-
+@keyframes rg3m {
+    0% { top: 54.4%; }
+   	14% { top:160%; }
+    50% { top: 160%; }
+    100% { top: 160%; }
+}
 @keyframes rg4 {
     0% { top: 54.4%; }
    	13% { top:120%; }
     50% { top: 120%; }
     100% { top: 120%; }
+}
+@keyframes rg4m {
+    0% { top: 54.4%; }
+   	13% { top:160%; }
+    50% { top: 160%; }
+    100% { top: 160%; }
 }
 @keyframes rg5 {
     0% { top: 54.4%; }
@@ -364,11 +394,23 @@
     50% { top: 120%; }
     100% { top: 120%; }
 }
+@keyframes rg5m {
+    0% { top: 54.4%; }
+   	11% { top:160%; }
+    50% { top: 160%; }
+    100% { top: 160%; }
+}
 @keyframes rg6 {
     0% { top: 54.4%; }
    	14% { top:120%; }
     50% { top: 120%; }
     100% { top: 120%; }
+}
+@keyframes rg6m {
+    0% { top: 54.4%; }
+   	14% { top:160%; }
+    50% { top: 160%; }
+    100% { top: 160%; }
 }
 
 @keyframes rfa {
@@ -403,9 +445,55 @@
 }
 
 @keyframes rise {
-    0% { top: 11.4%; }
-    100% { top: 0.4%; }
+    0% { top: 13.4%; }
+    100% { top: -4.4%; } 
 }
+
+@keyframes peak {
+    0% {  left: 49.5%;  }
+    5% {  left: 48.6%;  }
+    35% {  left: 48.6%;  }
+    40% {  left: 49.5% } 
+    100% {  left: 49.5% } 
+}
+
+@keyframes fadeinout {
+    0% { opacity: 0; }
+    20% { opacity: 0.5; }
+    50% { opacity: 1; }
+    75% { opacity: 0.5; }
+    0% { opacity: 0; }
+}
+@keyframes grow {
+    0% { width: 0%; }
+    25% { width: 0.6%; }
+    50% { width: 0%; }
+    75% { width: 0%; }
+    100% { width: 0%; }
+}
+
+@keyframes n1t {
+    0% { top: 49%; }
+    40% { top: 43.4%; }
+    100% { top: 43.4%; }
+}
+@keyframes n2t {
+    0% { top: 49%; }
+    40% { top: 43.4%; }
+    100% { top: 43.4%; }
+}
+
+@keyframes n1l {
+    0% { left: 83%; }
+    40% { left: 86.5%; }
+    100% { left: 86.5%; }
+}
+@keyframes n2l {
+    0% { left: 83%; }
+    40% { left: 84.5%; }
+    100% { left: 85.5%; }
+}
+
 
 // Create REM values with PX fall back
 //

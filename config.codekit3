@@ -7,7 +7,7 @@
 		"uuidString": "784E2474-D17D-4C2C-984F-F9D8D6568706"
 		}
 	],
-"creatorBuild": "26097",
+"creatorBuild": "26148",
 "files": {
 	"\/404.php": {
 		"cB": 0,
@@ -120,6 +120,14 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/acf-json\/group_5a0590dac168d.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5a0590dac168d-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -158,14 +166,24 @@
 		"oAP": "\/assets\/fonts\/slick.woff",
 		"oF": 0
 		},
+	"\/assets\/hp\/background-mobile.jpg": {
+		"ft": 16384,
+		"iS": 394285,
+		"oA": 0,
+		"oAP": "\/assets\/hp\/background-mobile.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/assets\/hp\/background.jpg": {
 		"ft": 16384,
-		"iS": 3629156,
+		"iS": 2609564,
 		"oA": 0,
 		"oAP": "\/assets\/hp\/background.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"\/assets\/hp\/balloon.png": {
@@ -228,6 +246,28 @@
 		"iS": 258360,
 		"oA": 0,
 		"oAP": "\/assets\/hp\/lr.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/hp\/note1.png": {
+		"ft": 32768,
+		"iS": 11204,
+		"oA": 0,
+		"oAP": "\/assets\/hp\/note1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/hp\/note2.png": {
+		"ft": 32768,
+		"iS": 18342,
+		"oA": 0,
+		"oAP": "\/assets\/hp\/note2.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -300,14 +340,25 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/hp\/rock-mobile.png": {
+		"ft": 32768,
+		"iS": 595842,
+		"oA": 0,
+		"oAP": "\/assets\/hp\/rock-mobile.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/hp\/rock.png": {
 		"ft": 32768,
-		"iS": 84229874,
+		"iS": 2258571,
 		"oA": 0,
 		"oAP": "\/assets\/hp\/rock.png",
 		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -333,14 +384,36 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/hp\/tree-mobile.png": {
+		"ft": 32768,
+		"iS": 368136,
+		"oA": 0,
+		"oAP": "\/assets\/hp\/tree-mobile.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/hp\/tree.png": {
 		"ft": 32768,
-		"iS": 1123263,
+		"iS": 1204594,
 		"oA": 0,
 		"oAP": "\/assets\/hp\/tree.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/hp\/wally.png": {
+		"ft": 32768,
+		"iS": 11159,
+		"oA": 0,
+		"oAP": "\/assets\/hp\/wally.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
@@ -371,6 +444,16 @@
 		"oAP": "\/assets\/images\/ajax-loader.gif",
 		"oF": 0,
 		"opt": 0
+		},
+	"\/assets\/images\/left-arrow-dark.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/left-arrow-dark.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/assets\/images\/left-arrow.svg": {
 		"ft": 2097152,
@@ -425,6 +508,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/images\/right-arrow-dark.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/right-arrow-dark.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/assets\/images\/right-arrow.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -464,6 +557,130 @@
 		"oF": 0,
 		"sC": 0,
 		"tS": 0
+		},
+	"\/assets\/js\/owl\/assets\/ajax-loader.gif": {
+		"ft": 4194304,
+		"iS": 3208,
+		"oA": 0,
+		"oAP": "\/assets\/js\/owl\/assets\/ajax-loader.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/assets\/js\/owl\/assets\/owl.carousel.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/js\/owl\/assets\/owl.carousel-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/js\/owl\/assets\/owl.carousel.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/js\/owl\/assets\/owl.carousel.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/js\/owl\/assets\/owl.theme.default.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/js\/owl\/assets\/owl.theme.default-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/js\/owl\/assets\/owl.theme.default.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/js\/owl\/assets\/owl.theme.default.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/js\/owl\/assets\/owl.theme.green.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/js\/owl\/assets\/owl.theme.green-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/js\/owl\/assets\/owl.theme.green.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/js\/owl\/assets\/owl.theme.green.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/assets\/js\/owl\/assets\/owl.video.play.png": {
+		"ft": 32768,
+		"iS": 4976,
+		"oA": 0,
+		"oAP": "\/assets\/js\/owl\/assets\/owl.video.play.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/js\/owl\/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/assets\/js\/owl\/LICENSE",
+		"oF": 0
+		},
+	"\/assets\/js\/owl\/owl.carousel.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/owl\/owl.carousel-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/owl\/owl.carousel.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/owl\/owl.carousel.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/owl\/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/assets\/js\/owl\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"\/assets\/js\/parallax.js": {
 		"ft": 64,
@@ -2694,6 +2911,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-parts\/content-blog.php",
+		"oF": 0
+		},
+	"\/template-parts\/content-home.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/content-home.php",
 		"oF": 0
 		},
 	"\/template-parts\/content-none.php": {

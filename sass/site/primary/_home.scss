@@ -13,6 +13,11 @@
 		margin-bottom: 0;
 		background: #E1E1E1;
 		overflow: hidden;
+		text-align: center;
+
+		@media (max-width: 480px) {
+			height: 75vh;
+		}
 
 		&.menuopen {
 			img {
@@ -21,11 +26,23 @@
 		}
 
 		img {
-			display: block;
+			display: inline-block;
 		}
 
 		.wrap {
 			position: relative;
+		}
+
+		.desktop {
+			@media (max-width: 480px) {
+				display: none;
+			}
+		}
+
+		.mobile {
+			@media (min-width: 480px) {
+				display: none;
+			}
 		}
 
 		.elements {
@@ -40,12 +57,21 @@
 				position: absolute;
 				top: 0;
 				z-index: 1;
+			}
 
+			.wally {
+				position: absolute;
+				top: 31%;
+				width: 3%;
+				left: 49.5%;
+				z-index: -1;
+
+				animation: peak linear 10000ms infinite alternate 5s;
 			}
 
 			.baloon {
 				position: absolute;
-				top: 11.4%;
+				top: 13.4%;
 				left: -10%;
 				width: 7%;
 				z-index: -1;
@@ -57,9 +83,14 @@
 			.camera {
 				position: absolute;
 				top: 55.4%;
-				left: 10.5%;
+				left: 10.1%;
 				width: 3%;
 				z-index: 5;
+				display: none;
+
+				@include media($medium-screen-up) {
+					display: block;
+				}
 
 				animation: camswing linear 750ms infinite alternate;
 				transform-origin: top center;
@@ -78,11 +109,15 @@
 			.drip {
 				position: absolute;
 				top: 72.4%;
-				left: 42%;
+				left: 41.1%;
 				width: 1%;
 				z-index: 1;
 
-				animation: drip linear 6500ms infinite;
+				animation: dripm linear 6500ms infinite;
+
+				@include media($medium-screen-up) {
+					animation: drip linear 6500ms infinite;
+				}
 				animation-delay: 3s;
 			}
 
@@ -102,7 +137,11 @@
 				left: 16.5%;
 				width: 2%;
 
-				animation: rg1 linear 15s infinite;
+				animation: rg1m linear 15s infinite;
+
+				@include media($medium-screen-up) {
+					animation: rg1 linear 15s infinite;
+				}
 				animation-delay: 3s;
 			}
 
@@ -112,7 +151,11 @@
 				left: 16.5%;
 				width: 2%;
 
-				animation: rg2 linear 15s infinite;
+				animation: rg2m linear 15s infinite;
+
+				@include media($medium-screen-up) {
+					animation: rg2 linear 15s infinite;
+				}
 				animation-delay: 3s;
 			}
 
@@ -122,7 +165,11 @@
 				left: 16.5%;
 				width: 2%;
 
-				animation: rg3 linear 15s infinite;
+				animation: rg3m linear 15s infinite;
+
+				@include media($medium-screen-up) {
+					animation: rg3 linear 15s infinite;
+				}
 				animation-delay: 3s;
 			}
 
@@ -132,7 +179,11 @@
 				left: 72.5%;
 				width: 2%;
 
-				animation: rg4 linear 15s infinite;
+				animation: rg4m linear 15s infinite;
+
+				@include media($medium-screen-up) {
+					animation: rg4 linear 15s infinite;
+				}
 				animation-delay: 8s;
 			}
 
@@ -142,7 +193,11 @@
 				left: 72.5%;
 				width: 2%;
 
-				animation: rg5 linear 15s infinite;
+				animation: rg5m linear 15s infinite;
+
+				@include media($medium-screen-up) {
+					animation: rg5 linear 15s infinite;
+				}
 				animation-delay: 8s;
 			}
 
@@ -152,8 +207,37 @@
 				left: 72.5%;
 				width: 2%;
 
-				animation: rg6 linear 15s infinite;
+				animation: rg6m linear 15s infinite;
+
+				@include media($medium-screen-up) {
+					animation: rg6 linear 15s infinite;
+				}
 				animation-delay: 8s;
+			}
+
+			.note1 {
+				position: absolute;
+				top: 49%;
+				left: 83%;
+				opacity: 0;
+				width: 0.61%;
+
+				animation: 	n1l linear 3s infinite 2s,
+							n1t linear 3s infinite 2s,
+							fadeinout linear 3s infinite 2s,
+							grow linear 3s infinite 2s;
+			}
+			.note2 {
+				position: absolute;
+				top: 49%;
+				left: 83%;
+				opacity: 0;
+				width: 0.61%;
+
+				animation: 	n2l linear 3s infinite 2.5s,
+							n2t linear 3s infinite 2.5s,
+							fadeinout linear 3s infinite 2.5s,
+							grow linear 3s infinite 2.5s;
 			}
 
 
@@ -191,18 +275,21 @@
 	}
 
 	#primary {
-		background: #020202;
-		background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
-		background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
-		background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
-		background: linear-gradient(225deg, #444, #020202);
+			background: #020202;
+			background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(225deg, #444, #020202);
 
 		h1, h2, h3, h4, h5, p, a {
 			color: white;
 		}
 
+		#main {
+		}
+
 		article {
-			padding: 60px 0;
+			padding: 80px 0;
 
 			.entry-content {
 				text-align: center;
@@ -215,8 +302,8 @@
 				}
 
 				p {
-					font-size: 19px;
-					color: #b7b7b7;
+					font-size: 24px;
+					color: #ffffff;
 					text-transform: uppercase;
 					font-weight: 700;
 				}
@@ -224,10 +311,35 @@
 		}
 
 		#offerings {
-			padding-bottom: 60px;
+			padding: 0 0 80px 0;
+			// background-color: #f9f9f9;
+			position: relative;
+			text-align: center;
+
+			.slick-prev {
+				background-image: url(assets/images/left-arrow.svg);
+				left: -50px;
+			}
+
+			.slick-next {
+				background-image: url(assets/images/right-arrow.svg);
+				right: -50px;
+			}
+
+			.slick-prev, .slick-next {
+				outline: 0;
+				width: 40px;
+				height: 40px;
+				background-repeat: no-repeat;
+				background-position: center;
+
+				&:before {
+					display: none;
+				}
+			}
 
 			.offering {
-				text-align: center;
+				// text-align: center;
 				padding: 0 30px;
 
 				h2 {
@@ -236,21 +348,99 @@
 					text-transform: uppercase;
 					margin-bottom: 20px;
 					line-height: 1.2;
+					// color: black;
+				}
+
+				p {
+					// color: black;
 				}
 				
 				a {
-					display: inline-block;
-					text-align: center;
-					padding: 8px 14px;
-					border: 1px solid #fff;
-					margin-top: 20px;
-					text-transform: uppercase;
+					// display: inline-block;
+					// text-align: center;
+					// padding: 8px 14px;
+					// border: 1px solid #333;
+					// margin-top: 20px;
+					// text-transform: uppercase;
+					// color: black;
 
-					&:hover {
-						background: $brand-primary;
-						border-color: $brand-primary;
+					// &:hover {
+					// 	background: $brand-primary;
+					// 	border-color: $brand-primary;
+					// }
+				}
+			}
+		}
+	}
+
+	#featurework {
+		padding: 0;
+
+		.container {
+			padding: 0;
+		}
+
+		.feature-work-item {
+			float: left;
+			width: 50%;
+			position: relative;
+
+			&:nth-child(1),
+			&:nth-child(2) {
+				// margin-bottom: 40px;
+			}
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+
+			.info {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				opacity: 0;
+				padding: 0;
+				transition: all 150ms ease-in-out;
+				box-sizing: border-box;
+
+				.table {
+					background: rgba(0,0,0,0.8);
+					// border: 10px solid white;
+					box-sizing: border-box;
+
+					h2 {
+						color: #ffffff;
+						font-size: 20px;
+						font-weight: 400;
+						margin: 0;
+					}
+
+					hr {
+						margin: 10px auto;
+						width: 25px;
+					}
+
+					h3 {
+						color: #ffffff;
+						font-size: 16px;
+						font-weight: 400;
+						margin: 0;
 					}
 				}
+			}
+
+			&:hover {
+
+				.info {
+					padding: 0;
+					opacity: 1;
+				}
+			}
+
+			img {
+				display: block;
 			}
 		}
 	}

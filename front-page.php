@@ -15,22 +15,29 @@ get_header(); ?>
 		<div class="table">
 			<div class="cell middle">
 				<div class="wrap">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/background.jpg" alt="" style="display: block;">	
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/background.jpg" alt="" class="desktop">	
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/background-mobile.jpg" alt="" class="mobile">	
 
 					<div class="elements">
-						<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/hp/tree.png" alt="">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/tree.png" alt="" class="desktop">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/tree-mobile.png" alt="" class="mobile">
 						
 						<div class="rock">
-							<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/hp/rock.png" alt="">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rock.png" alt="" class="desktop">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rock-mobile.png" alt="" class="mobile">
 						</div>
 
 						<div class="baloon">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/balloon.png" alt="">
 						</div>
-
-						<div class="tenticle-right">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/tentacle-right.png" alt="">
+					
+						<div class="wally">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/wally.png" alt="">
 						</div>
+
+						<!-- <div class="tenticle-right">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/tentacle-right.png" alt="">
+						</div> -->
 
 						<div class="camera">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/camera.png" alt="">
@@ -74,13 +81,20 @@ get_header(); ?>
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/frr.png" alt="">
 						</div>
 
+						<div class="note1">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/note1.png" alt="">
+						</div>
+						<div class="note2">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/note2.png" alt="">
+						</div>
+
 					</div>
 				</div>
 			</div></div>
 	</section>
 
 	<div id="primary" class="content-area section dark">
-		<main id="main" class="site-main container narrow" role="main">
+		<main id="main" class="site-main" role="main">
 
 		<?php
 		if ( have_posts() ) :
@@ -93,7 +107,7 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				get_template_part( 'template-parts/content', 'home' );
 
 			endwhile;
 
@@ -108,27 +122,64 @@ get_header(); ?>
 		</main><!-- #main -->
 
 		<section id="offerings">
-			<div class="container">
-			<?php
-			if( have_rows('feature_content') ):
-				while ( have_rows('feature_content') ) : the_row();
-					$title = get_sub_field('title');
-					$link = get_sub_field('link');
-					$text = get_sub_field('text');
-					?>
-					<div class="offering span4">
-						<h2><?php echo $title; ?></h2>
-						<?php echo $text; ?>
-						<a href="<?php echo $link; ?>">See More</a>
-					</div>
-					<?php
-				endwhile;
-			endif;
-			?>
+			<div class="container narrow">
+				<div class="slick">
+				<?php
+				if( have_rows('feature_content') ):
+					while ( have_rows('feature_content') ) : the_row();
+						$title = get_sub_field('title');
+						$link = get_sub_field('link');
+						$text = get_sub_field('text');
+						?>
+						<div class="offering">
+							<a href="<?php echo $link; ?>">
+								<h2><?php echo $title; ?></h2>
+								<?php echo $text; ?>
+							</a>
+						</div>
+						<?php
+					endwhile;
+				endif;
+				?>
+				</div>
 			</div>
 		</section>
 
 	</div>
+
+<!-- 	<section id="featurework">
+		<div class="container">
+
+			<div class="feature-work-item">
+				<a href="<?php home_url( 'studio' ); ?>">
+					<img src="http://local.wearebeard.com/wp-content/uploads/2017/11/studio.jpg" alt=""> 
+
+					<div class="info">
+						<div class="table"><div class="cell middle">
+							<h2>The Studio</h2>
+							<hr>
+							<h3>Meet The Team</h3>
+						</div></div>
+					</div>
+				</a>
+			</div>
+
+			<div class="feature-work-item">
+				<a href="<?php home_url( 'studio' ); ?>">
+					<img src="http://local.wearebeard.com/wp-content/uploads/2017/11/dave.jpg" alt=""> 
+
+					<div class="info">
+						<div class="table"><div class="cell middle">
+							<h2>What We Do</h2>
+							<hr>
+							<h3>Our Offerings</h3>
+						</div></div>
+					</div>
+				</a>
+			</div>
+
+		</div>
+	</section> -->
 
 	<div id="brands" class="section light">
 		<div class="container">

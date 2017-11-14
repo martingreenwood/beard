@@ -57,13 +57,11 @@
 		// padding: 0 0 60px 0;
 		// margin-bottom: 60px;
 		@include row;
-		min-height: 600px;
+		// min-height: 600px;
 		position: relative;
-		display: unset;
+		// display: unset;
 
 		.wrapper {
-			height: 100%;
-			display: table;
 		}
 
 		.ovewrlay {
@@ -81,7 +79,7 @@
 		}
 
 		&.even {
-			background-position: bottom right;	
+			// background-position: bottom right;	
 
 			.text {
 				padding-left: 100px;
@@ -95,19 +93,13 @@
 		}
 
 		.half {
-			// height: auto;
-			min-height: 600px;
-			// float: left;
-			// width: 50%;
-
 			width: 50%;
-			height: 100%;
 			display: table-cell;
+			vertical-align: middle;
 
-			background-repeat: no-repeat;
-			background-size: 50% auto;
-			background-position: bottom left;
-			background-size: cover;
+			img {
+				display: block;
+			}
 
 		}
 		

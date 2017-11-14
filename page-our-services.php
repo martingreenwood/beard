@@ -60,16 +60,17 @@ get_header(); ?>
 				</div>
 				<?php endif;?>
 				<div class="wrapper">
+					<div class="table">
+						<div class="cell middle">
 
-					<div class="half" style="background-image: url(<?php echo $image['url'] ?>);">
-						&nbsp;
-					</div>
-					
-					<div class="half text">
-						<div class="table">
-							<div class="cell middle">
+							<div class="half">
+								<img src="<?php echo $image['url'] ?>" alt="">
+							</div>
+							
+							<div class="half text">
 								<?php the_sub_field('content'); ?>
 							</div>
+
 						</div>
 					</div>
 				</div>
@@ -97,8 +98,8 @@ get_header(); ?>
 						</div>
 					</div>
 
-					<div class="half" style="background-image: url(<?php echo $image['url'] ?>);">
-						&nbsp;
+					<div class="half">
+						<img src="<?php echo $image['url'] ?>" alt="">
 					</div>
 
 				</div>
