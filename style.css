@@ -1607,6 +1607,8 @@ a:hover, a:active { outline: 0; }
 
 #sections .service::after { clear: both; content: ""; display: table; }
 
+#sections .service img { -webkit-filter: grayscale(100%); filter: grayscale(100%); }
+
 #sections .service .ovewrlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 #sections .service .ovewrlay a.more { display: block; height: 100%; text-indent: -9999px; }
@@ -1615,13 +1617,17 @@ a:hover, a:active { outline: 0; }
 
 #sections .service.even:before { left: auto; right: 0; }
 
+#sections .service.odd .text { padding-right: 100px; padding-left: 40px; }
+
+#sections .service.odd:before { right: auto; left: 0; }
+
 #sections .service .half { width: 50%; display: table-cell; vertical-align: middle; }
 
 #sections .service .half img { display: block; width: 100%; }
 
 #sections .service .text { padding: 40px; padding-right: 100px; background: white; }
 
-#sections .service h1, #sections .service h2 { font-size: 62px; margin: 0 0 20px 0; }
+#sections .service h1, #sections .service h2 { font-size: 42px; margin: 0 0 20px 0; }
 
 #sections .fulllist { padding: 60px 0; text-align: center; background: #020202; background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */ background: linear-gradient(225deg, #444, #020202); }
 
@@ -1663,7 +1669,7 @@ a:hover, a:active { outline: 0; }
 /*===========================
 =            MAP            =
 ===========================*/
-#map { width: 100%; height: 400px; /* fixes potential theme css conflict */ }
+#map { width: 100%; height: 600px; /* fixes potential theme css conflict */ }
 
 #map img { max-width: inherit !important; }
 
@@ -1793,11 +1799,11 @@ a:hover, a:active { outline: 0; }
 
 .our-services #sections, .what-we-do #sections { background: #ffffff; }
 
-.our-services #sections .service, .what-we-do #sections .service { min-height: 600px; }
+.our-services #sections .service, .what-we-do #sections .service { position: relative; }
 
-.our-services #sections .service:before, .what-we-do #sections .service:before { opacity: 0; content: ''; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); background-image: url(assets/images/add-circular-outlined-button.svg); background-size: 40px; background-position: center; background-repeat: no-repeat; position: absolute; top: 0; left: 0; -webkit-transition: all .25s ease-in-out; -moz-transition: all .25s ease-in-out; -ms-transition: all .25s ease-in-out; -o-transition: all .25s ease-in-out; transition: all .25s ease-in-out; }
+.our-services #sections .service .ovewrlay, .what-we-do #sections .service .ovewrlay { opacity: 0; content: ''; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); background-image: url(assets/images/add-circular-outlined-button.svg); background-size: 40px; background-position: center; background-repeat: no-repeat; position: absolute; top: 0; left: 0; z-index: 2; -webkit-transition: all .25s ease-in-out; -moz-transition: all .25s ease-in-out; -ms-transition: all .25s ease-in-out; -o-transition: all .25s ease-in-out; transition: all .25s ease-in-out; }
 
-.our-services #sections .service:hover:before, .what-we-do #sections .service:hover:before { opacity: 1; }
+.our-services #sections .service:hover .ovewrlay, .what-we-do #sections .service:hover .ovewrlay { opacity: 1; }
 
 .our-services .fulllist, .what-we-do .fulllist { padding: 60px 0; text-align: center; background: #020202; background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */ background: linear-gradient(225deg, #444, #020202); }
 
@@ -1816,43 +1822,55 @@ a:hover, a:active { outline: 0; }
 /*============================
 =            TEAM            =
 ============================*/
-.our-team #primary { padding-top: 140px; }
+.our-team #primary, .the-studio #primary { padding-top: 140px; }
 
-.our-team #team { padding: 0; background: white; }
+.our-team #team_content, .the-studio #team_content { background: #020202; background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */ background: linear-gradient(225deg, #444, #020202); }
 
-.our-team #team .members { display: block; margin-bottom: 0; }
+.our-team #team_content h1, .our-team #team_content h2, .our-team #team_content h3, .our-team #team_content h4, .our-team #team_content h5, .our-team #team_content p, .our-team #team_content a, .the-studio #team_content h1, .the-studio #team_content h2, .the-studio #team_content h3, .the-studio #team_content h4, .the-studio #team_content h5, .the-studio #team_content p, .the-studio #team_content a { color: white; }
 
-.our-team #team .members::after { clear: both; content: ""; display: table; }
+.our-team #team_content article, .the-studio #team_content article { padding: 80px 0; }
 
-.our-team #team .members:last-of-type { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
+.our-team #team_content article .entry-content, .the-studio #team_content article .entry-content { text-align: center; }
 
-.our-team #team .members .member { text-align: center; position: relative; float: left; width: 50%; }
+.our-team #team_content article .entry-content h1, .our-team #team_content article .entry-content h2, .the-studio #team_content article .entry-content h1, .the-studio #team_content article .entry-content h2 { font-size: 32px; margin: 0 0 40px 0; color: white; }
 
-@media screen and (min-width: 1024px) { .our-team #team .members .member { width: 25%; } }
+.our-team #team_content article .entry-content p, .the-studio #team_content article .entry-content p { color: #ffffff; }
 
-.our-team #team .members .member .info { position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; opacity: 0; padding: 0; transition: all 150ms ease-in-out; box-sizing: border-box; }
+.our-team #team, .the-studio #team { padding: 0; background: white; }
 
-.our-team #team .members .member .info .table { background: rgba(0, 0, 0, 0.8); box-sizing: border-box; padding: 20px; }
+.our-team #team .members, .the-studio #team .members { display: block; margin-bottom: 0; }
 
-.our-team #team .members .member ul { display: inline-block; list-style: none; margin: 20px 0 0 0; padding: 0; margin-bottom: 20px; }
+.our-team #team .members::after, .the-studio #team .members::after { clear: both; content: ""; display: table; }
 
-.our-team #team .members .member ul li { display: inline-block; margin: 0 4px; }
+.our-team #team .members:last-of-type, .the-studio #team .members:last-of-type { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
 
-.our-team #team .members .member ul li a { color: white; }
+.our-team #team .members .member, .the-studio #team .members .member { text-align: center; position: relative; float: left; width: 50%; }
 
-.our-team #team .members .member h2 { color: #ffffff; font-size: 20px; font-weight: 600; margin: 0; }
+@media screen and (min-width: 1024px) { .our-team #team .members .member, .the-studio #team .members .member { width: 25%; } }
 
-.our-team #team .members .member hr { margin: 10px auto; width: 25px; }
+.our-team #team .members .member .info, .the-studio #team .members .member .info { position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; opacity: 0; padding: 0; transition: all 150ms ease-in-out; box-sizing: border-box; }
 
-.our-team #team .members .member h3 { color: #ffffff; font-size: 16px; font-weight: 400; margin: 0; }
+.our-team #team .members .member .info .table, .the-studio #team .members .member .info .table { background: rgba(0, 0, 0, 0.8); box-sizing: border-box; padding: 20px; }
 
-.our-team #team .members .member p { color: white; }
+.our-team #team .members .member ul, .the-studio #team .members .member ul { display: inline-block; list-style: none; margin: 20px 0 0 0; padding: 0; margin-bottom: 20px; }
 
-.our-team #team .members .member .image { display: block; }
+.our-team #team .members .member ul li, .the-studio #team .members .member ul li { display: inline-block; margin: 0 4px; }
 
-.our-team #team .members .member .image img { display: block; width: 100%; }
+.our-team #team .members .member ul li a, .the-studio #team .members .member ul li a { color: white; }
 
-.our-team #team .members .member:hover .info { padding: 0; opacity: 1; }
+.our-team #team .members .member h2, .the-studio #team .members .member h2 { color: #ffffff; font-size: 20px; font-weight: 600; margin: 0; }
+
+.our-team #team .members .member hr, .the-studio #team .members .member hr { margin: 10px auto; width: 25px; }
+
+.our-team #team .members .member h3, .the-studio #team .members .member h3 { color: #ffffff; font-size: 16px; font-weight: 400; margin: 0; }
+
+.our-team #team .members .member p, .the-studio #team .members .member p { color: white; }
+
+.our-team #team .members .member .image, .the-studio #team .members .member .image { display: block; }
+
+.our-team #team .members .member .image img, .the-studio #team .members .member .image img { display: block; width: 100%; }
+
+.our-team #team .members .member:hover .info, .the-studio #team .members .member:hover .info { padding: 0; opacity: 1; }
 
 /*============================
 =            WORK            =
@@ -1943,17 +1961,47 @@ a:hover, a:active { outline: 0; }
 /*===============================
 =            CONTACT            =
 ===============================*/
+.contact img.gform_ajax_spinner { display: none !important; }
+
+.contact img { -webkit-filter: grayscale(100%); filter: grayscale(100%); }
+
 .contact #primary { padding-top: 140px; padding-bottom: 60px; }
 
-.contact #primary .gform_wrapper .gform_fields .gfield:first-of-type { margin-top: 0; }
+.contact #sections .gform_wrapper { margin: 0; }
 
-.contact #primary article { padding: 0; text-align: left; }
+.contact #sections .gform_wrapper div.validation_error { display: none; }
 
-.contact #primary input, .contact #primary textarea { border: 1px solid #ccc; padding: 5px; }
+.contact #sections .gform_wrapper img { display: none; }
 
-.contact #primary input[type="submit"] { border-color: #ccc; color: #333; text-transform: uppercase; padding: 13px 16px; line-height: 1; }
+.contact #sections .gform_wrapper .gform_footer { padding: 10px 0 0 0; margin: 0; clear: both; width: 100%; }
 
-.contact #primary input[type="submit"]:hover { background: #000000; border-color: #000000; color: white; }
+.contact #sections .gform_wrapper .gform_fields .gfield { max-width: 100%; width: 100%; margin-top: 0; position: relative; display: inline-block; }
+
+.contact #sections .gform_wrapper .gform_fields .validation_message { color: #790000; font-weight: 700; letter-spacing: normal; position: absolute; }
+
+.contact #sections .gform_wrapper .gform_fields .gfield_error { background-color: transparent; margin-bottom: 0; border-top: 0; border-bottom: 0; padding-bottom: 0; padding-top: 0; box-sizing: border-box; }
+
+.contact #sections .gform_wrapper .gform_fields .gfield_label, .contact #sections .gform_wrapper .gform_fields .ginput_container { float: left; width: 50%; clear: none; margin-top: 0; }
+
+.contact #sections .gform_wrapper .gform_fields .gfield:first-of-type { margin-top: 0; }
+
+.contact #sections .gform_wrapper .gform_fields .gfield input, .contact #sections .gform_wrapper .gform_fields .gfield textarea { border: 1px solid #ccc; padding: 5px; }
+
+.contact #sections .gform_wrapper .gform_fields .gfield input[type="submit"] { border-color: #ccc; color: #333; text-transform: uppercase; padding: 13px 16px; line-height: 1; }
+
+.contact #sections .gform_wrapper .gform_fields .gfield input[type="submit"]:hover { background: #000000; border-color: #000000; color: white; }
+
+.contact #sections .row { margin-bottom: 0; }
+
+.contact #sections .row .half { width: 50%; display: table-cell; vertical-align: middle; }
+
+.contact #sections .row .half.text { padding: 40px; }
+
+.contact #sections .row .half img { width: 100%; display: block; }
+
+.contact #sections .row:nth-child(odd) .text { padding-right: 80px; }
+
+.contact #sections .row:nth-child(even) .text { padding-left: 80px; }
 
 /*--------------------------------------------------------------
 ## Asides

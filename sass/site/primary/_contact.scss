@@ -4,46 +4,140 @@
 
 .contact {
 
+	img.gform_ajax_spinner {
+		display: none!important;
+	}
+
+	img {
+		-webkit-filter:	grayscale(100%);
+		filter:	grayscale(100%);
+	}
+
 	#primary {
 		padding-top: 140px;
 		padding-bottom: 60px;
 	}
 
-	#primary {
+	#sections {
 
 		.gform_wrapper {
+			margin: 0;
+
+			div.validation_error {
+				display: none;
+			}
+
+			img {
+				display: none;
+			}
+
+			.gform_footer {
+				padding: 10px 0 0 0;
+				margin: 0;
+				clear: both;
+				width: 100%;
+			}
 			
 			.gform_fields {
+
+				.gfield {
+					max-width: 100%;
+					width: 100%;
+					margin-top: 0;
+					position: relative;
+					display: inline-block;
+				}
+
+				.validation_message {
+					color: #790000;
+					font-weight: 700;
+					letter-spacing: normal;
+					position: absolute;
+				}
+
+				.gfield_error {
+					background-color: transparent;
+					margin-bottom: 0;
+					border-top: 0;
+					border-bottom: 0;
+					padding-bottom: 0;
+					padding-top: 0;
+					box-sizing: border-box;
+				}
+
+				.gfield_label, .ginput_container {
+					float: left;
+					width: 50%;
+					clear: none;
+					margin-top: 0;
+				}
+
+				.gfield_label {
+				}
+
+				.ginput_container {
+				}
 				
 				.gfield {
 					&:first-of-type {
 						margin-top: 0;
 					}
+
+					input, textarea {
+						border: 1px solid #ccc;
+						padding: 5px;
+					}
+
+					input[type="submit"] {
+						border-color: #ccc;
+						color: #333;
+						text-transform: uppercase;
+						padding: 13px 16px;
+						line-height: 1;
+
+						&:hover {
+							background: $brand-primary;
+							border-color: $brand-primary;
+							color: white;
+						}
+					} 
 				}
 			}
 		}
+	}
 
-		article {
-			padding: 0;
-			text-align: left;
-		}
+	#sections {
 
-		input, textarea {
-			border: 1px solid #ccc;
-			padding: 5px;
-		}
+		.row {
+			margin-bottom: 0;
 
-		 input[type="submit"] {
-			border-color: #ccc;
-			color: #333;
-			text-transform: uppercase;
-			padding: 13px 16px;
-			line-height: 1;
+			.half {
+				width: 50%;
+				display: table-cell;
+				vertical-align: middle;
 
-			&:hover {
-				background: $brand-primary;
-				border-color: $brand-primary;
-				color: white;
+				&.text {
+					padding: 40px;
+				}
+
+				img {
+					width: 100%;
+					display: block;
+				}
+			}
+
+			&:nth-child(odd) {
+
+				.text {
+					padding-right: 80px;
+				}
+			}
+
+			&:nth-child(even) {
+
+				.text {
+					padding-left: 80px;
+				}
 			}
 		}
 	}

@@ -38,17 +38,17 @@ get_header(); ?>
 
 	<div id="sections">
 
-		<div class="service odd">
+		<div class="row">
 
 			<div class="wrapper">
 				<div class="table">
 					<div class="cell middle">
 
 						<div class="half">
-							<img src="http://placehold.it/900x900" alt="">
+							<img src="http://local.wearebeard.com/wp-content/uploads/2017/11/example5.jpg" alt="">
 						</div>
 						
-						<div class="half text contactdeets">
+						<div class="half text">
 							<?php the_content( ); ?>
 						</div>
 
@@ -58,7 +58,7 @@ get_header(); ?>
 
 		</div>
 
-		<div class="service odd">
+		<div class="row">
 
 			<div class="wrapper">
 				<div class="table">
@@ -73,8 +73,8 @@ get_header(); ?>
 							?>
 						</div>
 
-						<div class="half contactform">
-							<img src="http://placehold.it/900x900" alt="">
+						<div class="half">
+							<img src="http://local.wearebeard.com/wp-content/uploads/2017/11/example2.jpg" alt="">
 						</div>
 
 					</div>

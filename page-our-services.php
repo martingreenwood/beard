@@ -43,36 +43,39 @@ get_header(); ?>
 		</main>
 	</div>
 
-		<?php $counter = 0;  ?>
-	<?php if( have_rows('repeater') ): ?>
-	
+	<?php $counter = 0;  ?>
+	<?php
+	$args = array(
+		'post_parent' => get_the_ID(),
+		'post_type' => 'page',
+		'orderby' => 'menu_order',
+		'posts_per_page' => -1,
+	);
+
+	$child_query = new WP_Query( $args );
+	?>
 	<div id="sections">
-		<?php while( have_rows('repeater') ): the_row(); // rows ?>
+		<?php while ( $child_query->have_posts() ) : $child_query->the_post(); $counter++; ?>
 
-		<?php if( have_rows('column') ): while( have_rows('column') ): the_row(); $counter ++; // columns ?>
-
-			<?php if($counter == 1) { ?>
-			<?php $image = get_sub_field('image'); ?>
+		<?php if($counter == 1) { ?>
 			<div class="service odd">
-				<?php if (get_sub_field( 'page_link' )): ?>
-				<div class="ovewrlay">
-					<a class="more" href="<?php the_sub_field( 'page_link' ); ?>">Read More</a>
-				</div>
-				<?php endif;?>
 				<div class="wrapper">
 					<div class="table">
 						<div class="cell middle">
 
 							<div class="half">
-								<img src="<?php echo $image['url'] ?>" alt="">
+								<?php the_post_thumbnail( '' ) ?>
 							</div>
 							
 							<div class="half text">
-								<?php the_sub_field('content'); ?>
+								<?php the_content( ); ?>
 							</div>
 
 						</div>
 					</div>
+				</div>
+				<div class="ovewrlay">
+					<a class="more" href="<?php the_permalink( ); ?>">Read More</a>
 				</div>
 			</div>
 			<?php }
@@ -81,36 +84,32 @@ get_header(); ?>
 			// Reset the counter
 			$counter = 0; 
 			?>
-			<?php $image = get_sub_field('image'); ?>
 			<div class="service even">
-				<?php if (get_sub_field( 'page_link' )): ?>
-				<div class="ovewrlay">
-					<a class="more" href="<?php the_sub_field( 'page_link' ); ?>">Read More</a>
-				</div>
-				<?php endif;?>
 				<div class="wrapper">
 					
 					<div class="half text">
 						<div class="table">
 							<div class="cell middle">
-								<?php the_sub_field('content'); ?>
+								<?php the_content( ); ?>
 							</div>
 						</div>
 					</div>
 
 					<div class="half">
-						<img src="<?php echo $image['url'] ?>" alt="">
+						<?php the_post_thumbnail(  ) ?>
 					</div>
 
 				</div>
+				<div class="ovewrlay">
+					<a class="more" href="<?php the_permalink( ); ?>">Read More</a>
+				</div>
 			</div>
 			<?php } //end the elseif $counter ?>
-				
-		<?php endwhile; endif; ?>
-	<?php endwhile;  ?>
-	</div>
-	<?php endif; ?>
-	
+
+		<?php endwhile; ?>
+
+		<?php wp_reset_postdata(); ?>
+
 		<div class="fulllist">
 			<div class="container narrow">
 				<?php the_field( 'additional_content' ); ?>

@@ -2,10 +2,46 @@
 =            TEAM            =
 ============================*/
 
-.our-team {
+.our-team, .the-studio {
 
 	#primary {
 		padding-top: 140px;
+	}
+
+	#team_content {
+		background: #020202;
+		background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
+		background: linear-gradient(225deg, #444, #020202);
+
+		h1, h2, h3, h4, h5, p, a {
+			color: white;
+		}
+
+		#main {
+		}
+
+		article {
+			padding: 80px 0;
+
+			.entry-content {
+				text-align: center;
+
+				h1, h2 {
+					font-size: 32px;
+					margin: 0 0 40px 0;
+					color: white;
+				}
+
+				p {
+					// font-size: 16px;
+					color: #ffffff;
+					// text-transform: uppercase;
+					// font-weight: 700;
+				}
+			}
+		}
 	}
 
 	#team {

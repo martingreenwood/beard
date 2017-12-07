@@ -122,7 +122,7 @@ get_header(); ?>
 		</main><!-- #main -->
 
 		<section id="offerings">
-			<div class="container narrow">
+			<div class="container ">
 				<div class="slick">
 				<?php
 				if( have_rows('feature_content') ):

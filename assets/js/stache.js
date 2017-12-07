@@ -155,7 +155,7 @@ jQuery(window).on("orientationchange",function($){
 
 	$("#offerings .slick").slick({
 		infinite: 		true,
-		slidesToShow: 	3,
+		slidesToShow: 	4,
 		centerMode: 	true,
   		centerPadding: '0',
 		dots: 			false,
@@ -167,7 +167,7 @@ jQuery(window).on("orientationchange",function($){
 			{
 				breakpoint: 		1024,
 				settings: {
-					slidesToShow: 	3,
+					slidesToShow: 	4,
 					slidesToScroll: 1,
 					infinite: 		true,
 				}
