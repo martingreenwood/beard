@@ -45,7 +45,7 @@ get_header(); ?>
 					<div class="cell middle">
 
 						<div class="half">
-							<img src="http://local.wearebeard.com/wp-content/uploads/2017/11/example5.jpg" alt="">
+							<img src="http://local.wearebeard.com/wp-content/uploads/2017/12/faces.jpg" alt="">
 						</div>
 						
 						<div class="half text">
@@ -74,7 +74,7 @@ get_header(); ?>
 						</div>
 
 						<div class="half">
-							<img src="http://local.wearebeard.com/wp-content/uploads/2017/11/example2.jpg" alt="">
+							<img src="http://local.wearebeard.com/wp-content/uploads/2017/12/ben.jpg" alt="">
 						</div>
 
 					</div>

@@ -1836,6 +1836,26 @@ a:hover, a:active { outline: 0; }
 
 .our-team #team_content article .entry-content p, .the-studio #team_content article .entry-content p { color: #ffffff; }
 
+.our-team #insta, .the-studio #insta { width: 100%; }
+
+.our-team #insta header, .the-studio #insta header { text-align: center; padding: 100px 0; margin: 0 auto; width: 600px; }
+
+.our-team #insta header h3, .the-studio #insta header h3 { margin-bottom: 30px; }
+
+.our-team #insta header a, .the-studio #insta header a { display: inline-block; padding: 8px 27px; border: 1px solid #333; margin-top: 30px; text-transform: uppercase; font-weight: 600; }
+
+.our-team #insta .instagrams .ig-item, .the-studio #insta .instagrams .ig-item { float: left; width: 25%; position: relative; }
+
+.our-team #insta .instagrams .ig-item img, .the-studio #insta .instagrams .ig-item img { display: block; }
+
+.our-team #insta .instagrams .ig-item p, .the-studio #insta .instagrams .ig-item p { color: white; }
+
+.our-team #insta .instagrams .ig-item .caption, .the-studio #insta .instagrams .ig-item .caption { position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; opacity: 0; padding: 0; transition: all 150ms ease-in-out; box-sizing: border-box; }
+
+.our-team #insta .instagrams .ig-item .caption .table, .the-studio #insta .instagrams .ig-item .caption .table { background: rgba(0, 0, 0, 0.8); box-sizing: border-box; padding: 20px; }
+
+.our-team #insta .instagrams .ig-item:hover .caption, .the-studio #insta .instagrams .ig-item:hover .caption { opacity: 1; }
+
 .our-team #team, .the-studio #team { padding: 0; background: white; }
 
 .our-team #team .members, .the-studio #team .members { display: block; margin-bottom: 0; }
@@ -1844,33 +1864,31 @@ a:hover, a:active { outline: 0; }
 
 .our-team #team .members:last-of-type, .the-studio #team .members:last-of-type { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
 
-.our-team #team .members .member, .the-studio #team .members .member { text-align: center; position: relative; float: left; width: 50%; }
+.our-team #team .members .member, .the-studio #team .members .member { text-align: center; position: relative; float: left; width: 100%; }
 
-@media screen and (min-width: 1024px) { .our-team #team .members .member, .the-studio #team .members .member { width: 25%; } }
+@media screen and (min-width: 1024px) { .our-team #team .members .member, .the-studio #team .members .member { width: 100%; } }
 
-.our-team #team .members .member .info, .the-studio #team .members .member .info { position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; opacity: 0; padding: 0; transition: all 150ms ease-in-out; box-sizing: border-box; }
-
-.our-team #team .members .member .info .table, .the-studio #team .members .member .info .table { background: rgba(0, 0, 0, 0.8); box-sizing: border-box; padding: 20px; }
+.our-team #team .members .member .info, .the-studio #team .members .member .info { position: absolute; right: 0; width: 50%; height: 100%; text-align: left; box-sizing: border-box; padding-right: 100px; padding-left: 40px; }
 
 .our-team #team .members .member ul, .the-studio #team .members .member ul { display: inline-block; list-style: none; margin: 20px 0 0 0; padding: 0; margin-bottom: 20px; }
 
 .our-team #team .members .member ul li, .the-studio #team .members .member ul li { display: inline-block; margin: 0 4px; }
 
-.our-team #team .members .member ul li a, .the-studio #team .members .member ul li a { color: white; }
+.our-team #team .members .member ul li a, .the-studio #team .members .member ul li a { color: black; }
 
-.our-team #team .members .member h2, .the-studio #team .members .member h2 { color: #ffffff; font-size: 20px; font-weight: 600; margin: 0; }
+.our-team #team .members .member h2, .the-studio #team .members .member h2 { font-size: 20px; font-weight: 600; margin: 0; }
 
 .our-team #team .members .member hr, .the-studio #team .members .member hr { margin: 10px auto; width: 25px; }
 
-.our-team #team .members .member h3, .the-studio #team .members .member h3 { color: #ffffff; font-size: 16px; font-weight: 400; margin: 0; }
+.our-team #team .members .member h3, .the-studio #team .members .member h3 { font-size: 16px; font-weight: 400; margin: 0; }
 
-.our-team #team .members .member p, .the-studio #team .members .member p { color: white; }
-
-.our-team #team .members .member .image, .the-studio #team .members .member .image { display: block; }
+.our-team #team .members .member .image, .the-studio #team .members .member .image { display: block; float: left; width: 50%; }
 
 .our-team #team .members .member .image img, .the-studio #team .members .member .image img { display: block; width: 100%; }
 
-.our-team #team .members .member:hover .info, .the-studio #team .members .member:hover .info { padding: 0; opacity: 1; }
+.our-team #team .members .member:nth-child(even) .image, .the-studio #team .members .member:nth-child(even) .image { float: right; }
+
+.our-team #team .members .member:nth-child(even) .info, .the-studio #team .members .member:nth-child(even) .info { right: auto; left: 0; padding-left: 100px; padding-right: 40px; }
 
 /*============================
 =            WORK            =

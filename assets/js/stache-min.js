@@ -90,6 +90,33 @@
 =            NAV SLOGAN             =
 ===================================*/
 
+(function ($) {
+    var parent = $(".members");
+    var divs = parent.find('.staff');
+    while (divs.length) {
+        parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+    }
+})(jQuery);
+
+// (function ($) {
+//     $('#feature-image').mousemove(function (e) {
+//         parallax(e, this, 1);
+//         parallax(e, document.getElementById('baloon'), 2);
+//         // parallax(e, document.getElementById('layer-three'), 3);
+//     });
+// })(jQuery);
+
+// function parallax(e, target, layer) {
+//     var layer_coeff = 10 / layer;
+//     var x = (jQuery(window).width() - target.offsetWidth) / 2 - (e.pageX - (jQuery(window).width() / 2)) / layer_coeff;
+//     var y = (jQuery(window).height() - target.offsetHeight) / 2 - (e.pageY - (jQuery(window).height() / 2)) / layer_coeff;
+//     jQuery(target).offset({ top: y ,left : x });
+// };
+
+/*===================================
+=            NAV SLOGAN             =
+===================================*/
+
 (function($) {
 
 	$('.menu-toggle').on('click', function() {

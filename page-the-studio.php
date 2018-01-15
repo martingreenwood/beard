@@ -111,7 +111,7 @@ get_header(); ?>
 	</div>
 	<?php endif; ?>
 
-	<div id="team_content" class="content-area">
+	<!-- <div id="team_content" class="content-area">
 		<main id="main" class="site-main container narrow" role="main">
 
 			<article>
@@ -126,7 +126,7 @@ get_header(); ?>
 
 
 		</main>
-	</div>
+	</div> -->
 
 	<div id="team">
 		<div class="wrapper">
@@ -137,8 +137,8 @@ get_header(); ?>
 
 					<?php $teamimage = wp_get_attachment_url( get_post_thumbnail_id($team->ID)); ?>
 					<div class="image"">
-						<!-- <?php the_post_thumbnail( 'snap' ); ?> -->
-						<img src="https://placeimg.com/900/900/people" alt="">
+						<?php the_post_thumbnail( 'snap' ); ?>
+						<!-- <img src="https://placeimg.com/900/900/people" alt=""> -->
 					</div>
 
 					<div class="info">
@@ -175,11 +175,60 @@ get_header(); ?>
 
 				</div>
 				<?php
-     			if($i % 4 == 0) {echo '</div><div class="members row">';} $i++;
+     			// if($i % 1 == 0) {echo '</div><div class="members row">';} $i++;
      			?>
 			<?php endwhile; wp_reset_query(); ?>
 			</div>
 		</div>
+	</div>
+
+	<div id="insta">
+		<div class="wrapper">
+			<header>
+				<h3>Follow us on instagram</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+				<a href="http://www.instagram.com/wearebeard" target="_blank" title="">Follow</a>
+			</header>
+			<div class="row instagrams">
+			<?php
+			// Supply a user id and an access token
+			$userid = "13911372";
+			$accessToken = "13911372.f2fa7d2.780b469082634eb9a8e1f92dd189f970";
+			$counter = 0;
+
+			// Gets our data
+			function fetchData($url){
+				$ch = curl_init();
+				curl_setopt($ch, CURLOPT_URL, $url);
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+				curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+				$result = curl_exec($ch);
+				curl_close($ch); 
+				return $result;
+			}
+			// Pulls and parses data.
+			$result = fetchData("https://api.instagram.com/v1/users/{$userid}/media/recent/?access_token={$accessToken}");
+			$result = json_decode($result);
+			?>
+
+			<?php foreach ($result->data as $ig_post): ?>
+			<div class="ig-item">
+				<img src="<?php echo $ig_post->images->standard_resolution->url; ?>" alt="">
+				<?php if(isset($ig_post->caption->text)): ?>
+				<div class="caption">
+					<div class="table">
+						<div class="cell middle">
+							<p><em style="font-size: 0.875em;"><?php echo date("d m Y", $ig_post->caption->created_time); ?></em><br><?php echo $ig_post->caption->text; ?></p>
+						</div>
+					</div>
+				</div>
+				<?php endif; ?>
+			</div>
+			<?php if ($counter++ == 7) break; ?>
+			<?php endforeach ?> 
+
+			</div>
+		</div>	
 	</div>
 
 <?php

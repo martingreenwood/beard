@@ -111,7 +111,7 @@ get_header(); ?>
 	</div>
 	<?php endif; ?>
 
-	<div id="team_content" class="content-area">
+<!-- 	<div id="team_content" class="content-area">
 		<main id="main" class="site-main container narrow" role="main">
 
 			<article>
@@ -126,7 +126,7 @@ get_header(); ?>
 
 
 		</main>
-	</div>
+	</div> -->
 
 	<div id="team">
 		<div class="wrapper">
@@ -134,15 +134,15 @@ get_header(); ?>
 			<div class="members row">
 			<?php while ( $team->have_posts() ) : $team->the_post(); ?>
 				<div class="member">
+					<div class="table"><div class="cell middle">
 
-					<?php $teamimage = wp_get_attachment_url( get_post_thumbnail_id($team->ID)); ?>
-					<div class="image"">
-						<!-- <?php the_post_thumbnail( 'snap' ); ?> -->
-						<img src="https://placeimg.com/900/900/people" alt="">
-					</div>
+						<?php $teamimage = wp_get_attachment_url( get_post_thumbnail_id($team->ID)); ?>
+						<div class="image"">
+							<?php the_post_thumbnail( 'snap' ); ?>
+							<!-- <img src="https://placeimg.com/900/900/people" alt=""> -->
+						</div>
 
-					<div class="info">
-						<div class="table"><div class="cell middle">
+						<div class="info">
 							<h2><?php the_title( ); ?></h2>
 							<h3><?php the_field( 'sub_heading' ); ?></h3>
 							<ul>
@@ -170,12 +170,13 @@ get_header(); ?>
 							</ul>
 
 							<?php the_content(); ?>
-						</div></div>
-					</div>
+						</div>
+
+					</div></div>
 
 				</div>
 				<?php
-     			if($i % 4 == 0) {echo '</div><div class="members row">';} $i++;
+     			// if($i % 1 == 0) {echo '</div><div class="members row">';} $i++;
      			?>
 			<?php endwhile; wp_reset_query(); ?>
 			</div>

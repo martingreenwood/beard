@@ -18,7 +18,7 @@ get_header(); ?>
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/background.jpg" alt="" class="desktop">	
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/background-mobile.jpg" alt="" class="mobile">	
 
-					<div class="elements">
+					<div class="elements" id="elements">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/tree.png" alt="" class="desktop">
 						<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/tree-mobile.png" alt="" class="mobile">
 						
@@ -27,7 +27,7 @@ get_header(); ?>
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rock-mobile.png" alt="" class="mobile">
 						</div>
 
-						<div class="baloon">
+						<div class="baloon" id="baloon">
 							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/balloon.png" alt="">
 						</div>
 					

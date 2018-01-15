@@ -136,6 +136,14 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"\/acf-json\/group_5a314eb1c1ff1.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/acf-json\/group_5a314eb1c1ff1-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/archive.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -794,6 +802,20 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/extras.php",
+		"oF": 0
+		},
+	"\/inc\/Instagram.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/Instagram.php",
+		"oF": 0
+		},
+	"\/inc\/InstagramException.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/InstagramException.php",
 		"oF": 0
 		},
 	"\/inc\/jetpack.php": {
