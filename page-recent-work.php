@@ -14,37 +14,8 @@
 
 get_header(); ?>
 
-	<?php 
-	$featureimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
-	?>
-<!-- 	<section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
-		<div class="caption table">
-			<div class="cell bottom">
-				<div class="wrapper">
-					<h1><?php the_title(); ?></h1>
-					<hr>
-					<h2><?php the_field( 'sub_heading' ); ?></h2>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main container narrow" role="main">
-
-			<?php
-			while ( have_posts() ) : the_post();
-
-				// get_template_part( 'template-parts/content', 'page' );
-
-			endwhile;
-			?>
-
-		</main>
-	</div>
-
 	<div id="portfolio">
-		<div class="container">
+		<div class="row">
 		<?php $i = 1; $work = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => -1 ) ); ?>
 			<div class="grid">
 			<!-- <div class="grid-sizer"></div> -->
@@ -57,13 +28,11 @@ get_header(); ?>
 							<div class="table"><div class="cell middle">
 								<h2><?php the_title( ); ?></h2>
 								<?php $terms = wp_get_post_terms( get_the_id(), 'project-attribute' ); ?>
-								<hr>
 								<h3><?php echo $terms[0]->name; ?></h3>
 							</div></div>
 						</div>
 						</a>
 				</div>
-				<?php //if($i % 3 == 0) {echo '</div><div class="members row">';} $i++; ?>
 			<?php endwhile; wp_reset_query(); ?>
 			</div>
 		</div>

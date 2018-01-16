@@ -11,6 +11,7 @@
 	#portfolio {
 		background: white;
 		padding: 0;
+		padding-top: 99px;
 
 		.container {
 			padding: 0;
@@ -44,26 +45,18 @@
 				box-sizing: border-box;
 
 				.table {
-					background: rgba(0,0,0,0.8);
-					// border: 10px solid white;
+					background: rgba(255,255,255,0.8);
 					box-sizing: border-box;
 
 					h2 {
-						color: #ffffff;
-						font-size: 20px;
-						font-weight: 400;
+						color: #000000;
+						font-size: 45px;
 						margin: 0;
 					}
 
-					hr {
-						margin: 10px auto;
-						width: 25px;
-					}
-
 					h3 {
-						color: #ffffff;
-						font-size: 16px;
-						font-weight: 400;
+						color: #000000;
+						font-size: 15px;
 						margin: 0;
 					}
 				}

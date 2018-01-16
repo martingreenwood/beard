@@ -13,12 +13,19 @@
 	background: #fff;
 }
 
+#content {
+	background: -webkit-linear-gradient(225deg, #e6e6e6, #fff); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(225deg, #e6e6e6, #fff); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(225deg, #e6e6e6, #fff); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(225deg, #e6e6e6, #fff);
+}
+
 .page-template-default {
 
 	#primary {
 		background: -webkit-linear-gradient(225deg, #e6e6e6, #fff); /* For Safari 5.1 to 6.0 */
-	    background: -o-linear-gradient(225deg, #e6e6e6, #fff); /* For Opera 11.1 to 12.0 */
-	    background: -moz-linear-gradient(225deg, #e6e6e6, #fff); /* For Firefox 3.6 to 15 */
+		background: -o-linear-gradient(225deg, #e6e6e6, #fff); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient(225deg, #e6e6e6, #fff); /* For Firefox 3.6 to 15 */
 		background: linear-gradient(225deg, #e6e6e6, #fff);
 
 		article {
@@ -45,8 +52,43 @@
 ====================================*/
 
 #brands {
-	padding: 40px 0;
+	padding: 100px 0;
 	background: #f7f7f7;
+	display: inline-block;
+	width: 100%;
+
+	header {
+		margin-bottom: 50px;
+		text-align: center;
+
+		h2 {
+			font-weight: 700;
+			font-size: 62px;
+			text-transform: uppercase;
+			margin: 0 0 30px 0;
+		}
+	}
+
+	.brandicons {
+		display: inline-block;
+		width: 100%;
+
+		.brandicon {
+			border: 2px solid white;
+			margin-right: 20px;
+			box-sizing: border-box;
+			float: left;
+			width: calc(20% - 20px);
+
+			&:nth-child(5) {
+				margin-right: 0;
+			}
+
+			&:nth-child(1) {
+				margin-left: 10px;
+			}
+		}
+	}
 }
 
 /*=====================================

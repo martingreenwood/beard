@@ -60,11 +60,31 @@
 
 	var $document = $(document),
 	$element = $('#masthead'),
-	className = 'scrolled';
+	header = $('#masthead');
+
+	// className = 'hidden';
 
 	$document.scroll(function() {
-		$element.toggleClass(className, $document.scrollTop() >= 10);
+		$element.toggleClass('hidden', $document.scrollTop() >= 99);
 	});
+
+	$document.scroll(function() {
+		$element.toggleClass('fixed', $document.scrollTop() >= $(window).height());
+	});
+
+	// $(window).scroll(function() {
+	// 	// if ($(window).scrollTop() === 0) {
+	// 	// 	header.removeClass("fixed");
+	// 	// 	header.show();
+	// 	// } else if ($(window).scrollTop() > $(window).height()) {
+	// 	// 	header.addClass("fixed");
+	// 	// 	header.slideDown(1000);
+	// 	// } else {
+	// 	// 	header.slideUp(1000, function() {
+	// 	// 		header.removeClass("fixed");
+	// 	// 	});
+	// 	// }
+	// });  
 
 	var pfolioText = $(".pfolio .entry-content");
 	var pfolioTextOffset = $(".pfolio .entry-content").offset();

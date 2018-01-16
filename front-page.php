@@ -131,10 +131,9 @@ get_header(); ?>
 					$text = get_sub_field('text');
 					?>
 					<div class="offering span4">
-						<a href="<?php echo $link; ?>">
-							<h2><?php echo $title; ?></h2>
-							<?php echo $text; ?>
-						</a>
+						<h2><a href="<?php echo $link; ?>"><?php echo $title; ?></a></h2>
+						<?php echo $text; ?>
+						<a class="more" href="<?php echo $link; ?>">Find Out More</a>
 					</div>
 					<?php
 				endwhile;
@@ -145,51 +144,60 @@ get_header(); ?>
 
 	</div>
 
-<!-- 	<section id="featurework">
+	<section id="worktitle">
 		<div class="container">
-
-			<div class="feature-work-item">
-				<a href="<?php home_url( 'studio' ); ?>">
-					<img src="http://local.wearebeard.com/wp-content/uploads/2017/11/studio.jpg" alt=""> 
-
-					<div class="info">
-						<div class="table"><div class="cell middle">
-							<h2>The Studio</h2>
-							<hr>
-							<h3>Meet The Team</h3>
-						</div></div>
-					</div>
-				</a>
+			<div class="row">
+				<h2>Featured Projects</h2>
 			</div>
-
-			<div class="feature-work-item">
-				<a href="<?php home_url( 'studio' ); ?>">
-					<img src="http://local.wearebeard.com/wp-content/uploads/2017/11/dave.jpg" alt=""> 
-
-					<div class="info">
-						<div class="table"><div class="cell middle">
-							<h2>What We Do</h2>
-							<hr>
-							<h3>Our Offerings</h3>
-						</div></div>
-					</div>
-				</a>
-			</div>
-
 		</div>
-	</section> -->
+	</section>
+
+	<section id="featurework">
+		<div class="row">
+		<?php //feature_work ?>
+		<?php $i = 1; $work = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 4, 'meta_key' => 'feature_work', 'meta_value' => 1 ) ); ?>
+		<?php while ( $work->have_posts() ) : $work->the_post(); ?>
+			<?php $portfolio_image = get_field( 'portfolio_image' ); ?>
+			<div class="feature-work-item">
+				<a href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail( 'full' ) ?>
+					<div class="info">
+						<div class="table"><div class="cell middle">
+							<h2><?php the_title( ); ?></h2>
+							<?php $terms = wp_get_post_terms( get_the_id(), 'project-attribute' ); ?>
+							<h3><?php echo $terms[0]->name; ?></h3>
+						</div></div>
+					</div>
+				</a>
+			</div>
+			<?php //if($i % 2 == 0) {echo '</div><div class="members row">';} $i++; ?>
+		<?php endwhile; wp_reset_query(); ?>
+		</div>
+	</section>
+
+	<section id="moreshit">
+		<div class="container">
+			<div class="row">
+				<h2><a href="<?php echo home_url( 'recent-work' ) ?>" title="VIEW OUR FULL PORTFOLIO PAGE">VIEW OUR FULL PORTFOLIO PAGE</a></h2>
+			</div>
+		</div>
+	</section>
 
 	<div id="brands" class="section light">
 		<div class="container">
-		<?php $brands = get_field('brands', 'options'); if( $brands ): ?>
-			<div class="brandicons">
+			<header>
+				<h2>Selected Clients</h2>
+			</header><!-- /header -->
+			<?php $brands = get_field('brands', 'options'); if( $brands ): $i = 1; ?>
+			<div class="brandicons row">
 			<?php foreach( $brands as $brand ): ?>
 				<div class='brandicon'>
 					<img src="<?php echo $brand['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 				</div>
-			<?php endforeach; ?>
+				<?php if($i % 5 == 0) {echo '</div><div class="brandicons row">';} ?>
+			<?php $i++; endforeach; ?>
 			</div>
-		<?php endif; ?>
+			<?php endif; ?>
 		</div>
 	</div>
 
