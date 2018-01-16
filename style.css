@@ -1312,7 +1312,7 @@ a:hover, a:active { outline: 0; }
 
 .main-navigation ul { display: none; }
 
-.menu-icon { width: 40px; height: 30px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .5s ease-in-out; -moz-transition: .5s ease-in-out; -o-transition: .5s ease-in-out; transition: .5s ease-in-out; cursor: pointer; border: 0; outline: 0; margin: 35px 20px 0px 20px; }
+.menu-icon { width: 30px; height: 20px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .5s ease-in-out; -moz-transition: .5s ease-in-out; -o-transition: .5s ease-in-out; transition: .5s ease-in-out; cursor: pointer; border: 0; outline: 0; padding: 0; margin: 35px 20px 0px 20px; }
 
 .menu-icon:focus, .menu-icon:hover { background-color: transparent; color: inherit; }
 
@@ -1588,11 +1588,11 @@ a:hover, a:active { outline: 0; }
 /*==============================
 =            HEADER            =
 ==============================*/
-#masthead { position: fixed; left: 0; right: 0; top: 0; z-index: 51; height: 99px; background-color: transparent; -webkit-transition: top .5s linear 0s, background 0.5s linear 0s; -moz-transition: top .5s linear 0s, background 0.5s linear 0s; -ms-transition: top .5s linear 0s, background 0.5s linear 0s; -o-transition: top .5s linear 0s, background 0.5s linear 0s; transition: top .5s linear 0s, background 0.5s linear 0s; }
+#masthead { position: fixed; left: 0; right: 0; top: 0; z-index: 51; height: 90px; background-color: transparent; -webkit-transition: top .5s linear 0s, background 0.5s linear 0s; -moz-transition: top .5s linear 0s, background 0.5s linear 0s; -ms-transition: top .5s linear 0s, background 0.5s linear 0s; -o-transition: top .5s linear 0s, background 0.5s linear 0s; transition: top .5s linear 0s, background 0.5s linear 0s; }
 
 #masthead .site-branding { float: left; background: white; border-radius: 50%; margin: 20px 0 20px 20px; }
 
-#masthead .site-branding img { width: 60px; -webkit-transition: all 800ms ease-in-out; -moz-transition: all 800ms ease-in-out; -ms-transition: all 800ms ease-in-out; -o-transition: all 800ms ease-in-out; transition: all 800ms ease-in-out; display: block; }
+#masthead .site-branding img { width: 50px; -webkit-transition: all 800ms ease-in-out; -moz-transition: all 800ms ease-in-out; -ms-transition: all 800ms ease-in-out; -o-transition: all 800ms ease-in-out; transition: all 800ms ease-in-out; display: block; }
 
 #masthead .site-branding img:hover { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); }
 
@@ -1601,6 +1601,8 @@ a:hover, a:active { outline: 0; }
 #masthead.hidden { top: -99px; -webkit-transition: top .5s linear 0s, background 0.5s linear 0s; -moz-transition: top .5s linear 0s, background 0.5s linear 0s; -ms-transition: top .5s linear 0s, background 0.5s linear 0s; -o-transition: top .5s linear 0s, background 0.5s linear 0s; transition: top .5s linear 0s, background 0.5s linear 0s; }
 
 #masthead.fixed, #masthead.scriolled { position: fixed; top: 0px; background-color: #fff; z-index: 102; }
+
+#masthead.fixed .site-branding, #masthead.scriolled .site-branding { z-index: 999999; position: fixed; }
 
 #masthead.fixed .menu-icon, #masthead.scriolled .menu-icon { z-index: 999999; position: fixed; right: 0; }
 
@@ -1652,7 +1654,7 @@ a:hover, a:active { outline: 0; }
 
 .page-template-default #primary { background: -webkit-linear-gradient(225deg, #e6e6e6, #fff); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(225deg, #e6e6e6, #fff); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(225deg, #e6e6e6, #fff); /* For Firefox 3.6 to 15 */ background: linear-gradient(225deg, #e6e6e6, #fff); }
 
-.page-template-default #primary article { padding-top: 60px; padding-top: 60px; text-align: center; }
+.page-template-default #primary article { text-align: center; }
 
 .page-template-default #primary article .entry-content h1, .page-template-default #primary article .entry-content h2 { font-weight: 700; font-size: 62px; text-transform: uppercase; margin: 0 0 30px 0; }
 
@@ -1884,7 +1886,7 @@ a:hover, a:active { outline: 0; }
 /*================================
 =            SERVICES            =
 ================================*/
-.our-services #primary, .what-we-do #primary { padding-top: 140px; }
+.our-services #primary, .what-we-do #primary { padding: 140px 0 60px 0; }
 
 .our-services #sections, .what-we-do #sections { background: #ffffff; }
 
@@ -1911,7 +1913,7 @@ a:hover, a:active { outline: 0; }
 /*============================
 =            TEAM            =
 ============================*/
-.our-team #primary, .the-studio #primary { padding-top: 140px; }
+.our-team #primary, .the-studio #primary { padding: 140px 0 60px 0; }
 
 .our-team #team_content, .the-studio #team_content { background: #020202; background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */ background: linear-gradient(225deg, #444, #020202); }
 
@@ -1961,11 +1963,11 @@ a:hover, a:active { outline: 0; }
 
 .our-team #team .members .member ul, .the-studio #team .members .member ul { display: inline-block; list-style: none; margin: 20px 0 0 0; padding: 0; margin-bottom: 20px; }
 
-.our-team #team .members .member ul li, .the-studio #team .members .member ul li { display: inline-block; margin: 0 4px; }
+.our-team #team .members .member ul li, .the-studio #team .members .member ul li { display: inline-block; vertical-align: middle; margin: 0 10px 0 0; font-size: 18px; }
 
 .our-team #team .members .member ul li a, .the-studio #team .members .member ul li a { color: black; }
 
-.our-team #team .members .member h2, .the-studio #team .members .member h2 { font-size: 20px; font-weight: 600; margin: 0; }
+.our-team #team .members .member h2, .the-studio #team .members .member h2 { font-size: 45px; font-weight: 600; margin: 0; }
 
 .our-team #team .members .member hr, .the-studio #team .members .member hr { margin: 10px auto; width: 25px; }
 
