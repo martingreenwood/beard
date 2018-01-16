@@ -109,6 +109,8 @@ add_action( 'widgets_init', 'beard_widgets_init' );
 function beard_scripts() {
 	wp_enqueue_style( 'beard-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'beard-owl', get_template_directory_uri() . "/assets/js/owl/assets/owl.carousel.min.css" );
+	wp_enqueue_style( 'beard-gfont', "https://fonts.googleapis.com/css?family=Montserrat:400,600" );
+	wp_enqueue_style( 'beard-font', "https://use.typekit.net/mal8icp.css" );
 
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'beard-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDghRTYRnA6R3P1LJ6wJP4AjTFoDsva0jk','','',true );
@@ -155,7 +157,7 @@ function beard_typekit() {
 </script>
 <?php
 }
-add_action('wp_head', 'beard_typekit', 99);
+//add_action('wp_head', 'beard_typekit', 99);
 
 /**
  * Custom post types.

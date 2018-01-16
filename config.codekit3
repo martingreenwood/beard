@@ -189,7 +189,7 @@
 		"oAP": "\/assets\/hp\/background-mobile.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/assets\/hp\/background.jpg": {
@@ -199,7 +199,7 @@
 		"oAP": "\/assets\/hp\/background.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/assets\/hp\/balloon.png": {
@@ -362,8 +362,8 @@
 		"oA": 0,
 		"oAP": "\/assets\/hp\/rock-mobile.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -373,8 +373,8 @@
 		"oA": 0,
 		"oAP": "\/assets\/hp\/rock.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -406,8 +406,8 @@
 		"oA": 0,
 		"oAP": "\/assets\/hp\/tree-mobile.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},

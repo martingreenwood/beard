@@ -328,120 +328,137 @@
 @keyframes drip {
     0% { top: 72.4%; }
     15% { top:75.6%; }
-    25% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+    25% { top:200%; }
+    50% { top: 200%; }
+    100% { top: 200%; }
 }
 @keyframes dripm {
     0% { top: 72.4%; }
     15% { top:75.6%; }
-    25% { top:160%; }
-    50% { top: 160%; }
-    100% { top: 160%; }
+    25% { top:200%; }
+    50% { top: 200%; }
+    100% { top: 200%; }
 }
 
 @keyframes rg1 {
     0% { top: 54.4%; }
-   	13% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+   	13% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1; }
+    100% { top: 200%; opacity: 0; }
 }
 @keyframes rg1m {
     0% { top: 54.4%; }
-   	13% { top:160%; }
-    50% { top: 160%; }
-    100% { top: 160%; }
+   	13% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rg2 {
     0% { top: 54.4%; }
-   	11% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+   	11% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rg2mn {
     0% { top: 54.4%; }
-   	11% { top:160%; }
-    50% { top: 160%; }
-    100% { top: 160%; }
+   	11% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rg3 {
     0% { top: 54.4%; }
-   	14% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+   	14% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rg3m {
     0% { top: 54.4%; }
-   	14% { top:160%; }
-    50% { top: 160%; }
-    100% { top: 160%; }
+   	14% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rg4 {
     0% { top: 54.4%; }
-   	13% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+   	13% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rg4m {
     0% { top: 54.4%; }
-   	13% { top:160%; }
-    50% { top: 160%; }
-    100% { top: 160%; }
+   	13% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rg5 {
     0% { top: 54.4%; }
-   	11% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+   	11% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rg5m {
     0% { top: 54.4%; }
-   	11% { top:160%; }
-    50% { top: 160%; }
-    100% { top: 160%; }
+   	11% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rg6 {
     0% { top: 54.4%; }
-   	14% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+   	14% { top:200%; }
+    50% { top: 200%; }
+    90% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rg6m {
     0% { top: 54.4%; }
-   	14% { top:160%; }
-    50% { top: 160%; }
-    100% { top: 160%; }
+   	14% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 
 @keyframes rfa {
     0% { top: 54.4%; }
-   	6% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+   	6% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rfb {
     0% { top: 54.4%; }
-    6% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+    6% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rfc {
     0% { top: 54.4%; }
-    6% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+    6% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rfd {
     0% { top: 54.4%; }
-    6% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+    6% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 @keyframes rfa {
     0% { top: 54.4%; }
-    6% { top:120%; }
-    50% { top: 120%; }
-    100% { top: 120%; }
+    6% { top:200%; }
+    50% { top: 200%; }
+    80% { top: 200%; opacity: 1 }
+    100% { top: 200%; opacity: 0 }
 }
 
 @keyframes rise {

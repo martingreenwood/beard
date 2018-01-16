@@ -137,10 +137,10 @@
 				left: 16.5%;
 				width: 2%;
 
-				animation: rg1m linear 15s infinite;
+				animation: rg1m linear 15s infinite 5s;
 
 				@include media($medium-screen-up) {
-					animation: rg1 linear 15s infinite;
+					animation: rg1 linear 15s infinite 5s;
 				}
 				animation-delay: 3s;
 			}
@@ -151,10 +151,10 @@
 				left: 16.5%;
 				width: 2%;
 
-				animation: rg2m linear 15s infinite;
+				animation: rg2m linear 15s infinite 5s;
 
 				@include media($medium-screen-up) {
-					animation: rg2 linear 15s infinite;
+					animation: rg2 linear 15s infinite 5s;
 				}
 				animation-delay: 3s;
 			}
@@ -165,10 +165,10 @@
 				left: 16.5%;
 				width: 2%;
 
-				animation: rg3m linear 15s infinite;
+				animation: rg3m linear 15s infinite 10s;
 
 				@include media($medium-screen-up) {
-					animation: rg3 linear 15s infinite;
+					animation: rg3 linear 15s infinite 10s;
 				}
 				animation-delay: 3s;
 			}
@@ -179,10 +179,10 @@
 				left: 72.5%;
 				width: 2%;
 
-				animation: rg4m linear 15s infinite;
+				animation: rg4m linear 15s infinite 13s;
 
 				@include media($medium-screen-up) {
-					animation: rg4 linear 15s infinite;
+					animation: rg4 linear 15s infinite 13;
 				}
 				animation-delay: 8s;
 			}
@@ -289,7 +289,8 @@
 		}
 
 		article {
-			padding: 80px 0;
+			padding-top: 80px;
+			padding-bottom: 80px;
 
 			.entry-content {
 				text-align: center;
@@ -316,31 +317,40 @@
 			position: relative;
 			text-align: center;
 
-			.slick-prev {
-				background-image: url(assets/images/left-arrow.svg);
-				left: -50px;
-			}
+			// .slick-prev {
+			// 	background-image: url(assets/images/left-arrow.svg);
+			// 	left: -50px;
+			// }
 
-			.slick-next {
-				background-image: url(assets/images/right-arrow.svg);
-				right: -50px;
-			}
+			// .slick-next {
+			// 	background-image: url(assets/images/right-arrow.svg);
+			// 	right: -50px;
+			// }
 
-			.slick-prev, .slick-next {
-				outline: 0;
-				width: 40px;
-				height: 40px;
-				background-repeat: no-repeat;
-				background-position: center;
+			// .slick-prev, .slick-next {
+			// 	outline: 0;
+			// 	width: 40px;
+			// 	height: 40px;
+			// 	background-repeat: no-repeat;
+			// 	background-position: center;
 
-				&:before {
-					display: none;
-				}
-			}
+			// 	&:before {
+			// 		display: none;
+			// 	}
+			// }
 
 			.offering {
-				// text-align: center;
-				padding: 0 30px;
+				// padding: 0 30px;
+				border-bottom: 1px solid #eee;
+				margin-bottom: 20px;
+
+				&:nth-child(3n) {
+					// clear: left;
+					margin-right: 0;
+				}
+				&:nth-child(4n) {
+					clear: left;
+				}
 
 				h2 {
 					font-weight: 700;

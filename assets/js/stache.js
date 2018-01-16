@@ -180,81 +180,81 @@ jQuery(window).on("orientationchange",function($){
 
 (function($) {
 
-	$("#offerings .slick").slick({
-		infinite: 		true,
-		slidesToShow: 	4,
-		centerMode: 	true,
-  		centerPadding: '0',
-		dots: 			false,
-		arrows: 		true,
-		slidesToScroll: 1,
-		autoplay: 		false,
+	// $("#offerings .slick").slick({
+	// 	infinite: 		true,
+	// 	slidesToShow: 	4,
+	// 	centerMode: 	true,
+ //  		centerPadding: '0',
+	// 	dots: 			false,
+	// 	arrows: 		true,
+	// 	slidesToScroll: 1,
+	// 	autoplay: 		false,
 
-		responsive: [
-			{
-				breakpoint: 		1024,
-				settings: {
-					slidesToShow: 	4,
-					slidesToScroll: 1,
-					infinite: 		true,
-				}
-			},
-			{
-				breakpoint: 		600,
-				settings: {
-					slidesToShow: 	2,
-					slidesToScroll: 2
-				}
-			},
-			{
-				breakpoint: 		480,
-				settings: {
-					slidesToShow: 	1,
-					slidesToScroll: 1
-				}
-			}
-		]
-	});
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 		1024,
+	// 			settings: {
+	// 				slidesToShow: 	4,
+	// 				slidesToScroll: 1,
+	// 				infinite: 		true,
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 		600,
+	// 			settings: {
+	// 				slidesToShow: 	2,
+	// 				slidesToScroll: 2
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 		480,
+	// 			settings: {
+	// 				slidesToShow: 	1,
+	// 				slidesToScroll: 1
+	// 			}
+	// 		}
+	// 	]
+	// });
 
-	$('.brandicons').slick({
-		infinite: 		true,
-		slidesToShow: 	8,
-		speed: 			300,
-		dots: 			false,
-		arrows: 		false,
-		slidesToScroll: 1,
-		autoplay: 		true,
-		autoplaySpeed: 	3000,
+	// $('.brandicons').slick({
+	// 	infinite: 		true,
+	// 	slidesToShow: 	8,
+	// 	speed: 			300,
+	// 	dots: 			false,
+	// 	arrows: 		false,
+	// 	slidesToScroll: 1,
+	// 	autoplay: 		true,
+	// 	autoplaySpeed: 	3000,
 
-		responsive: [
-			{
-				breakpoint: 		1024,
-				settings: {
-					slidesToShow: 	8,
-					slidesToScroll: 8,
-					infinite: 		true,
-					dots: 			true
-				}
-			},
-			{
-				breakpoint: 		600,
-				settings: {
-					slidesToShow: 	4,
-					slidesToScroll: 4
-				}
-			},
-			{
-				breakpoint: 		480,
-				settings: {
-					slidesToShow: 	2,
-					slidesToScroll: 2
-				}
-			}
-		]
-		// You can unslick at a given breakpoint now by adding:
-		// settings: "unslick"
-		// instead of a settings object
-	});
+	// 	responsive: [
+	// 		{
+	// 			breakpoint: 		1024,
+	// 			settings: {
+	// 				slidesToShow: 	8,
+	// 				slidesToScroll: 8,
+	// 				infinite: 		true,
+	// 				dots: 			true
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 		600,
+	// 			settings: {
+	// 				slidesToShow: 	4,
+	// 				slidesToScroll: 4
+	// 			}
+	// 		},
+	// 		{
+	// 			breakpoint: 		480,
+	// 			settings: {
+	// 				slidesToShow: 	2,
+	// 				slidesToScroll: 2
+	// 			}
+	// 		}
+	// 	]
+	// 	// You can unslick at a given breakpoint now by adding:
+	// 	// settings: "unslick"
+	// 	// instead of a settings object
+	// });
 
 })(jQuery);
 

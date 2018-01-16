@@ -193,8 +193,12 @@
 	outline: 0;
 
 	position: absolute;
-	top: 55px;
-	right: 40px;
+	// top: 55px;
+	// right: 40px;
+
+	top: 35px;
+	right: 20px;
+			
 	z-index: 99;
 
 	&:focus, &:hover{

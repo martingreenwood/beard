@@ -122,26 +122,24 @@ get_header(); ?>
 		</main><!-- #main -->
 
 		<section id="offerings">
-			<div class="container ">
-				<div class="slick">
+			<div class="container narrow">
 				<?php
 				if( have_rows('feature_content') ):
-					while ( have_rows('feature_content') ) : the_row();
-						$title = get_sub_field('title');
-						$link = get_sub_field('link');
-						$text = get_sub_field('text');
-						?>
-						<div class="offering">
-							<a href="<?php echo $link; ?>">
-								<h2><?php echo $title; ?></h2>
-								<?php echo $text; ?>
-							</a>
-						</div>
-						<?php
-					endwhile;
+				while ( have_rows('feature_content') ) : the_row();
+					$title = get_sub_field('title');
+					$link = get_sub_field('link');
+					$text = get_sub_field('text');
+					?>
+					<div class="offering span4">
+						<a href="<?php echo $link; ?>">
+							<h2><?php echo $title; ?></h2>
+							<?php echo $text; ?>
+						</a>
+					</div>
+					<?php
+				endwhile;
 				endif;
 				?>
-				</div>
 			</div>
 		</section>
 

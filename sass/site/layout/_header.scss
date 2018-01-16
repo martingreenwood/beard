@@ -77,8 +77,17 @@
 		border-radius: 50%;
 		position: absolute;
 		z-index: 99;
-		left: 40px;
-		top: 40px;
+		// left: 40px;
+		// top: 40px;
+
+		left: 20px;
+		top: 20px;
+		
+		-webkit-transition: all 800ms ease-in-out;
+		-moz-transition: all 800ms ease-in-out;
+		-ms-transition: all 800ms ease-in-out;
+		-o-transition: all 800ms ease-in-out;
+		transition: all 800ms ease-in-out;
 
 		img {
 			width: 60px;
@@ -112,13 +121,18 @@
 	}
 
 	&.scrolled {
-		// background: white;
+		background: white;
+		height: 99px;
 		
 		.site-branding {
 
 			img {
 				//width: 45px;
 			}
+		}
+
+		.menu-icon {
+			
 		}
 	}
 }

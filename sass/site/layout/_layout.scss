@@ -6,8 +6,8 @@
 	@include outer-container();
 	padding: 0 40px;
 	
-	&.narrow {
-		@include outer-container(960px);
+	&.wide {
+		@include outer-container(100%);
 		padding: 0 40px;
 	}
 }
