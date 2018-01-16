@@ -72,22 +72,22 @@
 		$element.toggleClass('fixed', $document.scrollTop() >= $(window).height());
 	});
 
-	var pfolioText = $(".pfolio .entry-content");
-	var pfolioTextOffset = $(".pfolio .entry-content").offset();
+	// var pfolioText = $(".pfolio .entry-content");
+	// var pfolioTextOffset = $(".pfolio .entry-content").offset();
 
-	if (pfolioText.length) {
-		$(window).scroll(function() {	
-			if ( $(window).scrollTop() > pfolioTextOffset.top ){
-				$(pfolioText)
-					.stop()
-					.animate({"marginTop": ($(window).scrollTop() - pfolioTextOffset.top + 40) + "px"}, "slow" );
-			} else {
-				$(pfolioText)
-					.stop()
-					.animate({"marginTop": 0} );
-			}
-		})
-	}
+	// if (pfolioText.length) {
+	// 	$(window).scroll(function() {	
+	// 		if ( $(window).scrollTop() > pfolioTextOffset.top ){
+	// 			$(pfolioText)
+	// 				.stop()
+	// 				.animate({"marginTop": ($(window).scrollTop() - pfolioTextOffset.top + 40) + "px"}, "slow" );
+	// 		} else {
+	// 			$(pfolioText)
+	// 				.stop()
+	// 				.animate({"marginTop": 0} );
+	// 		}
+	// 	})
+	// }
 
 })(jQuery);
 
@@ -124,25 +124,25 @@
 ======================================*/
 
 // Select and loop the container element of the elements you want to equalise
-    $('#images .row').each(function(){  
+    // $('#images .row').each(function(){  
       
-      // Cache the highest
-      var highestBox = 0;
+    //   // Cache the highest
+    //   var highestBox = 0;
       
-      // Select and loop the elements you want to equalise
-      $('.element', this).each(function(){
+    //   // Select and loop the elements you want to equalise
+    //   $('.element', this).each(function(){
         
-        // If this box is higher than the cached highest then store it
-        if($(this).height() > highestBox) {
-          highestBox = $(this).height(); 
-        }
+    //     // If this box is higher than the cached highest then store it
+    //     if($(this).height() > highestBox) {
+    //       highestBox = $(this).height(); 
+    //     }
       
-      });  
+    //   });  
             
-      // Set the height of all those children to whichever was highest 
-      $('.element',this).height(highestBox);
+    //   // Set the height of all those children to whichever was highest 
+    //   $('.element',this).height(highestBox);
                     
-    }); 
+    // }); 
 
 
 /*===================================
