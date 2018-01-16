@@ -11,7 +11,7 @@
 ?>
 <!-- 
 	Built by Martin Greenwood
-	Lead Developer @wearebeard
+	Lead Developer at WEAREBEARD
 -->
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
