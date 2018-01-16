@@ -7,34 +7,8 @@
 
 get_header(); ?>
 
-	<?php 
-	$featureimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
-	$terms = wp_get_post_terms( $post->ID, 'project-attribute' );
-	//$luminance = get_avg_luminance($featureimage,10);
-	//echo "AVG LUMINANCE: $luminance<br />";
-	// assume a medium gray is the threshold, #acacac or RGB(172, 172, 172)
-	// this equates to a luminance of 170
-	// if ($luminance > 170) {
-	// 	$lum_class = "black-text";
-	// } else {
-	// 	$lum_class = "white-text";
-	// }
-	$highlight_color = get_field( 'highlight_colour' );
-	?>
-	<!-- <section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
-		<div class="caption table">
-			<div class="cell bottom">
-				<div class="wrapper">
-					<h1 <?php if($highlight_color): ?>style="color: <?php echo $highlight_color; ?>"<?php endif; ?>><?php the_title(); ?></h1>
-					<hr <?php if($highlight_color): ?>style="background: <?php echo $highlight_color; ?>"<?php endif; ?>>
-					<h2 <?php if($highlight_color): ?>style="color: <?php echo $highlight_color; ?>"<?php endif; ?>><?php echo $terms[0]->name; ?></h2>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
-	<div id="primary" class="content-area pfolio">
-		<main id="main" class="site-main container" role="main">
+	<!-- <div id="primary" class="content-area pfolio">
+		<main id="main" class="site-main container wide" role="main">
 		<section id="images" class="span8">
 			<?php $portfolio_gallery = get_field('portfolio_gallery'); if( $portfolio_gallery ): ?>
 			<?php foreach( $portfolio_gallery as $image ): ?>
@@ -51,7 +25,103 @@ get_header(); ?>
 		?>
 		</main>
 		<div id="buffer"></div>
+	</div> -->
+
+	<div id="primary" class="content-area pfolio">
+		<main id="main" class="site-main container wide" role="main">
+			<?php
+			while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content', 'portfolio' );
+			endwhile;
+			?>
+		</main>
 	</div>
+
+	<section id="images">
+
+		<?php
+		// rows
+		if( have_rows('portfolio_builder') ):
+			while ( have_rows('portfolio_builder') ) : the_row();
+			?>
+			<div class="row">
+			<?php
+				// items
+				if( have_rows('element') ):
+					while ( have_rows('element') ) : the_row();
+						$element_width = get_sub_field( 'element_width' );
+						$element_bg = get_sub_field( 'element_bg' );
+						$element_content_color = get_sub_field( 'element_content_color' );
+						?>
+						<div 
+							class="element <?php echo $element_width ?>" 
+							style="color: <?php echo $element_content_color ?>; background: <?php echo $element_bg; ?>;">
+
+							<?php
+							if( have_rows('item') ):
+								while ( have_rows('item') ) : the_row();
+
+									if( get_row_layout() == 'image' ):
+
+										$file = get_sub_field('image');
+
+										?>
+										<img src="<?php echo $file['url'] ?>" alt="">
+										<?php
+
+									elseif( get_row_layout() == 'text' ): 
+
+										?>
+										<div class="text">
+											<div class="table">
+												<div class="cell middle">
+													<?php the_sub_field('text'); ?>	
+												</div>
+											</div>
+										</div>
+										<?php
+									
+									elseif( get_row_layout() == 'quote' ): 
+
+										?>
+									<div class="text">
+											<div class="table">
+												<div class="cell middle">
+													<blockquote cite="http://example.com/facts">
+														<div class="icon">
+															<i class="fas fa-quote-left"></i>
+														</div>
+														<div class="blurb">
+															<h3><?php the_sub_field('quote'); ?></h3>
+															<p><?php the_sub_field('quotee'); ?></p>
+														</div>
+													</blockquote>
+												</div>
+											</div>	
+										</div>
+										<?php
+
+									endif;
+
+								endwhile;
+							endif;
+							?>
+
+						</div>
+						<?php
+					// end while for items
+					endwhile;
+				endif;
+
+			?>
+			</div>
+			<?php
+			// end while for rows
+			endwhile;
+		endif;
+		?>
+
+	</section>
 
 	<div class="page_links">
 		<span class="prev">

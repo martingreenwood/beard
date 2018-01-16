@@ -8,8 +8,13 @@
 	
 	&.wide {
 		@include outer-container(100%);
-		padding: 0 40px;
+		padding: 0 0;
 	}
+}
+
+.clear {
+	clear: both;
+	display: block;
 }
 
 .row {

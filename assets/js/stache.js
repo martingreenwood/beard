@@ -72,20 +72,6 @@
 		$element.toggleClass('fixed', $document.scrollTop() >= $(window).height());
 	});
 
-	// $(window).scroll(function() {
-	// 	// if ($(window).scrollTop() === 0) {
-	// 	// 	header.removeClass("fixed");
-	// 	// 	header.show();
-	// 	// } else if ($(window).scrollTop() > $(window).height()) {
-	// 	// 	header.addClass("fixed");
-	// 	// 	header.slideDown(1000);
-	// 	// } else {
-	// 	// 	header.slideUp(1000, function() {
-	// 	// 		header.removeClass("fixed");
-	// 	// 	});
-	// 	// }
-	// });  
-
 	var pfolioText = $(".pfolio .entry-content");
 	var pfolioTextOffset = $(".pfolio .entry-content").offset();
 
@@ -106,9 +92,9 @@
 })(jQuery);
 
 
-/*===================================
-=            NAV SLOGAN             =
-===================================*/
+/*================================
+=            MEMBERS             =
+================================*/
 
 (function ($) {
     var parent = $(".members");
@@ -132,6 +118,32 @@
 //     var y = (jQuery(window).height() - target.offsetHeight) / 2 - (e.pageY - (jQuery(window).height() / 2)) / layer_coeff;
 //     jQuery(target).offset({ top: y ,left : x });
 // };
+
+/*======================================
+=            EQUAL HEIGHTS             =
+======================================*/
+
+// Select and loop the container element of the elements you want to equalise
+    $('#images .row').each(function(){  
+      
+      // Cache the highest
+      var highestBox = 0;
+      
+      // Select and loop the elements you want to equalise
+      $('.element', this).each(function(){
+        
+        // If this box is higher than the cached highest then store it
+        if($(this).height() > highestBox) {
+          highestBox = $(this).height(); 
+        }
+      
+      });  
+            
+      // Set the height of all those children to whichever was highest 
+      $('.element',this).height(highestBox);
+                    
+    }); 
+
 
 /*===================================
 =            NAV SLOGAN             =
