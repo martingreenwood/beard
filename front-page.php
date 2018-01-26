@@ -93,7 +93,7 @@ get_header(); ?>
 			</div></div>
 	</section>
 
-	<div id="primary" class="content-area section dark">
+	<div id="primary" class="content-area section">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -122,7 +122,7 @@ get_header(); ?>
 		</main><!-- #main -->
 
 		<section id="offerings">
-			<div class="container narrow">
+			<div class="container wide">
 				<?php
 				if( have_rows('feature_content') ):
 				while ( have_rows('feature_content') ) : the_row();
@@ -144,13 +144,13 @@ get_header(); ?>
 
 	</div>
 
-	<section id="worktitle">
+	<!-- <section id="worktitle">
 		<div class="container">
 			<div class="row">
 				<h2>Featured Projects</h2>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section id="featurework">
 		<div class="row">
@@ -178,7 +178,7 @@ get_header(); ?>
 	<section id="moreshit">
 		<div class="container">
 			<div class="row">
-				<h2><a href="<?php echo home_url( 'recent-work' ) ?>" title="VIEW OUR FULL PORTFOLIO PAGE">VIEW OUR FULL PORTFOLIO PAGE</a></h2>
+				<h2><a href="<?php echo home_url( 'recent-work' ) ?>" title="VIEW OUR PORTFOLIO PAGE">VIEW OUR PORTFOLIO PAGE</a></h2>
 			</div>
 		</div>
 	</section>

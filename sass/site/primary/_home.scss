@@ -276,10 +276,10 @@
 
 	#primary {
 		background: #020202;
-		background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
-		background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
-		background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
-		background: linear-gradient(225deg, #444, #020202);
+		// background: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */
+		// background: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */
+		// background: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */
+		// background: linear-gradient(225deg, #444, #020202);
 
 		h1, h2, h3, h4, h5, p, a {
 			color: white;
@@ -291,6 +291,8 @@
 		article {
 			padding-top: 100px;
 			padding-bottom: 100px;
+			max-width: 80%;
+			margin: 0 auto;
 
 			.entry-content {
 				text-align: center;
@@ -317,6 +319,8 @@
 			// background-color: #f9f9f9;
 			position: relative;
 			text-align: center;
+			max-width: 80%;
+			margin: 0 auto;
 
 			// .slick-prev {
 			// 	background-image: url(assets/images/left-arrow.svg);
@@ -406,6 +410,7 @@
 	}
 
 	#worktitle {
+		background: #020202;
 		display: inline-block;
 		width: 100%;
 		padding: 50px 0;
@@ -416,7 +421,7 @@
 			text-align: center;
 			font-size: 62px;
 			text-transform: uppercase;
-			color: black;
+			color: white;
 			margin: 0;
 		}
 	}
@@ -493,16 +498,17 @@
 		width: 100%;
 		padding: 50px 0;
 		text-align: center;
+		background-color: #020202;
 
 		a {
 			display: inline-block;
 			text-align: center;
 			padding: 8px 14px;
-			border: 3px solid black;
+			border: 3px solid white;
 			margin-top: 20px;
 			font-size: 45px;
 			text-transform: uppercase;
-			color: black;
+			color: white;
 			font-weight: 700;
 		}
 	}
