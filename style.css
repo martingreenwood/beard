@@ -1297,9 +1297,9 @@ a:hover, a:active { outline: 0; }
 
 .main-navigation li:hover a:after, .main-navigation li:focus a:after { width: 75px; margin-left: 20px; }
 
-.main-navigation a { display: block; text-decoration: none; text-transform: uppercase; font-weight: 900; color: white; font-size: 20px; }
+.main-navigation a { display: block; text-decoration: none; text-transform: uppercase; font-weight: 900; color: white; font-size: 20px; font-family: "nimbus-sans-condensed", sans-serif; }
 
-@media screen and (min-width: 600px) { .main-navigation a { font-size: 44px; } }
+@media screen and (min-width: 600px) { .main-navigation a { font-size: 52px; line-height: 1.4; } }
 
 .main-navigation a:hover, .main-navigation a:visited { color: white; }
 
@@ -1344,11 +1344,23 @@ a:hover, a:active { outline: 0; }
 
 .slogan { position: fixed; opacity: 0; color: white; bottom: 40px; left: 50px; font-weight: 400; -webkit-transition-delay: 2s; transition-delay: 2s; -webkit-transition: all .25s ease-in-out; -moz-transition: all .25s ease-in-out; -ms-transition: all .25s ease-in-out; -o-transition: all .25s ease-in-out; transition: all .25s ease-in-out; }
 
+.socialites { bottom: 40px; right: 50px; height: 28px; position: fixed; opacity: 0; display: none; -webkit-transition-delay: 2s; transition-delay: 2s; -webkit-transition: all .25s ease-in-out; -moz-transition: all .25s ease-in-out; -ms-transition: all .25s ease-in-out; -o-transition: all .25s ease-in-out; transition: all .25s ease-in-out; }
+
+.socialites ul { display: block; text-align: right; }
+
+.socialites ul li { display: inline-block; float: none; }
+
+.socialites ul li a { font-size: 28px; margin-left: 10px; line-height: 1; }
+
+.socialites ul li a:after { display: none; }
+
 .toggled .menu-main-container { display: table; left: 0; }
 
 .toggled .menu-main-container ul { display: table-cell; width: 100%; height: 100%; vertical-align: middle; padding: 50px; }
 
 .toggled .slogan { opacity: 1; }
+
+.toggled .socialites { display: block; opacity: 1; }
 
 .toggled .menu-icon { z-index: 999999; position: fixed; right: 0; }
 

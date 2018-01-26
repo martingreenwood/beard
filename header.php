@@ -79,6 +79,15 @@
 						</h2>
 					</div>
 
+					<div class="socialites">
+						<ul>
+							<li><a href="https://www.facebook.com/wearebeard" target="_blank" title=""><i class="fab fa-facebook"></i></a></li>
+							<li><a href="https://www.instagram.com/wearebeard/" target="_blank" title=""><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/2166784/" target="_blank" title=""><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://twitter.com/wearebeard" target="_blank" title=""><i class="fab fa-twitter-square"></i></a></li>
+						</ul>
+					</div>
+
 				</nav>
 			<!-- </div> -->
 		<!-- </div> -->

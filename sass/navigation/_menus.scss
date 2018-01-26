@@ -76,9 +76,11 @@
 		font-weight: 900;
 		color: white;
 		font-size: 20px;
+		font-family: $heading-font-family;
 
 		@include media($medium-screen-up) {
-			font-size: 44px;
+			font-size: 52px;
+			line-height: 1.4;
 		}
 
 		&:hover, &:visited {
@@ -369,6 +371,45 @@
 	        transition: all .25s ease-in-out;
 }
 
+.socialites {
+	bottom: 40px;
+	right: 50px;
+	height: 28px;
+	position: fixed;
+	opacity: 0;
+	display: none;
+
+	-webkit-transition-delay: 2s;
+	        transition-delay: 2s;
+
+	-webkit-transition: all .25s ease-in-out;
+	   -moz-transition: all .25s ease-in-out;
+	    -ms-transition: all .25s ease-in-out;
+	     -o-transition: all .25s ease-in-out;
+	        transition: all .25s ease-in-out;
+
+	ul {
+		display: block;
+		text-align: right;
+
+		li {
+			display: inline-block;
+			float: none;
+
+			a {
+				font-size: 28px;
+				margin-left: 10px;
+				line-height: 1;
+
+
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
 .toggled {
 
 	.menu-main-container {
@@ -386,6 +427,11 @@
 	}
 
 	.slogan {
+		opacity: 1;
+	}
+
+	.socialites {
+		display: block;
 		opacity: 1;
 	}
 
