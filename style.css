@@ -2021,6 +2021,8 @@ a:hover, a:active { outline: 0; }
 
 .single-portfolio #primary article .entry-content h1, .single-portfolio #primary article .entry-content h2 { font-weight: 700; font-size: 62px; text-transform: uppercase; margin: 0 0 30px 0; }
 
+.single-portfolio #images { background-color: white; padding-top: 60px; }
+
 .single-portfolio #images .row { margin-bottom: 0; }
 
 .single-portfolio #images .element { float: left; }
