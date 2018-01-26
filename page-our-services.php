@@ -100,9 +100,9 @@ get_header(); ?>
 					</div>
 
 				</div>
-				<div class="ovewrlay">
+				<!-- <div class="ovewrlay">
 					<a class="more" href="<?php the_permalink( ); ?>">Read More</a>
-				</div>
+				</div> -->
 			</div>
 			<?php } //end the elseif $counter ?>
 
