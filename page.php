@@ -61,8 +61,8 @@ get_header(); ?>
 				<?php endif;?>
 				<div class="wrapper">
 
-					<div class="half" style="background-image: url(<?php echo $image['url'] ?>);">
-						&nbsp;
+					<div class="half">
+						<img src="<?php echo $image['url'] ?>" alt="">
 					</div>
 					
 					<div class="half text">
@@ -97,8 +97,8 @@ get_header(); ?>
 						</div>
 					</div>
 
-					<div class="half" style="background-image: url(<?php echo $image['url'] ?>);">
-						&nbsp;
+					<div class="half">
+						<img src="<?php echo $image['url'] ?>" alt="">
 					</div>
 
 				</div>

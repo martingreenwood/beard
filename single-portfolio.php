@@ -118,6 +118,25 @@ get_header(); ?>
 			<?php
 			// end while for rows
 			endwhile;
+
+		else:
+
+			$portfolio_gallery = get_field('portfolio_gallery');
+			$size = 'full'; // (thumbnail, medium, large, full or custom size)
+
+			if( $portfolio_gallery ): ?>
+			<div class="container">
+					<?php foreach( $portfolio_gallery as $image ): ?>
+					<div class="row">
+						<div class="columns twelve">
+					<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+						</div>
+					</div>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+			<?php endif;
+
 		endif;
 		?>
 
