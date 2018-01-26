@@ -74,9 +74,9 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<div class="ovewrlay">
+				<!-- <div class="ovewrlay">
 					<a class="more" href="<?php the_permalink( ); ?>">Read More</a>
-				</div>
+				</div> -->
 			</div>
 			<?php }
 			// If the second item in the loop
