@@ -14,5 +14,12 @@
 
 	.site-info {
 		padding-bottom: 20px;
+		padding-left: 40px;
+		padding-right: 40px;
+
+		@include media($medium-screen-up) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 }

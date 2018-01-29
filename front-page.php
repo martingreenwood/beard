@@ -15,16 +15,13 @@ get_header(); ?>
 		<div class="table">
 			<div class="cell middle">
 				<div class="wrap">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/background.jpg" alt="" class="desktop">	
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/background-mobile.jpg" alt="" class="mobile">	
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/background.jpg" alt="">	
 
 					<div class="elements" id="elements">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/tree.png" alt="" class="desktop">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/tree-mobile.png" alt="" class="mobile">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/tree.png" alt="">
 						
 						<div class="rock">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rock.png" alt="" class="desktop">
-							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rock-mobile.png" alt="" class="mobile">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/hp/rock.png" alt="">
 						</div>
 
 						<div class="baloon" id="baloon">

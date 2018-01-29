@@ -7,26 +7,6 @@
 
 get_header(); ?>
 
-	<!-- <div id="primary" class="content-area pfolio">
-		<main id="main" class="site-main container wide" role="main">
-		<section id="images" class="span8">
-			<?php $portfolio_gallery = get_field('portfolio_gallery'); if( $portfolio_gallery ): ?>
-			<?php foreach( $portfolio_gallery as $image ): ?>
-			<div class="item">
-				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-			</div>
-			<?php endforeach; ?>
-			<?php endif; ?>
-		</section>
-		<?php
-		while ( have_posts() ) : the_post();
-			get_template_part( 'template-parts/content', 'portfolio' );
-		endwhile;
-		?>
-		</main>
-		<div id="buffer"></div>
-	</div> -->
-
 	<div id="primary" class="content-area pfolio">
 		<main id="main" class="site-main container wide" role="main">
 			<?php

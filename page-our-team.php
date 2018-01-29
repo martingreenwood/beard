@@ -14,21 +14,6 @@
 
 get_header(); ?>
 
-	<?php 
-	$featureimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
-	?>
-	<!-- <section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
-		<div class="caption table">
-			<div class="cell bottom">
-				<div class="wrapper">
-					<h1><?php the_title(); ?></h1>
-					<hr>
-					<h2><?php the_field( 'sub_heading' ); ?></h2>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container narrow" role="main">
 
@@ -43,90 +28,7 @@ get_header(); ?>
 		</main>
 	</div>
 
-	<?php $counter = 0;  ?>
-	<?php if( have_rows('repeater') ): ?>
-	
-	<div id="sections">
-		<?php while( have_rows('repeater') ): the_row(); // rows ?>
-
-		<?php if( have_rows('column') ): while( have_rows('column') ): the_row(); $counter ++; // columns ?>
-
-			<?php if($counter == 1) { ?>
-			<?php $image = get_sub_field('image'); ?>
-			<div class="service odd">
-				<?php if (get_sub_field( 'page_link' )): ?>
-				<div class="ovewrlay">
-					<a class="more" href="<?php the_sub_field( 'page_link' ); ?>">Read More</a>
-				</div>
-				<?php endif;?>
-				<div class="wrapper">
-					<div class="table">
-						<div class="cell middle">
-
-							<div class="half">
-								<img src="<?php echo $image['url'] ?>" alt="">
-							</div>
-							
-							<div class="half text">
-								<?php the_sub_field('content'); ?>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-			<?php }
-			// If the second item in the loop
-			elseif($counter == 2) { 
-			// Reset the counter
-			$counter = 0; 
-			?>
-			<?php $image = get_sub_field('image'); ?>
-			<div class="service even">
-				<?php if (get_sub_field( 'page_link' )): ?>
-				<div class="ovewrlay">
-					<a class="more" href="<?php the_sub_field( 'page_link' ); ?>">Read More</a>
-				</div>
-				<?php endif;?>
-				<div class="wrapper">
-					
-					<div class="half text">
-						<div class="table">
-							<div class="cell middle">
-								<?php the_sub_field('content'); ?>
-							</div>
-						</div>
-					</div>
-
-					<div class="half">
-						<img src="<?php echo $image['url'] ?>" alt="">
-					</div>
-
-				</div>
-			</div>
-			<?php } //end the elseif $counter ?>
-				
-		<?php endwhile; endif; ?>
-	<?php endwhile;  ?>
-	</div>
-	<?php endif; ?>
-
-<!-- 	<div id="team_content" class="content-area">
-		<main id="main" class="site-main container narrow" role="main">
-
-			<article>
-
-				<div class="entry-content">
-				<?php
-					echo get_field( 'team_content' );
-				?>
-				</div>
-
-			</article>
-
-
-		</main>
-	</div> -->
+	<?php get_template_part( 'template-parts/content', 'repeat' ); ?>
 
 	<div id="team">
 		<div class="wrapper">

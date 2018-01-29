@@ -14,21 +14,6 @@
 
 get_header(); ?>
 
-	<?php 
-	$featureimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
-	?>
-	<!-- <section id="feature-image" class="parallax-window" data-bleed="50" data-parallax="scroll" data-image-src="<?php echo $featureimage; ?>">
-		<div class="caption table">
-			<div class="cell bottom">
-				<div class="wrapper">
-					<h1><?php the_title(); ?></h1>
-					<hr>
-					<h2><?php the_field( 'sub_heading' ); ?></h2>
-				</div>
-			</div>
-		</div>
-	</section> -->
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main container narrow" role="main">
 
@@ -63,7 +48,7 @@ get_header(); ?>
 					<div class="table">
 						<div class="cell middle">
 
-							<div class="half">
+							<div class="half" style="background-image: url(<?php get_the_post_thumbnail_url( 'full' ); ?>)">
 								<?php the_post_thumbnail( '' ) ?>
 							</div>
 							
@@ -95,7 +80,7 @@ get_header(); ?>
 						</div>
 					</div>
 
-					<div class="half">
+					<div class="half" style="background-image: url(<?php get_the_post_thumbnail_url( 'full' ); ?>)">
 						<?php the_post_thumbnail(  ) ?>
 					</div>
 

@@ -372,12 +372,21 @@
 }
 
 .socialites {
-	bottom: 40px;
-	right: 50px;
-	height: 28px;
 	position: fixed;
 	opacity: 0;
 	display: none;
+
+	height: 18px;
+	right: auto;
+	left: 45px;
+	bottom: 70px;
+
+	@include media($medium-screen-up) {
+		bottom: 40px;
+		right: 50px;
+		left: auto;
+		height: 28px;
+	}
 
 	-webkit-transition-delay: 2s;
 	        transition-delay: 2s;
@@ -397,10 +406,14 @@
 			float: none;
 
 			a {
-				font-size: 28px;
-				margin-left: 10px;
+				font-size: 16px;
+				margin-left: 5px;
 				line-height: 1;
 
+				@include media($medium-screen-up) {
+					font-size: 28px;
+					margin-left: 10px;
+				}
 
 				&:after {
 					display: none;

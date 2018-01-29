@@ -6,8 +6,8 @@
             "key": "field_58e254ea24363",
             "label": "",
             "name": "contact_form",
-            "type": "gravity_forms_field",
-            "instructions": "",
+            "type": "text",
+            "instructions": "Put your shortcode here:",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -15,8 +15,11 @@
                 "class": "",
                 "id": ""
             },
-            "allow_null": 0,
-            "allow_multiple": 0
+            "default_value": "",
+            "placeholder": "[contact-form-7 id=\"2313\" title=\"Contact form 1\"]",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -36,5 +39,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1506090370
+    "modified": 1517226173
 }

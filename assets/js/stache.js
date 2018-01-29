@@ -193,18 +193,18 @@
 =            ORIENTATION            =
 ===================================*/
 
-jQuery(window).on("orientationchange",function($){
-	if(window.orientation == 0) // Portrait
-	{
-		$('#turnme').removeClass('show');
-		$('body').removeClass('disablescroll');
-	}
-	else // Landscape
-	{
-		$('#turnme').addClass('show');
-		$('body').addClass('disablescroll');
-	}
-});
+// jQuery(window).on("orientationchange",function($){
+// 	if(window.orientation == 0) // Portrait
+// 	{
+// 		$('#turnme').removeClass('show');
+// 		$('body').removeClass('disablescroll');
+// 	}
+// 	else // Landscape
+// 	{
+// 		$('#turnme').addClass('show');
+// 		$('body').addClass('disablescroll');
+// 	}
+// });
 
 /*==============================
 =            SLIDER            =

@@ -2979,6 +2979,13 @@
 		"oAP": "\/template-parts\/content-portfolio.php",
 		"oF": 0
 		},
+	"\/template-parts\/content-repeat.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/content-repeat.php",
+		"oF": 0
+		},
 	"\/template-parts\/content-search.php": {
 		"cB": 0,
 		"ft": 8192,
