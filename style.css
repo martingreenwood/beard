@@ -2267,7 +2267,7 @@ a:hover, a:active { outline: 0; }
 
 .error404 #page, .error404 #content, .error404 #primary, .error404 #main { background: none; height: 100vh; }
 
-.error404 .table { background-image: url(assets/images/404.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #eeeeee; }
+.error404 .table { background-image: url(assets/images/search.jpg); background-size: contain; background-position: center; background-repeat: no-repeat; background-color: #eeeeee; }
 
 .error404 .error-404 { text-align: right; max-width: 1280px; margin: 0 auto; padding: 0 40px; }
 
@@ -2279,7 +2279,7 @@ a:hover, a:active { outline: 0; }
 
 .search #page, .search #content, .search #primary, .search #main { background: none; height: 100vh; }
 
-.search .table { background-image: url(assets/images/search.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #eeeeee; }
+.search .table { background-image: url(assets/images/404.jpg); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #eeeeee; }
 
 .search .search-res { text-align: right; max-width: 1280px; margin: 0 auto; padding: 0 40px; }
 
