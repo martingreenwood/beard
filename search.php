@@ -17,7 +17,7 @@ get_header(); ?>
 					
 					<section class="search-res">
 						<header class="page-header">
-							<h1 class="page-title">Sorry, you'll find nothing there my friend.</h1>
+							<h1 class="page-title">Sorry, you'll find nothing here my friend.</h1>
 						</header>
 					</section>
 
