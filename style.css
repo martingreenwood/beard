@@ -2271,7 +2271,7 @@ a:hover, a:active { outline: 0; }
 
 .error404 .error-404 { text-align: right; max-width: 1280px; margin: 0 auto; padding: 0 40px; }
 
-.error404 .error-404 h1 { font-size: 39px; margin: 0; width: 250px; position: absolute; right: 20%; top: 140px; text-align: right; }
+.error404 .error-404 h1 { font-size: 39px; margin: 0; width: 250px; position: absolute; right: 20%; top: 140px; text-align: right; color: #333333; }
 
 .error404 #colophon { display: none; }
 
