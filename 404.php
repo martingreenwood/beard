@@ -17,7 +17,11 @@ get_header(); ?>
 					
 					<section class="error-404 not-found">
 						<header class="page-header">
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'beard' ); ?></h1>
+							<h1 class="page-title">
+								<span>404</span><br>
+								Sorry, that page<br>
+								does not exist!
+							</h1>
 						</header>
 					</section>
 

@@ -2267,11 +2267,13 @@ a:hover, a:active { outline: 0; }
 
 .error404 #page, .error404 #content, .error404 #primary, .error404 #main { background: none; height: 100vh; }
 
-.error404 .table { background-image: url(assets/images/search.jpg); background-size: contain; background-position: center; background-repeat: no-repeat; background-color: #eeeeee; }
+.error404 .table { background-image: url(assets/images/search.jpg); background-size: contain; background-position: 40% center; background-repeat: no-repeat; background-color: #eeeeee; }
 
-.error404 .error-404 { text-align: right; max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+.error404 .error-404 { text-align: right; max-width: 1100px; margin: 0 auto; padding: 0 40px; }
 
-.error404 .error-404 h1 { font-size: 39px; margin: 0; width: 250px; position: absolute; right: 20%; top: 140px; text-align: right; color: #333333; }
+.error404 .error-404 h1 { font-size: 69px; margin: 0; line-height: 1; float: right; text-align: right; color: #333333; }
+
+.error404 .error-404 h1 span { font-size: 120px; }
 
 .error404 #colophon { display: none; }
 
