@@ -232,9 +232,12 @@ button.fs-continue,
 
 .fs-fields > li label.fs-field-label {
 	display: inline-block;
-	padding: 0 5px 1em 0;
-	font-weight: 700;
+	padding: 0 0 15px 0;
+	font-size: 1.4em;
+	line-height: 1;
 	pointer-events: none;
+	font-family: $heading-font-family;
+	text-transform: uppercase;
 }
 
 .fs-form-full .fs-fields > li label[data-info]::after {
@@ -296,8 +299,8 @@ button.fs-continue,
 	padding: 8px;
 	width: 100%;
 	border: none;
-	border-bottom: 2px solid rgba(255,255,255,1);
-	background-color: transparent;
+	// border-bottom: 2px solid rgba(255,255,255,1);
+	background-color: rgba(255, 255, 255, 0.5); /* Fixes chrome bug with placeholder */
 	color: #ffffff;
 	text-overflow: ellipsis;
 	font-weight: bold;
@@ -315,6 +318,7 @@ button.fs-continue,
 	padding: 10px 0;
 }
 
+
 .fs-fields [required] {
 	background-image: url(../img/abacusstar.svg);
 	background-position: top right;
@@ -322,8 +326,9 @@ button.fs-continue,
 	background-repeat: no-repeat;
 }
 
-.fs-fields input:focus {
+.fs-fields input:focus, .fs-fields input:hover {
 	background-color: rgba(255, 255, 255, 0.5); /* Fixes chrome bug with placeholder */
+	border-color: inherit;
 }
 
 .fs-form-overview .fs-fields input:focus {
@@ -593,8 +598,8 @@ button.fs-continue,
 /* Number indicator */
 .fs-numbers {
 	position: absolute;
-	top: 0;
-	right: 0;
+	bottom: 0;
+	left: 0;
 	overflow: hidden;
 	color: white;
 	margin: 40px;
