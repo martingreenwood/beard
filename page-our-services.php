@@ -48,7 +48,7 @@ get_header(); ?>
 					<div class="table">
 						<div class="cell middle">
 
-							<div class="half" style="background-image: url(<?php get_the_post_thumbnail_url( 'full' ); ?>)">
+							<div class="half" style="background-image: url(<?php echo get_the_post_thumbnail_url( 'full' ); ?>)">
 								<?php the_post_thumbnail( '' ) ?>
 							</div>
 							
@@ -80,7 +80,7 @@ get_header(); ?>
 						</div>
 					</div>
 
-					<div class="half" style="background-image: url(<?php get_the_post_thumbnail_url( 'full' ); ?>)">
+					<div class="half" style="background-image: url(<?php echo get_the_post_thumbnail_url( 'full' ); ?>)">
 						<?php the_post_thumbnail(  ) ?>
 					</div>
 
