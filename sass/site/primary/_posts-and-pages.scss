@@ -327,3 +327,45 @@
 	}
 
 }
+
+/*===========================
+=            404            =
+===========================*/
+
+.error404 {
+	height: 100vh;
+	background-color: #eeeeee;
+
+	#page, #content, #primary, #main {
+		background: none;
+		height: 100vh;
+	}
+
+	.table {
+		background-image: url(assets/images/404.jpg);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.error-404 {
+		text-align: right;
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 40px;
+
+		h1 {
+			font-size: 39px;
+			margin: 0;
+			width: 250px;
+			position: absolute;
+			right: 20%;
+			top: 140px;
+			text-align: right;
+		}
+	}
+
+	#colophon {
+		display: none;
+	}
+}
