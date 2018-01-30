@@ -538,6 +538,26 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/js\/classie-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/classie-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/classie.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/classie-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/js\/customizer.js": {
 		"ft": 64,
 		"ma": 0,
@@ -546,6 +566,26 @@
 		"oAP": "\/assets\/js\/customizer-min.js",
 		"oF": 0,
 		"sC": 0,
+		"tS": 0
+		},
+	"\/assets\/js\/fullform-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/fullform-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/fullform.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/fullform-min.js",
+		"oF": 0,
+		"sC": 1,
 		"tS": 0
 		},
 	"\/assets\/js\/morphext.min.js": {
@@ -700,6 +740,26 @@
 		"oAP": "\/assets\/js\/parallax-min.js",
 		"oF": 0,
 		"sC": 0,
+		"tS": 0
+		},
+	"\/assets\/js\/select-fix-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/select-fix-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/select-fix.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/select-fix-min.js",
+		"oF": 0,
+		"sC": 1,
 		"tS": 0
 		},
 	"\/assets\/js\/slick.js": {
@@ -877,6 +937,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page-the-studio.php",
+		"oF": 0
+		},
+	"\/page-work-with-us.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-work-with-us.php",
 		"oF": 0
 		},
 	"\/page.php": {
@@ -2998,6 +3065,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/template-parts\/content-team.php",
+		"oF": 0
+		},
+	"\/template-parts\/content-work-with-us.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/template-parts\/content-work-with-us.php",
 		"oF": 0
 		},
 	"\/template-parts\/content.php": {
