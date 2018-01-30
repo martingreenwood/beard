@@ -10,23 +10,19 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main " role="main">
+		<main id="main" class="site-main" role="main">
 
-			<?php
-			if ( have_posts() ) :
-				while ( have_posts() ) : the_post();
+			<div class="table">
+				<div class="cell middle">
+					
+					<section class="search-res">
+						<header class="page-header">
+							<h1 class="page-title">Sorry, you'll find nothing there my friend.</h1>
+						</header>
+					</section>
 
-					get_template_part( 'template-parts/content', 'search' );
-
-				endwhile;
-
-				the_posts_navigation();
-
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-
-			endif; ?>
+				</div>
+			</div>
 
 		</main>
 	</div>
