@@ -2296,7 +2296,7 @@ a:hover, a:active { outline: 0; }
 
 .home #feature-image.menuopen img { filter: brightness(0); }
 
-.home #feature-image img { display: none; }
+.home #feature-image img { display: none; width: 100%; }
 
 @media screen and (min-width: 600px) { .home #feature-image img { display: inline-block; } }
 

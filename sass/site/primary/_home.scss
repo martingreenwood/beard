@@ -23,6 +23,7 @@
 
 		img {
 			display: none;
+			width: 100%;
 
 			@include media($medium-screen-up) {
 				display: inline-block;
