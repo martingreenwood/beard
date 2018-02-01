@@ -312,7 +312,7 @@
 		$("title").text(pageTitle);
 	});
 
-
+	 window.status = "<TYPE YOUR MESSAGE>"; 
 
 	// $("#offerings .slick").slick({
 	// 	infinite: 		true,
