@@ -108,7 +108,6 @@ add_action( 'widgets_init', 'beard_widgets_init' );
  */
 function beard_scripts() {
 	wp_enqueue_style( 'beard-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'beard-owl', get_template_directory_uri() . "/assets/js/owl/assets/owl.carousel.min.css" );
 	wp_enqueue_style( 'beard-gfont', "https://fonts.googleapis.com/css?family=Montserrat:400,600" );
 	wp_enqueue_style( 'beard-font', "https://use.typekit.net/mal8icp.css" );
 
@@ -116,13 +115,7 @@ function beard_scripts() {
 	wp_enqueue_script( 'beard-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDghRTYRnA6R3P1LJ6wJP4AjTFoDsva0jk','','',true );
 	wp_enqueue_script( 'beard-fa', 'https://use.fontawesome.com/releases/v5.0.4/js/all.js','','',true );
 
-	wp_enqueue_script( 'beard-parallax', get_template_directory_uri() . '/assets/js/parallax.js','','',true );
-	wp_enqueue_script( 'beard-slick', get_template_directory_uri() . '/assets/js/slick.js','','',true );
-	wp_enqueue_script( 'beard-owl', get_template_directory_uri() . '/assets/js/owl/owl.carousel.min.js','','',true );
-
 	wp_enqueue_script( 'beard-morphext', get_template_directory_uri() . '/assets/js/morphext.min.js','','',true );
-	// wp_enqueue_script( 'beard-masonry', '//unpkg.com/masonry-layout@4.1.1/dist/masonry.pkgd.min.js','','',true );
-	// wp_enqueue_script( 'beard-imgload', '//unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js','','',true );
 	wp_enqueue_script( 'beard-nav', get_template_directory_uri() . '/assets/js/navigation.js','','',true );
 	wp_enqueue_script( 'beard-js', get_template_directory_uri() . '/assets/js/stache.js','','',true );
 	
