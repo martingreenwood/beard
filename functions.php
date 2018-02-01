@@ -125,6 +125,10 @@ function beard_scripts() {
 	// wp_enqueue_script( 'beard-imgload', '//unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js','','',true );
 	wp_enqueue_script( 'beard-nav', get_template_directory_uri() . '/assets/js/navigation.js','','',true );
 	wp_enqueue_script( 'beard-js', get_template_directory_uri() . '/assets/js/stache.js','','',true );
+	
+	if (is_page( 'work-with-us' )) {
+		wp_enqueue_script( 'beard-js', get_template_directory_uri() . '/assets/js/fform.js','','',true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'beard_scripts' );
 

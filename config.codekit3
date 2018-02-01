@@ -588,6 +588,16 @@
 		"sC": 0,
 		"tS": 0
 		},
+	"\/assets\/js\/fform.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/fform-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/js\/fullform-min.js": {
 		"ft": 64,
 		"ma": 0,
