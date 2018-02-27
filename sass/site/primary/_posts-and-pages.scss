@@ -336,15 +336,31 @@
 	height: 100vh;
 	background-color: #eeeeee;
 
+	#game {
+		position: absolute;
+		left: 50%;
+		margin-left: -225px;
+		z-index: 99;
+		display: none;
+
+		&.show {
+			display: block;
+		}
+	}
+
+	canvas {
+		border-radius: .4em;
+	}
+
 	#page, #content, #primary, #main {
 		background: none;
 		height: 100vh;
 	}
 
 	.table {
-		background-image: url(assets/images/search.jpg);
-		background-size: contain;
-		background-position: 40% center;
+		background-image: url(assets/images/404.png);
+		background-size: auto;
+		background-position:center;
 		background-repeat: no-repeat;
 		background-color: #eeeeee;
 	}
@@ -354,6 +370,16 @@
 		max-width: 1100px;
 		margin: 0 auto;
 		padding: 0 40px;
+
+		a {
+			position: absolute;
+			background: black;
+			color: white;
+			padding: 10px;
+			border-radius: 6px;
+			right: 40px;
+			bottom: 40px;
+		}
 
 		h1 {
 			font-size: 69px;
@@ -385,9 +411,9 @@
 	}
 
 	.table {
-		background-image: url(assets/images/404.jpg);
-		background-size: cover;
-		background-position: center;
+		background-image: url(assets/images/search.jpg);
+		background-size: contain;
+		background-position: 40% center;
 		background-repeat: no-repeat;
 		background-color: #eeeeee;
 	}

@@ -1,0 +1,582 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"transpa",
+				"transparent"
+			],
+			[
+				"tra",
+				"transparent"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"backg",
+				"background-image"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"get_thumbna",
+				"get_the_post_thumbnail_url"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"PADD",
+				"padding-bottom"
+			],
+			[
+				"nth",
+				"nth-child"
+			],
+			[
+				"a",
+				"a\t<a>"
+			],
+			[
+				"gr",
+				"grayscale\tgrayscale()"
+			],
+			[
+				"the_id",
+				"get_the_ID"
+			],
+			[
+				"trans",
+				"transition\tCSS - transition: ;"
+			],
+			[
+				"ini",
+				"inline-block"
+			],
+			[
+				"backgr",
+				"background-position"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"enq",
+				"wp_enqueue_style"
+			],
+			[
+				"hi",
+				"hidden"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"get_tem",
+				"get_template_directory_uri"
+			],
+			[
+				"tmpla",
+				"template_directory_uri"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"lin",
+				"linear-gradient"
+			],
+			[
+				"backgrp",
+				"background-clip"
+			],
+			[
+				"background",
+				"background-image"
+			],
+			[
+				"inline",
+				"inline-table"
+			],
+			[
+				"abs",
+				"absolute"
+			],
+			[
+				"opac",
+				"opacity"
+			],
+			[
+				"nex",
+				"next_post_link"
+			],
+			[
+				"comm",
+				"comm-html-header\tComment - HTML section header"
+			],
+			[
+				"get_comment_author_",
+				"get_comment_author_email"
+			],
+			[
+				"impo",
+				"important"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"get_author_ema",
+				"get_comment_author_email"
+			],
+			[
+				"get_",
+				"get_avatar"
+			],
+			[
+				"style",
+				"style\tAttr"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"toggle",
+				"toggleClass\t.toggleClass()"
+			],
+			[
+				"get_styleshe",
+				"get_stylesheet_directory_uri"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"redirec",
+				"wp_redirect"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"m",
+				"margin-bottom"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"pl",
+				"padding-left"
+			],
+			[
+				"wp_login",
+				"wp_login_form"
+			],
+			[
+				"wp_loigin",
+				"wp_login_form\tWP Function"
+			],
+			[
+				"login_",
+				"login_form_"
+			],
+			[
+				"login",
+				"login_form"
+			],
+			[
+				"comm-se",
+				"comm-section-header\tComment - Section header comment"
+			],
+			[
+				"the_post",
+				"the_post_thumbnail"
+			],
+			[
+				"user",
+				"userID"
+			],
+			[
+				"P",
+				"get_post_type"
+			],
+			[
+				"attr",
+				"attr\t.attr() - single"
+			],
+			[
+				"add",
+				"addClass\t.addClass()"
+			],
+			[
+				"backgroun",
+				"background-color"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"upp",
+				"uppercase"
+			],
+			[
+				"wp_enqueue",
+				"wp_enqueue_style"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"package control: install package",
+				"Package Control: Install Package"
+			],
+			[
+				"package control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 560.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/martingreenwood/Sites/tests",
+		"/Users/martingreenwood/Sites/tests/scss"
+	],
+	"file_history":
+	[
+		"/Users/martingreenwood/Sites/tests/huw.php",
+		"/Users/martingreenwood/Sites/tests/scss/skeleton.scss",
+		"/Users/martingreenwood/Sites/tests/config.codekit3",
+		"/Users/martingreenwood/Sites/tests/scss/tests/_huw.scss",
+		"/Users/martingreenwood/Sites/tests/scss/base/_variables.scss",
+		"/Users/martingreenwood/Sites/tests/scss/base/_typography.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/assets/js/stache.js",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/site/primary/_posts-and-pages.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/404.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/functions.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/assets/js/game.js",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/assets/js/fullform.js",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/assets/js/fform.js",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/site/primary/_home.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/elements/_elements.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/front-page.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/page-our-services.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/search.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/page-work-with-us.php",
+		"/Users/martingreenwood/Sites/wearebeard/workwithus/index.html",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/forms/_forms.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-config.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/header.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/header-work-with-us.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/template-parts/content-work-with-us.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/site/layout/_header.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/navigation/_menus.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/site/primary/_contact.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/page-contact.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/index.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/single-portfolio.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/page-the-studio.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/page-our-team.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/site/primary/_portfolio-item.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/site/primary/_our-work.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/site/layout/_footer.scss",
+		"/Users/martingreenwood/Sites/wearebeard/workwithus/js/classie.js",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/assets/js/select-fix.js",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/assets/js/classie.js",
+		"/Users/martingreenwood/Sites/wearebeard/workwithus/css/demo.css",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/site/primary/_our-team.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/single.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/template-parts/content-repeat.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/template-parts/content-home.php",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/sass/site/primary/_our-services.scss",
+		"/Users/martingreenwood/Sites/wearebeard/wp-content/themes/beard/page.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/functions.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/site/primary/_portfolio-item.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/page-the-studio.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/site/primary/_posts-and-pages.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/site/layout/_header.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/single-portfolio.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/assets/js/stache.js",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/site/primary/_our-team.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/site/primary/_our-services.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/navigation/_menus.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/site/layout/_layout.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/template-parts/content-portfolio.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/site/primary/_our-work.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/page-recent-work.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/header.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/mixins/_mixins-master.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/front-page.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/site/primary/_home.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/typography/_typography.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/typography/_headings.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/base/_variables.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/base/_grid-settings.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/page-our-team.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/page-contact.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/workwithus/index.html",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/workwithus/sendemail.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/workwithus/css/component.css",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/workwithus/css/demo.css",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/page-our-services.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/site/primary/_contact.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/template-parts/content-team.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/forms/_forms.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/template-parts/content-contact.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/template-parts/content-home.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/page.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/search.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/index.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/site/primary/_blog-home.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-config.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/sass/site/primary/_blog-single.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/beard/assets/js/stache-min.js",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/sass/style.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/search.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/sidebar.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/single-portfolio.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/single.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/style.css",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/template-parts/content-blog.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/template-parts/content-none.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/template-parts/content-page.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/template-parts/content-portfolio.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/template-parts/content-search.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/template-parts/content.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/404.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/archive.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/assets/js/stache-min.js",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/assets/js/stache.js",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/comments.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/config.codekit3",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/footer.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/front-page.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/functions.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/header.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/inc/cpts.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/inc/customizer.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/inc/extras.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/inc/jetpack.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/inc/template-tags.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/index.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/page-contact.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/page-our-services.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/page-our-team.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/page-recent-work.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/page.php",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/readme.txt",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/rtl-min.css",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/rtl.css",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/sass/site/primary/_posts-and-pages.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/sass/site/primary/_portfolio-item.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/sass/site/primary/_our-services.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/sass/site/primary/_our-work.scss",
+		"/Users/martingreenwood/vagrant-local/www/wearebeard/htdocs/wp-content/themes/stache/sass/site/primary/_blog-single.scss"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 69.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "tests.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 718.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 384.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

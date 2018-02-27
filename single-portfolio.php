@@ -5,8 +5,21 @@
  * @package beard
  */
 
-get_header(); ?>
+get_header(); 
+$featureimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+?>
 
+	<div id="hero" style="background-image: url(<?php echo $featureimage; ?>)">
+		<div class="table">
+			<div class="cell middle">
+				<center>
+					<h1><?php the_title(); ?></h1>
+				</center>
+			</div>
+		</div>
+	</div>
+
+	<?php /* ?>
 	<div id="primary" class="content-area pfolio">
 		<main id="main" class="site-main container wide" role="main">
 			<?php
@@ -16,6 +29,7 @@ get_header(); ?>
 			?>
 		</main>
 	</div>
+	<?php */ ?>
 
 	<section id="images">
 

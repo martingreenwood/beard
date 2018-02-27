@@ -17,13 +17,13 @@ get_header(); ?>
 					
 					<section class="error-404 not-found">
 						<header class="page-header">
-							<h1 class="page-title">
-								<span>404</span><br>
-								Sorry, that page<br>
-								does not exist!
-							</h1>
+							
 						</header>
 					</section>
+
+					<div id="game">
+						<canvas height="450" width="750"></canvas>
+					</div>
 
 				</div>
 			</div>

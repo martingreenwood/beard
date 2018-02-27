@@ -34,7 +34,6 @@
 	</div>
 
 	<?php 
-	$featureimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
 	$terms = wp_get_post_terms( $post->ID, 'project-attribute' );
 	$header_mode = "";
 	$highlight_color = "";

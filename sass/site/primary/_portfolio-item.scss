@@ -10,9 +10,26 @@
 		height: 40px;
 	}
 
+	#hero {
+		height: 100%;
+		height: 100vh;
+		padding: 100px 0;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		h1 {
+			text-align: center;
+			padding: 0 150px;
+			font-size: 100px;
+			letter-spacing: 2px;
+			color: white;
+		}
+	}
+
 	#primary {
-		padding: 140px 0 60px 0;
-		background: transparent;
+		padding: 60px 0;
+		background: white;
 
 		article {
 			text-align: center;

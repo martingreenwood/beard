@@ -120,8 +120,12 @@ function beard_scripts() {
 	wp_enqueue_script( 'beard-js', get_template_directory_uri() . '/assets/js/stache.js','','',true );
 	
 	if (is_page( 'work-with-us' )) {
-		wp_enqueue_script( 'beard-js', get_template_directory_uri() . '/assets/js/fform.js','','',true );
+		wp_enqueue_script( 'fform-js', get_template_directory_uri() . '/assets/js/fform.js','','',true );
 	}
+
+	// if ( is_404() ) {
+		wp_enqueue_script( 'game-js', get_template_directory_uri() . '/assets/js/game.js','','',true );
+	// }
 }
 add_action( 'wp_enqueue_scripts', 'beard_scripts' );
 
