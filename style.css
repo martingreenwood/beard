@@ -2090,7 +2090,7 @@ a:hover, a:active { outline: 0; }
 /*==============================
 =            HEADER            =
 ==============================*/
-#masthead { position: fixed; left: 0; right: 0; top: 0; z-index: 51; height: 99px; background-color: transparent; }
+#masthead { position: fixed; left: 0; right: 0; top: 0; z-index: 102; height: 99px; background-color: transparent; }
 
 #masthead .site-branding { float: left; background: white; border-radius: 50%; margin: 20px 0 20px 20px; }
 
@@ -2100,9 +2100,9 @@ a:hover, a:active { outline: 0; }
 
 #masthead .site-branding.open-menu img { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 
-#masthead.hidden { top: -99px; height: 99px; }
+#masthead.hidden { top: -99px; }
 
-#masthead.fixed { position: fixed; top: 0; background-color: #fff; z-index: 102; height: 99px; }
+#masthead.fixed { top: 0; background-color: #fff; }
 
 #masthead.fixed .site-branding { z-index: 999999; position: fixed; }
 

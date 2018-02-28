@@ -59,7 +59,7 @@
 	left: 0;
 	right: 0;
 	top: 0;
-	z-index: 51;
+	z-index: 102;
 	height: 99px;
 	background-color: transparent;
 
@@ -96,15 +96,11 @@
 
 	&.hidden {
 		top: -99px;
-		height: 99px;
 	}
 
 	&.fixed {
-		position: fixed;
 		top: 0;
 		background-color: #fff;
-		z-index: 102;
-		height: 99px;
 		
 		.site-branding {
 			z-index: 999999;
