@@ -2090,7 +2090,7 @@ a:hover, a:active { outline: 0; }
 /*==============================
 =            HEADER            =
 ==============================*/
-#masthead { position: fixed; left: 0; right: 0; top: 0; z-index: 102; width: 100%; background-color: transparent; -webkit-transition: all linear .5s; transition: all linear .5s; }
+#masthead { position: fixed; left: 0; right: 0; top: 0; z-index: 102; width: 100%; background-color: rgba(255, 255, 255, 0.25); -webkit-transition: all linear .5s; transition: all linear .5s; }
 
 #masthead .new-container { height: 99px; position: relative; }
 
