@@ -63,8 +63,8 @@
 	height: 99px;
 	background-color: transparent;
 
-	-webkit-transition: all linear .5s;
-	transition: all linear .5s;
+	// -webkit-transition: all linear .5s;
+	// transition: all linear .5s;
 
 	.site-branding {
 		float: left;
@@ -78,6 +78,7 @@
 			-webkit-transition: all linear 500ms;
 
 			&:hover {
+				-webkit-transform: rotate(360deg);
 				transform: rotate(360deg);
 			}
 
@@ -87,20 +88,20 @@
 		&.open-menu {
 
 			img {
-				;
+				-webkit-transform: rotate(360deg);
 				transform: rotate(360deg);
 			}
 		}
 	}
 
 	&.hidden {
-		// top: -99px;
-		// height: 99px;
+		top: -99px;
+		height: 99px;
 	}
 
 	&.fixed {
 		position: fixed;
-		top:0;
+		top: 0;
 		background-color: #fff;
 		z-index: 102;
 		height: 99px;
