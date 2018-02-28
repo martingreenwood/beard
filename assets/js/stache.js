@@ -66,11 +66,12 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 	header = $('#masthead');
 
 	$document.scroll(function() {
+		// $element.toggleClass('hidden', $document.scrollTop() >= 99);
 		$element.toggleClass('hidden', $document.scrollTop() >= 99);
 	});
 
 	$document.scroll(function() {
-		$element.toggleClass('fixed', $document.scrollTop() >= $(window).height());
+		$element.toggleClass('fixed', $document.scrollTop() >= 400);
 	});
 
 })(jQuery);
