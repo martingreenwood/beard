@@ -2600,7 +2600,7 @@ a:hover, a:active { outline: 0; }
 
 .single-portfolio #images .element img { display: block; width: 100%; }
 
-.single-portfolio #images .element .text { padding: 60px 60px; min-height: 200px; margin: 0 auto; height: 100%; }
+.single-portfolio #images .element .text { padding: 60px 180px; min-height: 200px; max-width: 1600px; margin: 0 auto; height: 100%; }
 
 .single-portfolio #images .element .text blockquote { quotes: ""; margin: 0; }
 
