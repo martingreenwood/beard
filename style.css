@@ -2570,13 +2570,11 @@ a:hover, a:active { outline: 0; }
 /*======================================
 =            PORTFOLIO ITEM            =
 ======================================*/
-.single-portfolio #masthead { background-color: rgba(255, 255, 255, 0.25); }
-
 .single-portfolio #buffer, .single-portfolio .buffer { float: left; width: 100%; height: 40px; }
 
 .single-portfolio #hero { height: 100%; height: 100vh; padding: 100px 0; background-size: cover; background-repeat: no-repeat; background-position: center; }
 
-.single-portfolio #hero h1 { text-align: center; padding: 0 150px; font-size: 100px; letter-spacing: 2px; color: white; }
+.single-portfolio #hero h1 { text-align: center; padding: 0 10%; font-size: 200px; letter-spacing: 2px; color: white; margin: 0; line-height: 154px; }
 
 .single-portfolio #primary { padding: 60px 0; background: white; }
 
