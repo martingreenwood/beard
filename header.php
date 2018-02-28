@@ -41,7 +41,7 @@
 	$highlight_color = get_field( 'highlight_colour' );
 	?>
 	<header id="masthead" class="<?php echo $header_mode; ?> site-header" role="banner">
-		<!-- <div class="container"> -->
+		<div class="new-container">
 			<!-- <div class="row"> -->
 				<div class="site-branding">
 					<?php if ( function_exists( 'the_custom_logo' ) ): ?>
@@ -89,7 +89,7 @@
 
 				</nav>
 			<!-- </div> -->
-		<!-- </div> -->
+		</div>
 	</header>
 
 	<div id="content" class="site-content">

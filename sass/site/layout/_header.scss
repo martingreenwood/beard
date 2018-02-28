@@ -60,11 +60,17 @@
 	right: 0;
 	top: 0;
 	z-index: 102;
-	height: 99px;
+	width: 100%;
+	
 	background-color: transparent;
 
 	-webkit-transition: all linear .5s;
-	// transition: all linear .5s;
+	transition: all linear .5s;
+
+	.new-container {
+		height: 99px;
+		position: relative;
+	}
 
 	.site-branding {
 		float: left;
@@ -95,7 +101,9 @@
 	}
 
 	&.hidden {
-		top: -99px;
+		// top: -99px;
+		// -webkit-transition: all linear .5s;
+		// transition: all linear .5s;
 	}
 
 	&.fixed {
