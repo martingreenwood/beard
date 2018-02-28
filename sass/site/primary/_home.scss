@@ -33,9 +33,9 @@
 		.wrap {
 			position: relative;
 			background-image: url(assets/hp/background-mobile.jpg);
-			height: 320px;
+			height: 370px;
 			background-position: 53% 0;
-			background-size: auto 97%;
+			background-size: auto 100%;
 
 			@include media($medium-screen-up) {
 				background-image: none;

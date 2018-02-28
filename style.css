@@ -2308,7 +2308,7 @@ a:hover, a:active { outline: 0; }
 
 @media screen and (min-width: 600px) { .home #feature-image img { display: inline-block; } }
 
-.home #feature-image .wrap { position: relative; background-image: url(assets/hp/background-mobile.jpg); height: 320px; background-position: 53% 0; background-size: auto 97%; }
+.home #feature-image .wrap { position: relative; background-image: url(assets/hp/background-mobile.jpg); height: 370px; background-position: 53% 0; background-size: auto 100%; }
 
 @media screen and (min-width: 600px) { .home #feature-image .wrap { background-image: none; height: auto; } }
 
