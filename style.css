@@ -2090,7 +2090,7 @@ a:hover, a:active { outline: 0; }
 /*==============================
 =            HEADER            =
 ==============================*/
-#masthead { position: fixed; left: 0; right: 0; top: 0; z-index: 51; height: 90px; background-color: transparent; -webkit-transition: all linear .5s; -moz-transition: all linear .5s; -ms-transition: all linear .5s; -o-transition: all linear .5s; transition: all linear .5s; }
+#masthead { position: fixed; left: 0; right: 0; top: 0; z-index: 51; height: 99px; background-color: transparent; -webkit-transition: all linear .5s; -moz-transition: all linear .5s; -ms-transition: all linear .5s; -o-transition: all linear .5s; transition: all linear .5s; }
 
 #masthead .site-branding { float: left; background: white; border-radius: 50%; margin: 20px 0 20px 20px; }
 
@@ -2102,7 +2102,7 @@ a:hover, a:active { outline: 0; }
 
 #masthead.hidden { top: -99px; height: 99px; }
 
-#masthead.fixed, #masthead.scriolled { position: fixed; top: 0px; background-color: #fff; z-index: 102; height: 99px; }
+#masthead.fixed, #masthead.scriolled { position: fixed; top: 0; background-color: #fff; z-index: 102; height: 99px; }
 
 #masthead.fixed .site-branding, #masthead.scriolled .site-branding { z-index: 999999; position: fixed; }
 
