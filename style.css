@@ -1798,7 +1798,7 @@ a:hover, a:active { outline: 0; }
 
 .main-navigation ul { display: none; }
 
-.menu-icon { width: 30px; height: 20px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .5s ease-in-out; -moz-transition: .5s ease-in-out; -o-transition: .5s ease-in-out; transition: .5s ease-in-out; cursor: pointer; border: 0; outline: 0; padding: 0; margin: 35px 20px 0px 20px; }
+.menu-icon { width: 30px; height: 20px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .5s ease-in-out; -moz-transition: .5s ease-in-out; -o-transition: .5s ease-in-out; transition: .5s ease-in-out; cursor: pointer; border: 0; outline: 0; padding: 0; margin: 39.5px 20px; }
 
 .menu-icon:focus, .menu-icon:hover { background-color: transparent; color: inherit; }
 
@@ -2094,7 +2094,7 @@ a:hover, a:active { outline: 0; }
 
 #masthead .new-container { height: 99px; position: relative; }
 
-#masthead .site-branding { float: left; background: white; border-radius: 50%; margin: 20px 0 20px 20px; }
+#masthead .site-branding { float: left; background: white; border-radius: 50%; margin: 25px 0 25px 25px; }
 
 #masthead .site-branding img { width: 50px; transition: all linear 500ms; -webkit-transition: all linear 500ms; display: block; }
 
