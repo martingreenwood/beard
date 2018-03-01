@@ -890,6 +890,14 @@ g/*===============================
 			border-radius: 6px;
 			right: 40px;
 			bottom: 40px;
+
+			&.procrastinate {
+				display: none;
+
+				@include media($large-screen-up) {
+					display: block;
+				}
+			}
 		}
 
 		h1 {

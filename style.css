@@ -2510,6 +2510,10 @@ g .noscroll { overflow: hidden; }
 
 .error404 .error-404 a { position: absolute; background: black; color: white; padding: 10px; border-radius: 6px; right: 40px; bottom: 40px; }
 
+.error404 .error-404 a.procrastinate { display: none; }
+
+@media screen and (min-width: 1024px) { .error404 .error-404 a.procrastinate { display: block; } }
+
 .error404 .error-404 h1 { font-size: 69px; margin: 0; line-height: 1; float: right; text-align: right; color: #333333; }
 
 .error404 .error-404 h1 span { font-size: 120px; }
