@@ -868,6 +868,12 @@ g/*===============================
 		background-position:center;
 		background-repeat: no-repeat;
 		background-color: #eeeeee;
+		background-size: contain;
+
+		@include media($large-screen-up) {
+			background-size: auto;
+		}
+
 	}
 
 	.error-404 {
