@@ -148,7 +148,7 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 
 (function($) {
 
-	$('.error404 .error-404 a').on('click', function(e) {
+	$('.error404 a.procrastinate').on('click', function(e) {
 		e.preventDefault();
 		
 		var target = $(this).attr('href');

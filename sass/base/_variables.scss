@@ -67,3 +67,21 @@ $base-timing: ease;
 
 $bitgold-yellow: #ffbe10;
 $cubic-bezier: cubic-bezier(0.30,1.40,0.70,1);
+
+
+
+$field-width: 500px;
+$grid-spacing: 15px;
+$grid-row-cells: 4;
+$tile-size: ($field-width - $grid-spacing * ($grid-row-cells + 1)) / $grid-row-cells;
+$tile-border-radius: 3px;
+
+$bright-text-color: #f9f6f2;
+
+$tile-color: #eee4da;
+$tile-gold-color: #edc22e;
+$tile-gold-glow-color: lighten($tile-gold-color, 15%);
+
+$game-container-background: #bbada0;
+
+$transition-speed: 100ms;

@@ -114,6 +114,7 @@ function beard_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'beard-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDghRTYRnA6R3P1LJ6wJP4AjTFoDsva0jk','','',true );
 	wp_enqueue_script( 'beard-fa', 'https://use.fontawesome.com/releases/v5.0.4/js/all.js','','',true );
+	wp_enqueue_script( 'beard-ha', '//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.6/hammer.min.js','','',true );
 
 	wp_enqueue_script( 'beard-morphext', get_template_directory_uri() . '/assets/js/morphext.min.js','','',true );
 	wp_enqueue_script( 'beard-nav', get_template_directory_uri() . '/assets/js/navigation.js','','',true );

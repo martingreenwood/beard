@@ -1,448 +1,540 @@
-var $ = {
-      canvas: null,
-      ctx: null,
-      canvas2: null,
-      ctx2: null,
-      colors: {
-        sky: "#D4F5FE",
-        mountains: "#83CACE",
-        ground: "#8FC04C",
-        groundDark: "#73B043",
-        road: "#606a7c",
-        roadLine: "#FFF",
-        hud: "#FFF"
-      },
-      settings: {
-        fps: 60,
-        skySize: 120,
-        ground: {
-          size: 350,
-          min: 4,
-          max: 120
-        },
-        road: {
-          min: 76,
-          max: 700,
+document.addEventListener("DOMContentLoaded", function () {
+  // Wait till the browser is ready to render the game (avoids glitches)
+  window.requestAnimationFrame(function () {
+    var manager = new GameManager(4, KeyboardInputManager, HTMLActuator);
+  });
+});
+
+
+function GameManager(size, InputManager, Actuator) {
+  this.size         = size; // Size of the grid
+  this.inputManager = new InputManager;
+  this.actuator     = new Actuator;
+
+  this.startTiles   = 2;
+
+  this.inputManager.on("move", this.move.bind(this));
+  this.inputManager.on("restart", this.restart.bind(this));
+
+  this.setup();
+}
+
+// Restart the game
+GameManager.prototype.restart = function () {
+  this.actuator.restart();
+  this.setup();
+};
+
+// Set up the game
+GameManager.prototype.setup = function () {
+  this.grid         = new Grid(this.size);
+
+  this.score        = 0;
+  this.over         = false;
+  this.won          = false;
+
+  // Add the initial tiles
+  this.addStartTiles();
+
+  // Update the actuator
+  this.actuate();
+};
+
+// Set up the initial tiles to start the game with
+GameManager.prototype.addStartTiles = function () {
+  for (var i = 0; i < this.startTiles; i++) {
+    this.addRandomTile();
+  }
+};
+
+// Adds a tile in a random position
+GameManager.prototype.addRandomTile = function () {
+  if (this.grid.cellsAvailable()) {
+    var value = Math.random() < 0.9 ? 2 : 4;
+    var tile = new Tile(this.grid.randomAvailableCell(), value);
+
+    this.grid.insertTile(tile);
+  }
+};
+
+// Sends the updated grid to the actuator
+GameManager.prototype.actuate = function () {
+  this.actuator.actuate(this.grid, {
+    score: this.score,
+    over:  this.over,
+    won:   this.won
+  });
+};
+
+// Save all tile positions and remove merger info
+GameManager.prototype.prepareTiles = function () {
+  this.grid.eachCell(function (x, y, tile) {
+    if (tile) {
+      tile.mergedFrom = null;
+      tile.savePosition();
+    }
+  });
+};
+
+// Move a tile and its representation
+GameManager.prototype.moveTile = function (tile, cell) {
+  this.grid.cells[tile.x][tile.y] = null;
+  this.grid.cells[cell.x][cell.y] = tile;
+  tile.updatePosition(cell);
+};
+
+// Move tiles on the grid in the specified direction
+GameManager.prototype.move = function (direction) {
+  // 0: up, 1: right, 2:down, 3: left
+  var self = this;
+
+  if (this.over || this.won) return; // Don't do anything if the game's over
+
+  var cell, tile;
+
+  var vector     = this.getVector(direction);
+  var traversals = this.buildTraversals(vector);
+  var moved      = false;
+
+  // Save the current tile positions and remove merger information
+  this.prepareTiles();
+
+  // Traverse the grid in the right direction and move tiles
+  traversals.x.forEach(function (x) {
+    traversals.y.forEach(function (y) {
+      cell = { x: x, y: y };
+      tile = self.grid.cellContent(cell);
+
+      if (tile) {
+        var positions = self.findFarthestPosition(cell, vector);
+        var next      = self.grid.cellContent(positions.next);
+
+        // Only one merger per row traversal?
+        if (next && next.value === tile.value && !next.mergedFrom) {
+          var merged = new Tile(positions.next, tile.value * 2);
+          merged.mergedFrom = [tile, next];
+
+          self.grid.insertTile(merged);
+          self.grid.removeTile(tile);
+
+          // Converge the two tiles' positions
+          tile.updatePosition(positions.next);
+
+          // Update the score
+          self.score += merged.value;
+
+          // The mighty 2048 tile
+          if (merged.value === 2048) self.won = true;
+        } else {
+          self.moveTile(tile, positions.farthest);
         }
-      },
-      state: {
-        bgpos: 0,
-        offset: 0,
-        startDark: true,
-        curve: 0,
-        currentCurve: 0,
-        turn: 1,
-        speed: 27,
-        xpos: 0,
-        section: 50,
-        car: {
-          maxSpeed: 50,
-          friction: 0.4,
-          acc: 0.85,
-          deAcc: 0.5
-        },
-        keypress: {
-          up: false,
-          left: false,
-          right: false,
-          down: false
+
+        if (!self.positionsEqual(cell, tile)) {
+          moved = true; // The tile moved from its original cell!
         }
-      },
-      storage: {
-        bg: null
       }
-    };
-$.canvas = document.getElementsByTagName('canvas')[0];
-$.ctx = $.canvas.getContext('2d');
-$.canvas2 = document.createElement('canvas');
-$.canvas2.width = $.canvas.width;
-$.canvas2.height = $.canvas.height;
-$.ctx2 = $.canvas2.getContext('2d');
-window.addEventListener("keydown", keyDown, false);
-window.addEventListener("keyup", keyUp, false);
+    });
+  });
 
-drawBg();
-draw();
+  if (moved) {
+    this.addRandomTile();
 
-function draw() {
-  setTimeout(function() {
-    calcMovement();
-    
-    //if($.state.speed > 0) {
-      $.state.bgpos += ($.state.currentCurve * 0.02) * ($.state.speed * 0.2);
-      $.state.bgpos = $.state.bgpos % $.canvas.width;
-      
-      $.ctx.putImageData($.storage.bg, $.state.bgpos, 5);
-      $.ctx.putImageData($.storage.bg, $.state.bgpos > 0 ? $.state.bgpos - $.canvas.width : $.state.bgpos + $.canvas.width, 5);
-    //}
-    
-    $.state.offset += $.state.speed * 0.05;
-    if($.state.offset > $.settings.ground.min) {
-      $.state.offset = $.settings.ground.min - $.state.offset;
-      $.state.startDark = !$.state.startDark;
+    if (!this.movesAvailable()) {
+      this.over = true; // Game over!
     }
-    drawGround($.ctx, $.state.offset, $.colors.ground, $.colors.groundDark, $.canvas.width);
-    
-    drawRoad($.settings.road.min + 6, $.settings.road.max + 36, 10, $.colors.roadLine);
-    drawGround($.ctx2, $.state.offset, $.colors.roadLine, $.colors.road, $.canvas.width);
-    drawRoad($.settings.road.min, $.settings.road.max, 10, $.colors.road);
-    drawRoad(3, 24, 0, $.ctx.createPattern($.canvas2, 'repeat'));
-    drawCar();
-    drawHUD($.ctx, 630, 340, $.colors.hud);
-    
-    requestAnimationFrame(draw);
-  }, 1000 / $.settings.fps);
-}
 
-function drawHUD(ctx, centerX, centerY, color) {
-  var radius = 50, tigs = [0, 90, 135, 180, 225, 270, 315],
-      angle = 90;
-
-  ctx.beginPath();
-  ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
-  ctx.lineWidth = 7;
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
-  ctx.fill();
-  ctx.strokeStyle = color;
-  ctx.stroke();
-  
-  for (var i = 0; i < tigs.length; i++) {
-    drawTig(ctx, centerX, centerY, radius, tigs[i], 7);
+    this.actuate();
   }
-  
-  // draw pointer
-  angle = map($.state.speed, 0, $.state.car.maxSpeed, 90, 360);
-  drawPointer(ctx, color, 50, centerX, centerY, angle);
-}
+};
 
-function drawPointer(ctx, color, radius, centerX, centerY, angle) {
-  var point = getCirclePoint(centerX, centerY, radius - 20, angle),
-      point2 = getCirclePoint(centerX, centerY, 2, angle + 90),
-      point3 = getCirclePoint(centerX, centerY, 2, angle - 90);
-  
-  ctx.beginPath();
-  ctx.strokeStyle = "#FF9166";
-  ctx.lineCap = 'round';
-  ctx.lineWidth = 4;
-  ctx.moveTo(point2.x, point2.y);
-  ctx.lineTo(point.x, point.y);
-  ctx.lineTo(point3.x, point3.y);
-  ctx.stroke();
-  
-  ctx.beginPath();
-  ctx.arc(centerX, centerY, 9, 0, 2 * Math.PI, false);
-  ctx.fillStyle = color;
-  ctx.fill();
-}
+// Get the vector representing the chosen direction
+GameManager.prototype.getVector = function (direction) {
+  // Vectors representing tile movement
+  var map = {
+    0: { x: 0,  y: -1 }, // up
+    1: { x: 1,  y: 0 },  // right
+    2: { x: 0,  y: 1 },  // down
+    3: { x: -1, y: 0 }   // left
+  };
 
-function drawTig(ctx, x, y, radius, angle, size) {
-  var startPoint = getCirclePoint(x, y, radius - 4, angle),
-      endPoint = getCirclePoint(x, y, radius - size, angle)
-  
-  ctx.beginPath();
-  ctx.lineCap = 'round';
-  ctx.moveTo(startPoint.x, startPoint.y);
-  ctx.lineTo(endPoint.x, endPoint.y);
-  ctx.stroke();
-}
+  return map[direction];
+};
 
-function getCirclePoint(x, y, radius, angle) {
-    var radian = (angle / 180) * Math.PI;
-  
-    return {
-      x: x + radius * Math.cos(radian),
-      y: y + radius * Math.sin(radian)
-    }
-}
+// Build a list of positions to traverse in the right order
+GameManager.prototype.buildTraversals = function (vector) {
+  var traversals = { x: [], y: [] };
 
-function calcMovement() {
-  var move = $.state.speed * 0.01,
-      newCurve = 0;
-  
-  if($.state.keypress.up) {
-    $.state.speed += $.state.car.acc - ($.state.speed * 0.015);
-  } else if ($.state.speed > 0) {
-    $.state.speed -= $.state.car.friction;
+  for (var pos = 0; pos < this.size; pos++) {
+    traversals.x.push(pos);
+    traversals.y.push(pos);
   }
-  
-  if($.state.keypress.down && $.state.speed > 0) {
-    $.state.speed -= 1;
-  }
-  
-  // Left and right
-  $.state.xpos -= ($.state.currentCurve * $.state.speed) * 0.005;
-  
-  if($.state.speed) {
-    if($.state.keypress.left) {
-      $.state.xpos += (Math.abs($.state.turn) + 7 + ($.state.speed > $.state.car.maxSpeed / 4 ? ($.state.car.maxSpeed - ($.state.speed / 2)) : $.state.speed)) * 0.2;
-      $.state.turn -= 1;
-    }
-  
-    if($.state.keypress.right) {
-      $.state.xpos -= (Math.abs($.state.turn) + 7 + ($.state.speed > $.state.car.maxSpeed / 4 ? ($.state.car.maxSpeed - ($.state.speed / 2)) : $.state.speed)) * 0.2;
-      $.state.turn += 1;
-    }
-    
-    if($.state.turn !== 0 && !$.state.keypress.left && !$.state.keypress.right) {
-      $.state.turn += $.state.turn > 0 ? -0.25 : 0.25;
+
+  // Always traverse from the farthest cell in the chosen direction
+  if (vector.x === 1) traversals.x = traversals.x.reverse();
+  if (vector.y === 1) traversals.y = traversals.y.reverse();
+
+  return traversals;
+};
+
+GameManager.prototype.findFarthestPosition = function (cell, vector) {
+  var previous;
+
+  // Progress towards the vector direction until an obstacle is found
+  do {
+    previous = cell;
+    cell     = { x: previous.x + vector.x, y: previous.y + vector.y };
+  } while (this.grid.withinBounds(cell) &&
+           this.grid.cellAvailable(cell));
+
+  return {
+    farthest: previous,
+    next: cell // Used to check if a merge is required
+  };
+};
+
+GameManager.prototype.movesAvailable = function () {
+  return this.grid.cellsAvailable() || this.tileMatchesAvailable();
+};
+
+// Check for available matches between tiles (more expensive check)
+GameManager.prototype.tileMatchesAvailable = function () {
+  var self = this;
+
+  var tile;
+
+  for (var x = 0; x < this.size; x++) {
+    for (var y = 0; y < this.size; y++) {
+      tile = this.grid.cellContent({ x: x, y: y });
+
+      if (tile) {
+        for (var direction = 0; direction < 4; direction++) {
+          var vector = self.getVector(direction);
+          var cell   = { x: x + vector.x, y: y + vector.y };
+
+          var other  = self.grid.cellContent(cell);
+          if (other) {
+          }
+
+          if (other && other.value === tile.value) {
+            return true; // These two tiles can be merged
+          }
+        }
+      }
     }
   }
-  
-  $.state.turn = clamp($.state.turn, -5, 5);
-  $.state.speed = clamp($.state.speed, 0, $.state.car.maxSpeed);
-  
-  // section
-  $.state.section -= $.state.speed;
-  
-  if($.state.section < 0) {
-    $.state.section = randomRange(1000, 9000);
-    
-    newCurve = randomRange(-50, 50);
-    
-    if(Math.abs($.state.curve - newCurve) < 20) {
-      newCurve = randomRange(-50, 50);
+
+  return false;
+};
+
+GameManager.prototype.positionsEqual = function (first, second) {
+  return first.x === second.x && first.y === second.y;
+};
+
+
+
+function Grid(size) {
+  this.size = size;
+
+  this.cells = [];
+
+  this.build();
+}
+
+// Build a grid of the specified size
+Grid.prototype.build = function () {
+  for (var x = 0; x < this.size; x++) {
+    var row = this.cells[x] = [];
+
+    for (var y = 0; y < this.size; y++) {
+      row.push(null);
     }
-    
-    $.state.curve = newCurve;
   }
-  
-  if($.state.currentCurve < $.state.curve && move < Math.abs($.state.currentCurve - $.state.curve)) {
-    $.state.currentCurve += move;
-  } else if($.state.currentCurve > $.state.curve && move < Math.abs($.state.currentCurve - $.state.curve)) {
-    $.state.currentCurve -= move;
+};
+
+// Find the first available random position
+Grid.prototype.randomAvailableCell = function () {
+  var cells = this.availableCells();
+
+  if (cells.length) {
+    return cells[Math.floor(Math.random() * cells.length)];
   }
-  
-  if(Math.abs($.state.xpos) > 550) {
-    $.state.speed *= 0.96;
+};
+
+Grid.prototype.availableCells = function () {
+  var cells = [];
+
+  this.eachCell(function (x, y, tile) {
+    if (!tile) {
+      cells.push({ x: x, y: y });
+    }
+  });
+
+  return cells;
+};
+
+// Call callback for every cell
+Grid.prototype.eachCell = function (callback) {
+  for (var x = 0; x < this.size; x++) {
+    for (var y = 0; y < this.size; y++) {
+      callback(x, y, this.cells[x][y]);
+    }
   }
-  
-  $.state.xpos = clamp($.state.xpos, -650, 650);
+};
+
+// Check if there are any cells available
+Grid.prototype.cellsAvailable = function () {
+  return !!this.availableCells().length;
+};
+
+// Check if the specified cell is taken
+Grid.prototype.cellAvailable = function (cell) {
+  return !this.cellOccupied(cell);
+};
+
+Grid.prototype.cellOccupied = function (cell) {
+  return !!this.cellContent(cell);
+};
+
+Grid.prototype.cellContent = function (cell) {
+  if (this.withinBounds(cell)) {
+    return this.cells[cell.x][cell.y];
+  } else {
+    return null;
+  }
+};
+
+// Inserts a tile at its position
+Grid.prototype.insertTile = function (tile) {
+  this.cells[tile.x][tile.y] = tile;
+};
+
+Grid.prototype.removeTile = function (tile) {
+  this.cells[tile.x][tile.y] = null;
+};
+
+Grid.prototype.withinBounds = function (position) {
+  return position.x >= 0 && position.x < this.size &&
+         position.y >= 0 && position.y < this.size;
+};
+
+
+function HTMLActuator() {
+  this.tileContainer    = document.getElementsByClassName("tile-container")[0];
+  this.scoreContainer   = document.getElementsByClassName("score-container")[0];
+  this.messageContainer = document.getElementsByClassName("game-message")[0];
+
+  this.score = 0;
 }
 
-function keyUp(e) {
-    move(e, false);
-}
+HTMLActuator.prototype.actuate = function (grid, metadata) {
+  var self = this;
 
-function keyDown(e) {
-    move(e, true);
-}
+  window.requestAnimationFrame(function () {
+    self.clearContainer(self.tileContainer);
 
-function move(e, isKeyDown) {
-  if(e.keyCode >= 37 && e.keyCode <= 40) {
-    e.preventDefault();
+    grid.cells.forEach(function (column) {
+      column.forEach(function (cell) {
+        if (cell) {
+          self.addTile(cell);
+        }
+      });
+    });
+
+    self.updateScore(metadata.score);
+
+    if (metadata.over) self.message(false); // You lose
+    if (metadata.won) self.message(true); // You win!
+  });
+};
+
+HTMLActuator.prototype.restart = function () {
+  this.clearMessage();
+};
+
+HTMLActuator.prototype.clearContainer = function (container) {
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+};
+
+HTMLActuator.prototype.addTile = function (tile) {
+  var self = this;
+
+  var element   = document.createElement("div");
+  var position  = tile.previousPosition || { x: tile.x, y: tile.y };
+  positionClass = this.positionClass(position);
+
+  // We can't use classlist because it somehow glitches when replacing classes
+  var classes = ["tile", "tile-" + tile.value, positionClass];
+  this.applyClasses(element, classes);
+
+  element.textContent = tile.value;
+
+  if (tile.previousPosition) {
+    // Make sure that the tile gets rendered in the previous position first
+    window.requestAnimationFrame(function () {
+      classes[2] = self.positionClass({ x: tile.x, y: tile.y });
+      self.applyClasses(element, classes); // Update the position
+    });
+  } else if (tile.mergedFrom) {
+    classes.push("tile-merged");
+    this.applyClasses(element, classes);
+
+    // Render the tiles that merged
+    tile.mergedFrom.forEach(function (merged) {
+      self.addTile(merged);
+    });
+  } else {
+    classes.push("tile-new");
+    this.applyClasses(element, classes);
   }
 
-  if(e.keyCode === 37) {
-    $.state.keypress.left = isKeyDown;
-  } 
+  // Put the tile on the board
+  this.tileContainer.appendChild(element);
+};
 
-  if(e.keyCode === 38) {
-    $.state.keypress.up = isKeyDown;
-  } 
+HTMLActuator.prototype.applyClasses = function (element, classes) {
+  element.setAttribute("class", classes.join(" "));
+};
 
-  if(e.keyCode === 39) {
-    $.state.keypress.right = isKeyDown;
-  } 
+HTMLActuator.prototype.normalizePosition = function (position) {
+  return { x: position.x + 1, y: position.y + 1 };
+};
 
-  if(e.keyCode === 40) {
-    $.state.keypress.down = isKeyDown;
+HTMLActuator.prototype.positionClass = function (position) {
+  position = this.normalizePosition(position);
+  return "tile-position-" + position.x + "-" + position.y;
+};
+
+HTMLActuator.prototype.updateScore = function (score) {
+  this.clearContainer(this.scoreContainer);
+
+  var difference = score - this.score;
+  this.score = score;
+
+  this.scoreContainer.textContent = this.score;
+
+  if (difference > 0) {
+    var addition = document.createElement("div");
+    addition.classList.add("score-addition");
+    addition.textContent = "+" + difference;
+
+    this.scoreContainer.appendChild(addition);
   }
+};
+
+HTMLActuator.prototype.message = function (won) {
+  var type    = won ? "game-won" : "game-over";
+  var message = won ? "You win!" : "Game over!"
+
+  // if (ga) ga("send", "event", "game", "end", type, this.score);
+
+  this.messageContainer.classList.add(type);
+  this.messageContainer.getElementsByTagName("p")[0].textContent = message;
+};
+
+HTMLActuator.prototype.clearMessage = function () {
+  this.messageContainer.classList.remove("game-won", "game-over");
+};
+
+
+
+function KeyboardInputManager() {
+  this.events = {};
+
+  this.listen();
 }
 
-function randomRange(min, max) {
-  return min + Math.random() * (max - min);
-}
+KeyboardInputManager.prototype.on = function (event, callback) {
+  if (!this.events[event]) {
+    this.events[event] = [];
+  }
+  this.events[event].push(callback);
+};
 
-function norm(value, min, max) {
-  return (value - min) / (max - min);
-}
+KeyboardInputManager.prototype.emit = function (event, data) {
+  var callbacks = this.events[event];
+  if (callbacks) {
+    callbacks.forEach(function (callback) {
+      callback(data);
+    });
+  }
+};
 
-function lerp(norm, min, max) {
-  return (max - min) * norm + min;
-}
+KeyboardInputManager.prototype.listen = function () {
+  var self = this;
 
-function map(value, sourceMin, sourceMax, destMin, destMax) {
-  return lerp(norm(value, sourceMin, sourceMax), destMin, destMax);
-}
+  var map = {
+    38: 0, // Up
+    39: 1, // Right
+    40: 2, // Down
+    37: 3, // Left
+    75: 0, // vim keybindings
+    76: 1,
+    74: 2,
+    72: 3
+  };
 
-function clamp(value, min, max) {
-  return Math.min(Math.max(value, min), max);
-}
+  document.addEventListener("keydown", function (event) {
+    var modifiers = event.altKey || event.ctrlKey || event.metaKey ||
+                    event.shiftKey;
+    var mapped    = map[event.which];
 
-function drawBg() {
-  $.ctx.fillStyle = $.colors.sky;
-  $.ctx.fillRect(0, 0, $.canvas.width, $.settings.skySize);
-  drawMountain(0, 60, 200);
-  drawMountain(280, 40, 200);
-  drawMountain(400, 80, 200);
-  drawMountain(550, 60, 200);
-  
-  $.storage.bg = $.ctx.getImageData(0, 0, $.canvas.width, $.canvas.height);
-}
+    if (!modifiers) {
+      if (mapped !== undefined) {
+        event.preventDefault();
+        self.emit("move", mapped);
+      }
 
-function drawMountain(pos, height, width) {
-  $.ctx.fillStyle = $.colors.mountains;
-  $.ctx.strokeStyle = $.colors.mountains;
-  $.ctx.lineJoin = "round";
-  $.ctx.lineWidth = 20;
-  $.ctx.beginPath();
-  $.ctx.moveTo(pos, $.settings.skySize);
-  $.ctx.lineTo(pos + (width / 2), $.settings.skySize - height);
-  $.ctx.lineTo(pos + width, $.settings.skySize);
-  $.ctx.closePath();
-  $.ctx.stroke();
-  $.ctx.fill();
-}
+      if (event.which === 32) self.restart.bind(self)(event);
+    }
+  });
 
-function drawSky() {
-  $.ctx.fillStyle = $.colors.sky;
-  $.ctx.fillRect(0, 0, $.canvas.width, $.settings.skySize);
-}
+  var retry = document.getElementsByClassName("retry-button")[0];
+  retry.addEventListener("click", this.restart.bind(this));
 
-function drawRoad(min, max, squishFactor, color) {
-  var basePos = $.canvas.width + $.state.xpos;
-  
-  $.ctx.fillStyle = color;
-  $.ctx.beginPath();
-  $.ctx.moveTo(((basePos + min) / 2) - ($.state.currentCurve * 3), $.settings.skySize);
-  $.ctx.quadraticCurveTo((((basePos / 2) + min)) + ($.state.currentCurve / 3) + squishFactor, $.settings.skySize + 52, (basePos + max) / 2, $.canvas.height);
-  $.ctx.lineTo((basePos - max) / 2, $.canvas.height);
-  $.ctx.quadraticCurveTo((((basePos / 2) - min)) + ($.state.currentCurve / 3) - squishFactor, $.settings.skySize + 52, ((basePos - min) / 2) - ($.state.currentCurve * 3), $.settings.skySize);
-  $.ctx.closePath();
-  $.ctx.fill();
-}
+  // Listen to swipe events
+  var gestures = [Hammer.DIRECTION_UP, Hammer.DIRECTION_RIGHT,
+                  Hammer.DIRECTION_DOWN, Hammer.DIRECTION_LEFT];
 
-function drawCar() {
-  var carWidth = 160,
-      carHeight = 50,
-      carX = ($.canvas.width / 2) - (carWidth / 2),
-      carY = 320;
-  
-  // shadow
-  roundedRect($.ctx, "rgba(0, 0, 0, 0.35)", carX - 1 + $.state.turn, carY + (carHeight - 35), carWidth + 10, carHeight, 9);
-  
-  // tires
-  roundedRect($.ctx, "#111", carX, carY + (carHeight - 30), 30, 40, 6);
-  roundedRect($.ctx, "#111", (carX - 22) + carWidth, carY + (carHeight - 30), 30, 40, 6);
-  
-  drawCarBody($.ctx);
-}
-
-function drawCarBody(ctx) {
-  var startX = 299, startY = 311,
-      lights = [10, 26, 134, 152],
-      lightsY = 0;
-  
-  /* Front */
-  roundedRect($.ctx, "#C2C2C2", startX + 6 + ($.state.turn * 1.1), startY - 18, 146, 40, 18);
-  
-  ctx.beginPath(); 
-  ctx.lineWidth="12";
-  ctx.fillStyle="#FFFFFF";
-  ctx.strokeStyle="#FFFFFF";
-  ctx.moveTo(startX + 30, startY);
-  ctx.lineTo(startX + 46 + $.state.turn, startY - 25);
-  ctx.lineTo(startX + 114 + $.state.turn, startY - 25);
-  ctx.lineTo(startX + 130, startY);
-  ctx.fill();
-  ctx.stroke();
-  /* END: Front */
-  
-  ctx.lineWidth="12";
-  ctx.lineCap = 'round';
-  ctx.beginPath(); 
-  ctx.fillStyle="#DEE0E2";
-  ctx.strokeStyle="#DEE0E2";
-  ctx.moveTo(startX + 2, startY + 12 + ($.state.turn * 0.2));
-  ctx.lineTo(startX + 159, startY + 12 + ($.state.turn * 0.2));
-  ctx.quadraticCurveTo(startX + 166, startY + 35, startX + 159, startY + 55 + ($.state.turn * 0.2));
-  ctx.lineTo(startX + 2, startY + 55 - ($.state.turn * 0.2));
-  ctx.quadraticCurveTo(startX - 5, startY + 32, startX + 2, startY + 12 - ($.state.turn * 0.2));
-  ctx.fill();
-  ctx.stroke();
-
-  ctx.beginPath(); 
-  ctx.lineWidth="12";
-  ctx.fillStyle="#DEE0E2";
-  ctx.strokeStyle="#DEE0E2";
-  ctx.moveTo(startX + 30, startY);
-  ctx.lineTo(startX + 40 + ($.state.turn * 0.7), startY - 15);
-  ctx.lineTo(startX + 120 + ($.state.turn * 0.7), startY - 15);
-  ctx.lineTo(startX + 130, startY);
-  ctx.fill();
-  ctx.stroke();
-  
-  roundedRect(ctx, "#474747", startX - 4, startY, 169, 10, 3, true, 0.2);
-  roundedRect(ctx, "#474747", startX + 40, startY + 5, 80, 10, 5, true, 0.1);
-  
-  ctx.fillStyle = "#FF9166";
-  
-  lights.forEach(function(xPos) {
-    ctx.beginPath();
-    ctx.arc(startX + xPos, startY + 20 + lightsY, 6, 0, Math.PI*2, true); 
-    ctx.closePath();
-    ctx.fill();
-    lightsY += $.state.turn * 0.05;
+  var gameContainer = document.getElementsByClassName("game-container")[0];
+  var handler       = Hammer(gameContainer, {
+    drag_block_horizontal: true,
+    drag_block_vertical: true
   });
   
-  ctx.lineWidth="9";
-  ctx.fillStyle="#222222";
-  ctx.strokeStyle="#444";
-  
-  roundedRect($.ctx, "#FFF", startX + 60, startY + 25, 40, 18, 3, true, 0.05);
+  handler.on("swipe", function (event) {
+    event.gesture.preventDefault();
+    mapped = gestures.indexOf(event.gesture.direction);
+
+    if (mapped !== -1) self.emit("move", mapped);
+  });
+};
+
+KeyboardInputManager.prototype.restart = function (event) {
+  event.preventDefault();
+  this.emit("restart");
+};
+
+
+
+
+
+function Tile(position, value) {
+  this.x                = position.x;
+  this.y                = position.y;
+  this.value            = value || 2;
+
+  this.previousPosition = null;
+  this.mergedFrom       = null; // Tracks tiles that merged together
 }
 
-function roundedRect(ctx, color, x, y, width, height, radius, turn, turneffect) {
-  var skew = turn === true ? $.state.turn * turneffect : 0;
-  
-  ctx.fillStyle = color;
-  ctx.beginPath();
-  ctx.moveTo(x + radius, y - skew);
-  
-  // top right
-  ctx.lineTo(x + width - radius, y + skew);
-  ctx.arcTo(x + width, y + skew, x + width, y + radius + skew, radius);
-  ctx.lineTo(x + width, y + radius + skew);
-  
-  // down right
-  ctx.lineTo(x + width, (y + height + skew) - radius);
-  ctx.arcTo(x + width, y + height + skew, (x + width) - radius, y + height + skew, radius);
-  ctx.lineTo((x + width) - radius, y + height + skew);
-  
-  // down left
-  ctx.lineTo(x + radius, y + height - skew);
-  ctx.arcTo(x, y + height - skew, x, (y + height - skew) - radius, radius);
-  ctx.lineTo(x, (y + height - skew) - radius);
-  
-  // top left
-  ctx.lineTo(x, y + radius - skew);
-  ctx.arcTo(x, y - skew, x + radius, y - skew, radius);
-  ctx.lineTo(x + radius, y - skew);
-  ctx.fill();
-}
+Tile.prototype.savePosition = function () {
+  this.previousPosition = { x: this.x, y: this.y };
+};
 
-function drawGround(ctx, offset, lightColor, darkColor, width) {
-  var pos = ($.settings.skySize - $.settings.ground.min) + offset, stepSize = 1, drawDark = $.state.startDark, firstRow = true;
-  ctx.fillStyle = lightColor;
-  ctx.fillRect(0, $.settings.skySize, width, $.settings.ground.size);
+Tile.prototype.updatePosition = function (position) {
+  this.x = position.x;
+  this.y = position.y;
+};
 
-  ctx.fillStyle =  darkColor;
-  while(pos <= $.canvas.height) {
-    stepSize = norm(pos, $.settings.skySize, $.canvas.height) * $.settings.ground.max;
-    if(stepSize < $.settings.ground.min) {
-      stepSize = $.settings.ground.min;
-    }
-  
-    if(drawDark) {
-      if(firstRow) {
-        ctx.fillRect(0, $.settings.skySize, width, stepSize - (offset > $.settings.ground.min ? $.settings.ground.min : $.settings.ground.min - offset));
-      } else {
-        ctx.fillRect(0, pos < $.settings.skySize ? $.settings.skySize : pos, width, stepSize);
-      }
-    }
-    
-    firstRow = false;
-    pos += stepSize;
-    drawDark = !drawDark;
-  }
-}
