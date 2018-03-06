@@ -48,6 +48,7 @@ function beard_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'team', '600', '600', true );
 	add_image_size( 'snap', '1200', '900', true );
+	add_image_size( 'feat', '1920', '1080', true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

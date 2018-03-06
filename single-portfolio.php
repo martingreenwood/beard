@@ -6,7 +6,8 @@
  */
 
 get_header(); 
-$featureimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+// $featureimage = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+$featureimage = get_the_post_thumbnail_url($post->ID, 'feat'); 
 ?>
 
 	<div id="hero" style="background-image: url(<?php echo $featureimage; ?>)">
