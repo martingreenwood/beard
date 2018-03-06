@@ -23,7 +23,7 @@ get_header(); ?>
 				<?php $portfolio_image = get_field( 'portfolio_image' ); ?>
 				<div class="grid-item">
 					<a href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail( 'full' ) ?>
+						<?php the_post_thumbnail( 'feat' ) ?>
 						<div class="info">
 							<div class="table"><div class="cell middle">
 								<h2><?php the_title( ); ?></h2>
