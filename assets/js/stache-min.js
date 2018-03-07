@@ -91,31 +91,23 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 =            EQUAL HEIGHTS             =
 ======================================*/
 
-// Select and loop the container element of the elements you want to equalise
-// $('#images .row').each(function(){  
-  
-//   // Cache the highest
-//   var highestBox = 0;
-  
-//   // Select and loop the elements you want to equalise
-//   $('.element', this).each(function(){
-    
-//     // If this box is higher than the cached highest then store it
-//     if($(this).height() > highestBox) {
-//       highestBox = $(this).height(); 
-//     }
-  
-//   });  
-        
-//   // Set the height of all those children to whichever was highest 
-//   $('.element',this).height(highestBox);
-                
-// }); 
-
 (function($) {
 	$('#images .element').matchHeight();
 })(jQuery);
 
+/*=============================
+=            VIDEO            =
+=============================*/
+
+(function($) {
+	$('video').each(function(){
+		if ($(this).is(":in-viewport")) {
+			$(this)[0].play();
+		} else {
+			$(this)[0].pause();
+		}
+	})
+})(jQuery);
 
 /*===================================
 =            NAV SLOGAN             =
