@@ -2843,6 +2843,10 @@ g .noscroll { overflow: hidden; }
 
 .single-portfolio #images .element img { display: block; width: 100%; }
 
+.single-portfolio #images .element .wp-video { width: 100% !important; }
+
+.single-portfolio #images .element .wp-video .mejs-video { width: 100% !important; }
+
 .single-portfolio #images .element .text { padding: 60px; min-height: 200px; max-width: 1600px; margin: 0 auto; height: 100%; }
 
 @media screen and (min-width: 600px) { .single-portfolio #images .element .text { padding: 60px 180px; } }

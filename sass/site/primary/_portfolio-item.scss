@@ -104,6 +104,14 @@
 				display: block;
 				width: 100%;
 			}
+
+			.wp-video {
+				width: 100% !important;
+
+				.mejs-video {
+					width: 100% !important;
+				}
+			}
 // 
 			.text {
 				padding: 60px;
