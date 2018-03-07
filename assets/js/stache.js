@@ -99,7 +99,7 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 =============================*/
 
 // (function($) {
-	var video = $('video'); 
+	var video = jQuery('video'); 
 	var visibility = VisSense(video[0], { fullyvisible: 0.75 });
 
 	var visibility_monitor = visibility.monitor({
