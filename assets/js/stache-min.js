@@ -98,7 +98,7 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 =            VIDEO            =
 =============================*/
 
-(function($) {
+// (function($) {
 	var video = $('video'); 
 	var visibility = VisSense(video[0], { fullyvisible: 0.75 });
 
@@ -110,8 +110,8 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 	    video.stop(); 
 	  }
 	}).start();
-})(jQuery);
-
+// })(jQuery);
+// 
 /*===================================
 =            NAV SLOGAN             =
 ===================================*/
