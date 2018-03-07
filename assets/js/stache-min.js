@@ -112,6 +112,10 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
                 
 // }); 
 
+(function($) {
+	$('#images .element').matchHeight();
+})(jQuery);
+
 
 /*===================================
 =            NAV SLOGAN             =

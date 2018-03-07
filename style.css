@@ -2809,7 +2809,9 @@ g .noscroll { overflow: hidden; }
 
 .single-portfolio #hero { height: 100%; height: 100vh; padding: 100px 0; background-size: cover; background-repeat: no-repeat; background-position: center; }
 
-.single-portfolio #hero h1 { text-align: center; padding: 0 10%; font-size: 200px; letter-spacing: 2px; color: white; margin: 0; line-height: 154px; }
+.single-portfolio #hero h1 { text-align: center; padding: 0 10%; font-size: 60px; letter-spacing: 2px; color: white; margin: 0; line-height: 49px; }
+
+@media screen and (min-width: 600px) { .single-portfolio #hero h1 { font-size: 200px; line-height: 154px; } }
 
 .single-portfolio #primary { padding: 60px 0; background: white; }
 
@@ -2827,15 +2829,23 @@ g .noscroll { overflow: hidden; }
 
 .single-portfolio #images .element.full { width: 100%; }
 
-.single-portfolio #images .element.half { width: 50%; }
+.single-portfolio #images .element.half { width: 100%; }
 
-.single-portfolio #images .element.third { width: 33.33333%; }
+@media screen and (min-width: 600px) { .single-portfolio #images .element.half { width: 50%; } }
 
-.single-portfolio #images .element.quarter { width: 25%; }
+.single-portfolio #images .element.third { width: 100%; }
+
+@media screen and (min-width: 600px) { .single-portfolio #images .element.third { width: 33.33333%; } }
+
+.single-portfolio #images .element.quarter { width: 100%; }
+
+@media screen and (min-width: 600px) { .single-portfolio #images .element.quarter { width: 25%; } }
 
 .single-portfolio #images .element img { display: block; width: 100%; }
 
-.single-portfolio #images .element .text { padding: 60px 180px; min-height: 200px; max-width: 1600px; margin: 0 auto; height: 100%; }
+.single-portfolio #images .element .text { padding: 60px; min-height: 200px; max-width: 1600px; margin: 0 auto; height: 100%; }
+
+@media screen and (min-width: 600px) { .single-portfolio #images .element .text { padding: 60px 180px; } }
 
 .single-portfolio #images .element .text blockquote { quotes: ""; margin: 0; }
 

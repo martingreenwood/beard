@@ -75,6 +75,14 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 											</div>
 										</div>
 										<?php
+
+									elseif( get_row_layout() == 'video' ): 
+
+										?>
+										<div class="avideo">
+											<?php the_sub_field('text'); ?>	
+										</div>
+										<?php
 									
 									elseif( get_row_layout() == 'quote' ): 
 
