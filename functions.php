@@ -118,7 +118,6 @@ function beard_scripts() {
 	wp_enqueue_script( 'beard-ha', '//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.6/hammer.min.js','','',true );
 
 	wp_enqueue_script( 'beard-matchHeight', get_template_directory_uri() . '/assets/js/jquery.matchHeight.js','','',true );
-	wp_enqueue_script( 'beard-vissense', get_template_directory_uri() . '/assets/js/vissense.min.js','','',true );
 	wp_enqueue_script( 'beard-morphext', get_template_directory_uri() . '/assets/js/morphext.min.js','','',true );
 	wp_enqueue_script( 'beard-nav', get_template_directory_uri() . '/assets/js/navigation.js','','',true );
 	wp_enqueue_script( 'beard-js', get_template_directory_uri() . '/assets/js/stache.js','','',true );
