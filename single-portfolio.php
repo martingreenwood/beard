@@ -80,7 +80,7 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 
 										?>
 										<div class="avideo">
-											<?php the_sub_field('text'); ?>	
+											<?php the_sub_field('video'); ?>	
 										</div>
 										<?php
 									
