@@ -99,13 +99,12 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 =============================*/
 
 (function($) {
-	$('video').each(function(){
-		if ($(this).is(":in-viewport")) {
-			$(this)[0].play();
-		} else {
-			$(this)[0].pause();
-		}
-	})
+	var video = $('video'); 
+	var videoVisibility = VisSense(video[0]);
+
+	if(videoVisibility.percentage() > 0.75) { 
+	  video.play();
+	}
 })(jQuery);
 
 /*===================================
