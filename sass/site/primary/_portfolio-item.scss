@@ -111,6 +111,11 @@
 				.mejs-video {
 					width: 100% !important;
 				}
+
+				.mejs-controls {
+					display: none !important;
+					visibility: hidden !important;
+				}
 			}
 // 
 			.text {
