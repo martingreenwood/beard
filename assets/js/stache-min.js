@@ -237,7 +237,7 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 
 	// Change page title on blur
 	$(window).blur(function() {
-		$("title").text(myArray[Math.floor(Math.random()*myArray.length)]);
+		$("title").text(myArray[Math.floor(Math.random()*myArray.length)] + "... WEAREBEARD");
 	});
 
 	// Change page title back on focus

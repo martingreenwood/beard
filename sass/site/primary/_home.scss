@@ -443,8 +443,12 @@
 
 		.feature-work-item {
 			float: left;
-			width: 50%;
+			width: 100%;
 			position: relative;
+
+			@include media($medium-screen-up) { 
+				width: 50%;
+			}
 
 			&:nth-child(1),
 			&:nth-child(2) {
