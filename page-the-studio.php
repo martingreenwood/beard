@@ -115,7 +115,11 @@ get_header(); ?>
 
 			<?php foreach ($result->data as $ig_post): ?>
 			<div class="ig-item">
-				<img src="<?php echo $ig_post->images->standard_resolution->url; ?>" alt="">
+				<?php if ($ig_post->videos->standard_resolution->url): ?>
+					<?php echo do_shortcode( '[video width="640" height="640" mp4="'.$ig_post->videos->standard_resolution->url.'" loop="true" autoplay="true"][/video]' ); ?>
+				<?php else: ?>
+					<img src="<?php echo $ig_post->images->standard_resolution->url; ?>" alt="">
+				<?php endif; ?>
 				<?php if(isset($ig_post->caption->text)): ?>
 				<div class="caption">
 					<div class="table">

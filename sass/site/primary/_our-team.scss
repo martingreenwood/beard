@@ -73,17 +73,27 @@
 
 		.instagrams {
 
+			.mejs-controls {
+				display: none;
+				visibility: none;
+			}
+
 			.ig-item {
 				float: left;
 				width: 100%;
 				position: relative;
 
 				@include media($medium-screen-up) {
+					width: 50%;
+				}
+
+				@include media($xlarge-screen-up) {
 					width: 25%;
 				}
 
 				img {
 					display: block;
+					width: 100%;
 				}
 
 				p {
@@ -149,10 +159,6 @@
 				float: left;
 				width: 100%;
 
-				@include media($large-screen-up) {
-					width: 100%;
-				}
-
 				.info {
 					float: left;
 					width: 100%;
@@ -160,14 +166,14 @@
 					box-sizing: border-box;
 					padding: 40px;
 
-					@include media($medium-screen-up) {
+					@include media($xlarge-screen-up) {
 						position: absolute;
 						float: none;
 						right: 0;
 						width: 50%;
 						height: 100%;
-						padding-right: 100px;
-						padding-left: 40px;
+						// padding-right: 100px;
+						// padding-left: 40px;
 					}
 				}
 
@@ -218,7 +224,7 @@
 					float: left;
 					width: 100%;
 
-					@include media($medium-screen-up) {
+					@include media($large-screen-up) {
 						width: 50%;
 					}
 

@@ -120,7 +120,9 @@ get_header(); ?>
 
 		<section id="offerings">
 			<div class="container wide">
+				<div class="row">
 				<?php
+				$i = 1;
 				if( have_rows('feature_content') ):
 				while ( have_rows('feature_content') ) : the_row();
 					$title = get_sub_field('title');
@@ -132,10 +134,12 @@ get_header(); ?>
 						<?php echo $text; ?>
 						<a class="more" href="<?php echo $link; ?>">Find Out More</a>
 					</div>
+					<?php if($i % 3 === 0) {echo '</div><div class="row">';} $i++; ?>
 					<?php
 				endwhile;
 				endif;
 				?>
+				</div>
 			</div>
 		</section>
 

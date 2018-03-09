@@ -103,7 +103,7 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 
 (function($) {
 	$(window).scroll(function() {
-		$('video').each(function(){
+		$('#images video').each(function(){
 		    if ($(this).visible( true )) {
 		        $(this)[0].play();
 		    } else {

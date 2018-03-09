@@ -3694,70 +3694,70 @@ a:hover, a:active { outline: 0; }
 
 .span2:last-child { margin-right: 0; }
 
-@media screen and (min-width: 600px) { .span2 { float: left; display: block; margin-right: 3.2258064516%; width: 35.4838709677%; }
+@media screen and (min-width: 600px) { .span2 { float: left; display: block; margin-right: 2.8571428571%; width: 31.4285714286%; }
   .span2:last-child { margin-right: 0; } }
 
-@media screen and (min-width: 1024px) { .span2 { float: left; display: block; margin-right: 2.1276595745%; width: 14.8936170213%; }
+@media screen and (min-width: 1180px) { .span2 { float: left; display: block; margin-right: 2.1276595745%; width: 14.8936170213%; }
   .span2:last-child { margin-right: 0; } }
 
 .span3 { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
 
 .span3:last-child { margin-right: 0; }
 
-@media screen and (min-width: 600px) { .span3 { float: left; display: block; margin-right: 3.2258064516%; width: 35.4838709677%; }
+@media screen and (min-width: 600px) { .span3 { float: left; display: block; margin-right: 2.8571428571%; width: 31.4285714286%; }
   .span3:last-child { margin-right: 0; } }
 
-@media screen and (min-width: 1024px) { .span3 { float: left; display: block; margin-right: 2.1276595745%; width: 23.4042553191%; }
+@media screen and (min-width: 1180px) { .span3 { float: left; display: block; margin-right: 2.1276595745%; width: 23.4042553191%; }
   .span3:last-child { margin-right: 0; } }
 
 .span4 { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
 
 .span4:last-child { margin-right: 0; }
 
-@media screen and (min-width: 600px) { .span4 { float: left; display: block; margin-right: 3.2258064516%; width: 39.7419354839%; }
+@media screen and (min-width: 600px) { .span4 { float: left; display: block; margin-right: 2.8571428571%; width: 31.4285714286%; }
   .span4:last-child { margin-right: 0; } }
 
-@media screen and (min-width: 1024px) { .span4 { float: left; display: block; margin-right: 2.1276595745%; width: 31.914893617%; }
+@media screen and (min-width: 1180px) { .span4 { float: left; display: block; margin-right: 2.1276595745%; width: 31.914893617%; }
   .span4:last-child { margin-right: 0; } }
 
 .span6 { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
 
 .span6:last-child { margin-right: 0; }
 
-@media screen and (min-width: 600px) { .span6 { float: left; display: block; margin-right: 3.2258064516%; width: 48.3870967742%; }
+@media screen and (min-width: 600px) { .span6 { float: left; display: block; margin-right: 2.8571428571%; width: 42.8571428571%; }
   .span6:last-child { margin-right: 0; } }
 
-@media screen and (min-width: 1024px) { .span6 { float: left; display: block; margin-right: 2.1276595745%; width: 48.9361702128%; }
+@media screen and (min-width: 1180px) { .span6 { float: left; display: block; margin-right: 2.1276595745%; width: 48.9361702128%; }
   .span6:last-child { margin-right: 0; } }
 
 .span8 { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
 
 .span8:last-child { margin-right: 0; }
 
-@media screen and (min-width: 600px) { .span8 { float: left; display: block; margin-right: 3.2258064516%; width: 82.7096774194%; }
+@media screen and (min-width: 600px) { .span8 { float: left; display: block; margin-right: 2.8571428571%; width: 73.2571428571%; }
   .span8:last-child { margin-right: 0; } }
 
-@media screen and (min-width: 1024px) { .span8 { float: left; display: block; margin-right: 2.1276595745%; width: 65.9574468085%; }
+@media screen and (min-width: 1180px) { .span8 { float: left; display: block; margin-right: 2.1276595745%; width: 65.9574468085%; }
   .span8:last-child { margin-right: 0; } }
 
 .span9 { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
 
 .span9:last-child { margin-right: 0; }
 
-@media screen and (min-width: 600px) { .span9 { float: left; display: block; margin-right: 3.2258064516%; width: 112.903225806%; }
+@media screen and (min-width: 600px) { .span9 { float: left; display: block; margin-right: 2.8571428571%; width: 100%; }
   .span9:last-child { margin-right: 0; } }
 
-@media screen and (min-width: 1024px) { .span9 { float: left; display: block; margin-right: 2.1276595745%; width: 74.4680851064%; }
+@media screen and (min-width: 1180px) { .span9 { float: left; display: block; margin-right: 2.1276595745%; width: 74.4680851064%; }
   .span9:last-child { margin-right: 0; } }
 
 .span12 { float: left; display: block; margin-right: 33.3333333333%; width: 100%; }
 
 .span12:last-child { margin-right: 0; }
 
-@media screen and (min-width: 600px) { .span12 { float: left; display: block; margin-right: 3.2258064516%; width: 100%; }
+@media screen and (min-width: 600px) { .span12 { float: left; display: block; margin-right: 2.8571428571%; width: 88.5714285714%; }
   .span12:last-child { margin-right: 0; } }
 
-@media screen and (min-width: 1024px) { .span12 { float: left; display: block; margin-right: 2.1276595745%; width: 100%; }
+@media screen and (min-width: 1180px) { .span12 { float: left; display: block; margin-right: 2.1276595745%; width: 100%; }
   .span12:last-child { margin-right: 0; } }
 
 /*--------------------------------------------------------------
@@ -4191,7 +4191,7 @@ g .noscroll { overflow: hidden; }
 
 .error404 .table { background-image: url(assets/images/404.png); background-size: auto; background-position: center; background-repeat: no-repeat; background-color: #eeeeee; background-size: contain; }
 
-@media screen and (min-width: 1024px) { .error404 .table { background-size: auto; } }
+@media screen and (min-width: 1180px) { .error404 .table { background-size: auto; } }
 
 .error404 .error-404 { text-align: right; max-width: 1100px; margin: 0 auto; padding: 0 40px; }
 
@@ -4199,7 +4199,7 @@ g .noscroll { overflow: hidden; }
 
 .error404 .error-404 a.procrastinate { display: none; }
 
-@media screen and (min-width: 1024px) { .error404 .error-404 a.procrastinate { display: block; } }
+@media screen and (min-width: 1180px) { .error404 .error-404 a.procrastinate { display: block; } }
 
 .error404 .error-404 h1 { font-size: 69px; margin: 0; line-height: 1; float: right; text-align: right; color: #333333; }
 
@@ -4314,9 +4314,11 @@ g .noscroll { overflow: hidden; }
 
 .home #primary #offerings .offering:nth-child(4), .home #primary #offerings .offering:nth-child(5), .home #primary #offerings .offering:nth-child(6) { border-bottom: 0; }
 
-.home #primary #offerings .offering:after { content: ""; width: 1px; height: calc(100% - 20px); background-color: #6f6f6f; position: absolute; right: -12.5px; top: 0; }
+.home #primary #offerings .offering:after { width: 1px; height: calc(100% - 20px); background-color: #6f6f6f; position: absolute; right: -12.5px; top: 0; }
 
-.home #primary #offerings .offering h2 { font-weight: 700; font-size: 32px; text-transform: uppercase; margin-bottom: 20px; line-height: 1.2; }
+@media screen and (min-width: 600px) { .home #primary #offerings .offering:after { content: ""; } }
+
+.home #primary #offerings .offering h2 { font-weight: 700; font-size: 32px; margin-bottom: 20px; line-height: 1.2; }
 
 .home #primary #offerings .offering h2 a { color: inherit; }
 
@@ -4404,11 +4406,15 @@ g .noscroll { overflow: hidden; }
 
 .our-team #insta header a, .the-studio #insta header a { display: inline-block; padding: 8px 27px; border: 1px solid #333; margin-top: 30px; text-transform: uppercase; font-weight: 600; }
 
+.our-team #insta .instagrams .mejs-controls, .the-studio #insta .instagrams .mejs-controls { display: none; visibility: none; }
+
 .our-team #insta .instagrams .ig-item, .the-studio #insta .instagrams .ig-item { float: left; width: 100%; position: relative; }
 
-@media screen and (min-width: 600px) { .our-team #insta .instagrams .ig-item, .the-studio #insta .instagrams .ig-item { width: 25%; } }
+@media screen and (min-width: 600px) { .our-team #insta .instagrams .ig-item, .the-studio #insta .instagrams .ig-item { width: 50%; } }
 
-.our-team #insta .instagrams .ig-item img, .the-studio #insta .instagrams .ig-item img { display: block; }
+@media screen and (min-width: 1180px) { .our-team #insta .instagrams .ig-item, .the-studio #insta .instagrams .ig-item { width: 25%; } }
+
+.our-team #insta .instagrams .ig-item img, .the-studio #insta .instagrams .ig-item img { display: block; width: 100%; }
 
 .our-team #insta .instagrams .ig-item p, .the-studio #insta .instagrams .ig-item p { color: white; }
 
@@ -4428,11 +4434,9 @@ g .noscroll { overflow: hidden; }
 
 .our-team #team .members .member, .the-studio #team .members .member { text-align: center; position: relative; float: left; width: 100%; }
 
-@media screen and (min-width: 1024px) { .our-team #team .members .member, .the-studio #team .members .member { width: 100%; } }
-
 .our-team #team .members .member .info, .the-studio #team .members .member .info { float: left; width: 100%; text-align: left; box-sizing: border-box; padding: 40px; }
 
-@media screen and (min-width: 600px) { .our-team #team .members .member .info, .the-studio #team .members .member .info { position: absolute; float: none; right: 0; width: 50%; height: 100%; padding-right: 100px; padding-left: 40px; } }
+@media screen and (min-width: 1180px) { .our-team #team .members .member .info, .the-studio #team .members .member .info { position: absolute; float: none; right: 0; width: 50%; height: 100%; } }
 
 .our-team #team .members .member ul, .the-studio #team .members .member ul { display: inline-block; list-style: none; margin: 20px 0 0 0; padding: 0; margin-bottom: 20px; }
 
@@ -4448,7 +4452,7 @@ g .noscroll { overflow: hidden; }
 
 .our-team #team .members .member .image, .the-studio #team .members .member .image { display: block; float: left; width: 100%; }
 
-@media screen and (min-width: 600px) { .our-team #team .members .member .image, .the-studio #team .members .member .image { width: 50%; } }
+@media screen and (min-width: 1180px) { .our-team #team .members .member .image, .the-studio #team .members .member .image { width: 50%; } }
 
 .our-team #team .members .member .image img, .the-studio #team .members .member .image img { display: block; width: 100%; }
 
@@ -4456,7 +4460,7 @@ g .noscroll { overflow: hidden; }
 
 .our-team #team .members .member:nth-child(even) .info, .the-studio #team .members .member:nth-child(even) .info { right: auto; left: 0; }
 
-@media screen and (min-width: 1024px) { .our-team #team .members .member:nth-child(even) .info, .the-studio #team .members .member:nth-child(even) .info { padding-left: 100px; padding-right: 40px; } }
+@media screen and (min-width: 1180px) { .our-team #team .members .member:nth-child(even) .info, .the-studio #team .members .member:nth-child(even) .info { padding-left: 100px; padding-right: 40px; } }
 
 /*============================
 =            WORK            =
@@ -4502,7 +4506,7 @@ g .noscroll { overflow: hidden; }
 
 @media screen and (min-width: 600px) { .single-portfolio #hero h1 { font-size: 130px; line-height: 114px; } }
 
-@media screen and (min-width: 1024px) { .single-portfolio #hero h1 { font-size: 200px; line-height: 154px; } }
+@media screen and (min-width: 1180px) { .single-portfolio #hero h1 { font-size: 200px; line-height: 154px; } }
 
 .single-portfolio #primary { padding: 60px 0; background: white; }
 
@@ -4522,15 +4526,15 @@ g .noscroll { overflow: hidden; }
 
 .single-portfolio #images .element.half { width: 100%; }
 
-@media screen and (min-width: 1024px) { .single-portfolio #images .element.half { width: 50%; } }
+@media screen and (min-width: 1180px) { .single-portfolio #images .element.half { width: 50%; } }
 
 .single-portfolio #images .element.third { width: 100%; }
 
-@media screen and (min-width: 1024px) { .single-portfolio #images .element.third { width: 33.33333%; } }
+@media screen and (min-width: 1180px) { .single-portfolio #images .element.third { width: 33.33333%; } }
 
 .single-portfolio #images .element.quarter { width: 100%; }
 
-@media screen and (min-width: 1024px) { .single-portfolio #images .element.quarter { width: 25%; } }
+@media screen and (min-width: 1180px) { .single-portfolio #images .element.quarter { width: 25%; } }
 
 .single-portfolio #images .element img { display: block; width: 100%; }
 
@@ -4542,7 +4546,7 @@ g .noscroll { overflow: hidden; }
 
 .single-portfolio #images .element .text { padding: 60px; min-height: 200px; max-width: 1600px; margin: 0 auto; height: 100%; }
 
-@media screen and (min-width: 1024px) { .single-portfolio #images .element .text { padding: 60px 180px; } }
+@media screen and (min-width: 1180px) { .single-portfolio #images .element .text { padding: 60px 180px; } }
 
 .single-portfolio #images .element .text blockquote { quotes: ""; margin: 0; }
 
