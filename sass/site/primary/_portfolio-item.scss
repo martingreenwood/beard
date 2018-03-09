@@ -40,6 +40,11 @@
 			line-height: 49px;
 
 			@include media($medium-screen-up) {
+				font-size: 130px;
+				line-height: 114px;
+			}
+
+			@include media($large-screen-up) {
 				font-size: 200px;
 				line-height: 154px;
 			}
