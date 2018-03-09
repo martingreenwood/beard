@@ -10,6 +10,29 @@ get_header();
 $featureimage = get_the_post_thumbnail_url($post->ID, 'feat'); 
 ?>
 
+	<?php if( have_rows('top_slider') ): ?> 
+	<div id="hero">
+		<?php while ( have_rows('top_slider') ) : the_row(); ?>
+		<?php
+		$image = get_sub_field( 'image' );
+		$animate = get_sub_field( 'animate' );
+		$animate_effect = get_sub_field( 'animate_effect' );
+		$animation_delay = get_sub_field( 'animation_delay' );
+		?>
+		<div style="background-image: url(<?php echo $image[url]; ?>)" class="element <?php if ( $animate ): ?>animated <?php echo $animate_effect; ?> d_<?php echo $animation_delay ?><?php endif; ?>">
+		</div>
+		<?php endwhile; ?>
+		<div class="element">
+			<div class="table">
+				<div class="cell middle">
+					<center>
+						<h1><?php the_title(); ?></h1>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php else: ?>
 	<div id="hero" style="background-image: url(<?php echo $featureimage; ?>)">
 		<div class="table">
 			<div class="cell middle">
@@ -19,6 +42,7 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 			</div>
 		</div>
 	</div>
+	<?php endif; ?>
 
 	<?php /* ?>
 	<div id="primary" class="content-area pfolio">
