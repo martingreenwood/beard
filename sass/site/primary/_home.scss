@@ -446,7 +446,7 @@
 			width: 100%;
 			position: relative;
 
-			@include media($medium-screen-up) { 
+			@include media($large-screen-up) { 
 				width: 50%;
 			}
 
