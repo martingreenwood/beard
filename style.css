@@ -3638,13 +3638,13 @@ a:hover, a:active { outline: 0; }
 
 .row:last-of-type { margin-bottom: 0; }
 
-.page_links { position: fixed; bottom: 0; right: 0; z-index: 2; }
+.page_links { background: white; }
 
 .page_links span.prev { background-image: url(assets/images/left-arrow.svg); }
 
 .page_links span.next { background-image: url(assets/images/right-arrow.svg); }
 
-.page_links span.prev, .page_links span.next { width: 40px; height: 40px; display: inline-block; background-color: #020202; background-color: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */ background-color: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */ background-color: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */ background-color: linear-gradient(225deg, #444, #020202); background-size: 24px; background-repeat: no-repeat; background-position: center; vertical-align: bottom; }
+.page_links span.prev, .page_links span.next { width: 50%; height: 40px; float: left; background-color: #020202; background-color: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */ background-color: -o-linear-gradient(225deg, #444, #020202); /* For Opera 11.1 to 12.0 */ background-color: -moz-linear-gradient(225deg, #444, #020202); /* For Firefox 3.6 to 15 */ background-color: linear-gradient(225deg, #444, #020202); background-size: 24px; background-repeat: no-repeat; background-position: center; vertical-align: bottom; }
 
 .page_links span.prev a, .page_links span.next a { text-indent: -9999px; display: block; width: 100%; height: 100%; }
 
@@ -4501,6 +4501,10 @@ g .noscroll { overflow: hidden; }
 .single-portfolio #buffer, .single-portfolio .buffer { float: left; width: 100%; height: 40px; }
 
 .single-portfolio #hero { height: 100%; height: 100vh; padding: 100px 0; background-size: cover; background-repeat: no-repeat; background-position: center; }
+
+.single-portfolio #hero .arrow { position: absolute; width: 100%; text-align: center; bottom: 0; }
+
+.single-portfolio #hero .arrow a { cursor: pointer; padding: 9px 0; display: inline-block; }
 
 .single-portfolio #hero .element { height: 100%; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: center; }
 

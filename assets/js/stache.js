@@ -71,7 +71,19 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 	});
 
 	$document.scroll(function() {
-		$element.toggleClass('fixed', $document.scrollTop() >= 700);
+		$element.toggleClass('fixed', $document.scrollTop() >= 500);
+	});
+
+	$(document).on('click', '.arrow', function(event){                        
+	    event.preventDefault();
+	    var viewportHeight = $(window).height();
+
+	    $('html, body').animate({
+	        scrollTop: viewportHeight - 99,
+	        complete: function () {
+	            //Hide your button here
+	        }
+	    }, 1000);
 	});
 
 })(jQuery);

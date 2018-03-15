@@ -18,6 +18,19 @@
 		background-repeat: no-repeat;
 		background-position: center;
 
+		.arrow {
+			position: absolute;
+			width: 100%;
+			text-align: center;
+			bottom: 0; 
+
+			a {
+				cursor: pointer;
+				padding: 9px 0;
+				display: inline-block;
+			}
+		}
+
 		.element {
 			height: 100%;
 			position: absolute;

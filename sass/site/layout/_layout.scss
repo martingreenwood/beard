@@ -27,10 +27,11 @@
 }
 
 .page_links {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	z-index: 2;
+	// position: fixed;
+	// bottom: 0;
+	// right: 0;
+	// z-index: 2;
+	background: white; 
 
 	span.prev {
 		background-image: url(assets/images/left-arrow.svg);
@@ -40,9 +41,9 @@
 	}
 
 	span.prev, span.next {
-		width: 40px;
+		width: 50%;
 		height: 40px;
-		display: inline-block;
+		float: left;
 		
 		background-color: #020202;
 		background-color: -webkit-linear-gradient(225deg, #444, #020202); /* For Safari 5.1 to 6.0 */

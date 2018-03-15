@@ -30,6 +30,11 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 					</center>
 				</div>
 			</div>
+			<div class="arrow bouce">
+				<a href="#">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/down-arrow.svg" alt="" width="60">
+				</a>
+			</div>
 		</div>
 	</div>
 	<?php else: ?>
@@ -41,6 +46,10 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 				</center>
 			</div>
 		</div>
+		<div class="arrow bouce">
+			<a href="#">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/down-arrow.svg" alt="" width="60"></div>
+			</a>
 	</div>
 	<?php endif; ?>
 
@@ -170,12 +179,14 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 	</section>
 
 	<div class="page_links">
-		<span class="prev">
-			<?php previous_post_link( "%link" ); ?>
-		</span>
-		<span class="next">
-			<?php next_post_link( "%link" ); ?>
-		</span>
+		<div class="row">
+			<span class="prev">
+				<?php previous_post_link( "%link" ); ?>
+			</span>
+			<span class="next">
+				<?php next_post_link( "%link" ); ?>
+			</span>
+		</div>
 	</div>
 
 <?php
