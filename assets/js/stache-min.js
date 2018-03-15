@@ -53,7 +53,7 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 			tImg.src     = img[i].src;
 		}
 	}
-	// document.addEventListener('DOMContentLoaded', loadbar, false);
+	document.addEventListener('DOMContentLoaded', loadbar, false);
 
 	nextParticle = document.all.logo.nextParticle;
 	nextParticle.width = window.innerWidth;
