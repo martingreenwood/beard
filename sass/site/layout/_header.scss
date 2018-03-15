@@ -93,6 +93,9 @@
 
 		&.open-menu {
 
+			position: absolute;
+			z-index: 1;
+
 			img {
 				-webkit-transform: rotate(360deg);
 				transform: rotate(360deg);

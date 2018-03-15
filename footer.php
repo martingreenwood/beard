@@ -1,8 +1,6 @@
 <?php
 /**
  * The template for displaying the footer
- *
- * Rob's note
  * 
  * Contains the closing of the #content div and all content after.
  *

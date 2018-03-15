@@ -3787,6 +3787,8 @@ a:hover, a:active { outline: 0; }
 
 #masthead .site-branding img:hover { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 
+#masthead .site-branding.open-menu { position: absolute; z-index: 1; }
+
 #masthead .site-branding.open-menu img { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 
 #masthead.fixed { top: 0; background-color: #fff; }
@@ -4324,7 +4326,9 @@ g .noscroll { overflow: hidden; }
 
 .home #primary #offerings .offering p { font-size: 15px; }
 
-.home #primary #offerings .offering .more { display: inline-block; text-align: center; padding: 8px 14px; border: 1px solid white; margin-top: 20px; text-transform: uppercase; color: white; font-weight: 700; }
+.home #primary #offerings .offering .more { display: inline-block; text-align: center; padding: 8px 14px; border: 1px solid white; margin-top: 20px; text-transform: uppercase; color: white; font-weight: 700; -webkit-transition: all .3s linear; -moz-transition: all .3s linear; -ms-transition: all .3s linear; -o-transition: all .3s linear; transition: all .3s linear; }
+
+.home #primary #offerings .offering .more:hover { background-color: white; color: black; }
 
 .home #worktitle { background: #020202; display: inline-block; width: 100%; padding: 50px 0; text-align: center; }
 
@@ -4354,7 +4358,11 @@ g .noscroll { overflow: hidden; }
 
 .home #moreshit { display: inline-block; width: 100%; padding: 50px 0; text-align: center; background-color: #020202; }
 
-.home #moreshit a { display: inline-block; text-align: center; padding: 8px 14px; border: 3px solid white; margin-top: 20px; font-size: 45px; text-transform: uppercase; color: white; font-weight: 700; }
+.home #moreshit h2 { margin: 0; }
+
+.home #moreshit a { display: inline-block; text-align: center; padding: 7px 30px; border: 3px solid white; margin-top: 0; font-size: 30px; text-transform: uppercase; color: white; font-weight: 700; -webkit-transition: all .3s linear; -moz-transition: all .3s linear; -ms-transition: all .3s linear; -o-transition: all .3s linear; transition: all .3s linear; }
+
+.home #moreshit a:hover { background-color: white; color: black; }
 
 /*================================
 =            SERVICES            =
@@ -4569,6 +4577,28 @@ g .noscroll { overflow: hidden; }
 .single-portfolio #images .item:last-of-type { margin-bottom: 0; }
 
 .single-portfolio #images .item img { display: block; width: 100%; }
+
+.single-portfolio #moreshit { display: inline-block; width: 100%; padding: 50px 0; text-align: center; background-color: white; position: relative; }
+
+.single-portfolio #moreshit h2 { margin: 0; }
+
+.single-portfolio #moreshit a { display: inline-block; text-align: center; padding: 7px 30px; border: 3px solid black; margin-top: 0; font-size: 30px; text-transform: uppercase; color: black; font-weight: 700; -webkit-transition: all .3s linear; -moz-transition: all .3s linear; -ms-transition: all .3s linear; -o-transition: all .3s linear; transition: all .3s linear; }
+
+.single-portfolio #moreshit a:hover { background-color: black; color: white; }
+
+.single-portfolio #moreshit .postlink { position: absolute; height: 56px; top: 50px; }
+
+.single-portfolio #moreshit .postlink.prev { left: 0; }
+
+.single-portfolio #moreshit .postlink.next { right: 0; }
+
+.single-portfolio #moreshit .postlink a { padding: 0 40px; border: 0; }
+
+.single-portfolio #moreshit .postlink a:hover { background-color: transparent; }
+
+.single-portfolio #moreshit .postlink a img { height: 56px; display: block; }
+
+.single-portfolio #moreshit .postlink a span { display: none; }
 
 /*===================================
 =            BLOG - HOME            =

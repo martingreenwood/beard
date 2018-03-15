@@ -178,16 +178,33 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 
 	</section>
 
-	<div class="page_links">
-		<div class="row">
-			<span class="prev">
-				<?php previous_post_link( "%link" ); ?>
-			</span>
-			<span class="next">
-				<?php next_post_link( "%link" ); ?>
-			</span>
+	<section id="moreshit">
+		<?php
+		$prev_post = get_previous_post();
+		if (!empty( $prev_post )): ?>
+		<div class="postlink prev">
+			<a href="<?php echo $prev_post->guid; ?>">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/left-arrow.svg" alt="">
+				<span><?php echo $prev_post->post_title ?></span>
+			</a>
 		</div>
-	</div>
+		<?php endif; ?>
+		<div class="container">
+			<div class="row">
+				<h2><a class="goback" href="<?php echo home_url( 'recent-work' ) ?>" title="BACK TO PORTFOLIO">BACK TO PORTFOLIO</a></h2>
+			</div>
+		</div>
+		<?php
+		$next_post = get_next_post();
+		if (!empty( $prev_post )): ?>
+		<div class="postlink next">
+			<a href="<?php echo $next_post->guid ?>">
+				<span><?php echo $next_post->post_title ?></span>
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/right-arrow.svg" alt="">
+			</a>
+		</div>
+		<?php endif; ?>
+	</section>
 
 <?php
 get_footer();

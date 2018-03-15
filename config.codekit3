@@ -466,11 +466,11 @@
 		"oF": 0,
 		"opt": 0
 		},
-	"\/assets\/images\/left-arrow-dark.svg": {
+	"\/assets\/images\/down-arrow.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "\/assets\/images\/left-arrow-dark.svg",
+		"oAP": "\/assets\/images\/down-arrow.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -528,16 +528,6 @@
 		"opt": 1,
 		"oT": 1,
 		"q": 100
-		},
-	"\/assets\/images\/right-arrow-dark.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/assets\/images\/right-arrow-dark.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
 		},
 	"\/assets\/images\/right-arrow.svg": {
 		"ft": 2097152,
@@ -1056,6 +1046,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/page.php",
+		"oF": 0
+		},
+	"\/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/README.html",
 		"oF": 0
 		},
 	"\/README.md": {
