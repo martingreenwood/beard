@@ -53,12 +53,22 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 			tImg.src     = img[i].src;
 		}
 	}
-	document.addEventListener('DOMContentLoaded', loadbar, false);
+	// document.addEventListener('DOMContentLoaded', loadbar, false);
+
+	nextParticle = document.all.logo.nextParticle;
+	nextParticle.width = window.innerWidth;
+	nextParticle.height = window.innerHeight;
+
+	window.onresize = function() {
+	  nextParticle.width = window.innerWidth;
+	  nextParticle.height = window.innerHeight;
+	  nextParticle.start();
+	};
 
 })(jQuery);
 
 
-Nodes.init();
+// Nodes.init();
 
 // var gui = new dat.GUI();
 // gui.add( Nodes, 'baseRadius', 4, 60 ).name( 'Node Size');

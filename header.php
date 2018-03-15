@@ -32,7 +32,23 @@
 			<div id="progress"></div>
 		</div>
 
-		<canvas id='canvas'></canvas>
+		<div class="logo">
+			<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" alt="" id="logo" data-particle-gap="1"> -->
+			<img
+				id="logo"
+				class="next-particle"
+				data-noise="3"
+
+				data-width="700"
+				data-height="700"
+
+				data-min-width="400"
+				data-min-height="400"
+
+				src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png"
+			>
+			<!-- <canvas width="450" height="450"></canvas> -->
+		</div>
 
 	</div>
 
