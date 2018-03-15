@@ -31,6 +31,9 @@
 			<div id="progstat"></div>
 			<div id="progress"></div>
 		</div>
+
+		<canvas id='canvas'></canvas>
+
 	</div>
 
 	<?php 

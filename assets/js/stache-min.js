@@ -53,9 +53,18 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 			tImg.src     = img[i].src;
 		}
 	}
-	document.addEventListener('DOMContentLoaded', loadbar, false);
+	// document.addEventListener('DOMContentLoaded', loadbar, false);
 
 })(jQuery);
+
+
+Nodes.init();
+
+// var gui = new dat.GUI();
+// gui.add( Nodes, 'baseRadius', 4, 60 ).name( 'Node Size');
+// gui.add( Nodes, 'lineThickness', 0.8, 4) .name( 'Link Thickness' );
+// gui.add( Nodes, 'reactionSensitivity', 1, 4) .name( 'Sensitivity' );
+// gui.add( Nodes, 'drawDistance', 20, 50) .name( 'Link Distance' );
 
 /*===============================
 =            HEADER             =
