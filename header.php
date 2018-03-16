@@ -35,6 +35,7 @@
 		<div class="logo">
 			<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" alt="" id="logo" data-particle-gap="1"> -->
 			<img
+				style="display: none;" 
 				id="logo"
 				class="next-particle"
 				data-noise="3"
