@@ -40,8 +40,8 @@ get_header(); ?>
 
 						<?php $teamimage = wp_get_attachment_url( get_post_thumbnail_id($team->ID)); ?>
 						<div class="image"">
-							<?php the_post_thumbnail( 'snap' ); ?>
-							<!-- <img src="https://placeimg.com/900/900/people" alt=""> -->
+							<?php //the_post_thumbnail( 'snap' ); ?>
+							<img data-src="<?php echo $teamimage; ?>" src="<?php echo $teamimage; ?>" alt="">
 						</div>
 
 						<div class="info">

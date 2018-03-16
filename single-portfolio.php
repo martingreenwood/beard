@@ -94,7 +94,7 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 										$file = get_sub_field('image');
 
 										?>
-										<img src="<?php echo $file['url'] ?>" alt="">
+										<img data-src="<?php echo $file['url'] ?>" src="<?php echo $file['url'] ?>" alt="">
 										<?php
 
 									elseif( get_row_layout() == 'text' ): 
@@ -165,7 +165,7 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 					<?php foreach( $portfolio_gallery as $image ): ?>
 					<div class="row">
 						<div class="columns twelve">
-					<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+							<img data-src="<?php echo $image['url'] ?>" src="<?php echo $image['url'] ?>" alt="">
 						</div>
 					</div>
 					<?php endforeach; ?>

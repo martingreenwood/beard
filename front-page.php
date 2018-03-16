@@ -193,7 +193,7 @@ get_header(); ?>
 			<div class="brandicons row">
 			<?php foreach( $brands as $brand ): ?>
 				<div class='brandicon'>
-					<img src="<?php echo $brand['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					<img data-src="<?php echo $brand['url'] ?>" src="<?php echo $brand['url']; ?>" alt="<?php echo $brand['alt']; ?>" />
 				</div>
 				<?php if($i % 5 == 0) {echo '</div><div class="brandicons row">';} ?>
 			<?php $i++; endforeach; ?>

@@ -28,6 +28,7 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 		var ovrl = id("loader"),
 			prog = id("progress"),
 			stat = id("progstat"),
+			thebody = id("thebody"),
 			img = document.images,
 			c = 0,
 			tot = img.length;
@@ -44,6 +45,7 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 			ovrl.style.opacity = 0;
 			setTimeout(function(){ 
 				ovrl.style.display = "none";
+				thebody.style.overflow = "auto";
 			}, 1200);
 		}
 		for(var i=0; i<tot; i++) {
@@ -55,26 +57,17 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 	}
 	document.addEventListener('DOMContentLoaded', loadbar, false);
 
-	nextParticle = document.all.logo.nextParticle;
-	nextParticle.width = window.innerWidth;
-	nextParticle.height = window.innerHeight;
+	// nextParticle = document.all.logo.nextParticle;
+	// nextParticle.width = window.innerWidth;
+	// nextParticle.height = window.innerHeight;
 
-	window.onresize = function() {
-	  nextParticle.width = window.innerWidth;
-	  nextParticle.height = window.innerHeight;
-	  nextParticle.start();
-	};
+	// window.onresize = function() {
+	//   nextParticle.width = window.innerWidth;
+	//   nextParticle.height = window.innerHeight;
+	//   nextParticle.start();
+	// };
 
 })(jQuery);
-
-
-// Nodes.init();
-
-// var gui = new dat.GUI();
-// gui.add( Nodes, 'baseRadius', 4, 60 ).name( 'Node Size');
-// gui.add( Nodes, 'lineThickness', 0.8, 4) .name( 'Link Thickness' );
-// gui.add( Nodes, 'reactionSensitivity', 1, 4) .name( 'Sensitivity' );
-// gui.add( Nodes, 'drawDistance', 20, 50) .name( 'Link Distance' );
 
 /*===============================
 =            HEADER             =

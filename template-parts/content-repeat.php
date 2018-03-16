@@ -19,7 +19,7 @@
 						<div class="cell middle">
 
 							<div class="half" style="background-image: url(<?php echo $image['url'] ?>)">
-								<img src="<?php echo $image['url'] ?>" alt="">
+								<img data-src="<?php echo $image['url'] ?>" src="<?php echo $image['url'] ?>" alt="">
 							</div>
 							
 							<div class="half text">
@@ -54,7 +54,7 @@
 					</div>
 
 					<div class="half" style="background-image: url(<?php echo $image['url'] ?>)">
-						<img src="<?php echo $image['url'] ?>" alt="">
+						<img data-src="<?php echo $image['url'] ?>" src="<?php echo $image['url'] ?>" alt="">
 					</div>
 
 				</div>

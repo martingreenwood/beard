@@ -49,7 +49,7 @@ get_header(); ?>
 						<div class="cell middle">
 
 							<div class="half" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>)">
-								<?php the_post_thumbnail( '' ) ?>
+								<img data-src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>" alt="">
 							</div>
 							
 							<div class="half text">
@@ -59,9 +59,6 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<!-- <div class="ovewrlay">
-					<a class="more" href="<?php the_permalink( ); ?>">Read More</a>
-				</div> -->
 			</div>
 			<?php }
 			// If the second item in the loop
@@ -81,13 +78,10 @@ get_header(); ?>
 					</div>
 
 					<div class="half" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>)">
-						<?php the_post_thumbnail(  ) ?>
+						<img data-src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>" alt="">
 					</div>
 
 				</div>
-				<!-- <div class="ovewrlay">
-					<a class="more" href="<?php the_permalink( ); ?>">Read More</a>
-				</div> -->
 			</div>
 			<?php } //end the elseif $counter ?>
 

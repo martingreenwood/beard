@@ -23,7 +23,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class($pagename); ?>>
+<body <?php body_class($pagename); ?> id="thebody">
 <div id="page" class="site">
 
 	<div id="loader">
@@ -31,26 +31,6 @@
 			<div id="progstat"></div>
 			<div id="progress"></div>
 		</div>
-
-		<div class="logo">
-			<!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png" alt="" id="logo" data-particle-gap="1"> -->
-			<img
-				style="display: none;" 
-				id="logo"
-				class="next-particle"
-				data-noise="3"
-
-				data-width="700"
-				data-height="700"
-
-				data-min-width="400"
-				data-min-height="400"
-
-				src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png"
-			>
-			<!-- <canvas width="450" height="450"></canvas> -->
-		</div>
-
 	</div>
 
 	<?php 

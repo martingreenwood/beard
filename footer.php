@@ -24,6 +24,8 @@
 </div>
 
 <?php wp_footer(); ?>
-
+<script>
+	new LazyLoad();
+</script>
 </body>
 </html>

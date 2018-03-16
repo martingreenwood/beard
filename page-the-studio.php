@@ -39,8 +39,8 @@ get_header(); ?>
 
 					<?php $teamimage = wp_get_attachment_url( get_post_thumbnail_id($team->ID)); ?>
 					<div class="image"">
-						<?php the_post_thumbnail( 'snap' ); ?>
-						<!-- <img src="https://placeimg.com/900/900/people" alt=""> -->
+						<?php //the_post_thumbnail( 'snap' ); ?>
+						<img data-src="<?php echo $teamimage; ?>" src="<?php echo $teamimage; ?>" alt="">
 					</div>
 
 					<div class="info">
@@ -88,7 +88,7 @@ get_header(); ?>
 		<div class="wrapper">
 			<header>
 				<h3>Follow us on instagram</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+				<p>Design | Development | Strategy</p>
 				<a href="http://www.instagram.com/wearebeard" target="_blank" title="">Follow</a>
 			</header>
 			<div class="row instagrams">
@@ -116,9 +116,9 @@ get_header(); ?>
 			<?php foreach ($result->data as $ig_post): ?>
 			<div class="ig-item">
 				<?php if ($ig_post->videos->standard_resolution->url): ?>
-					<?php echo do_shortcode( '[video width="640" height="640" mp4="'.$ig_post->videos->standard_resolution->url.'" loop="true" autoplay="true"][/video]' ); ?>
+					<?php echo do_shortcode( '[video width="640" height="640" mp4="'.$ig_post->videos->standard_resolution->url.'" loop="true" autoplay="false"][/video]' ); ?>
 				<?php else: ?>
-					<img src="<?php echo $ig_post->images->standard_resolution->url; ?>" alt="">
+					<img data-src="<?php echo $ig_post->images->standard_resolution->url; ?> ?>" src="<?php echo $ig_post->images->standard_resolution->url; ?>" alt="">
 				<?php endif; ?>
 				<?php if(isset($ig_post->caption->text)): ?>
 				<div class="caption">

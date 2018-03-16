@@ -133,6 +133,16 @@
 			img {
 				display: block;
 				width: 100%;
+				opacity: 0;
+				-webkit-transition: all .25s linear;
+				   -moz-transition: all .25s linear;
+				    -ms-transition: all .25s linear;
+				     -o-transition: all .25s linear;
+				        transition: all .25s linear;
+
+				&.loaded {
+					opacity: 1;
+				}
 			}
 
 			.wp-video {

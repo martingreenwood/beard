@@ -21,9 +21,12 @@ get_header(); ?>
 			<!-- <div class="grid-sizer"></div> -->
 			<?php while ( $work->have_posts() ) : $work->the_post(); ?>
 				<?php $portfolio_image = get_field( 'portfolio_image' ); ?>
+				<?php $workimage = wp_get_attachment_url( get_post_thumbnail_id($work->ID)); ?>
 				<div class="grid-item">
 					<a href="<?php the_permalink(); ?>">
-						<?php the_post_thumbnail( 'feat' ) ?>
+						<img data-src="<?php echo $workimage; ?>" src="<?php echo $workimage; ?>" alt="">
+
+						<?php //the_post_thumbnail( 'feat' ) ?>
 						<div class="info">
 							<div class="table"><div class="cell middle">
 								<h2><?php the_title( ); ?></h2>
