@@ -24,7 +24,7 @@ get_header(); ?>
 				<?php $workimage = wp_get_attachment_url( get_post_thumbnail_id($work->ID)); ?>
 				<div class="grid-item">
 					<a href="<?php the_permalink(); ?>">
-						<img data-src="<?php echo $workimage; ?>" src="<?php echo $workimage; ?>" alt="">
+						<img data-src="<?php echo $workimage; ?>" width="1920" height="1280" alt="">
 
 						<?php //the_post_thumbnail( 'feat' ) ?>
 						<div class="info">

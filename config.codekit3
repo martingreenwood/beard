@@ -669,6 +669,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/assets\/js\/jquery.inview.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/jquery.inview.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/assets\/js\/jquery.matchHeight.js": {
 		"ft": 64,
 		"ma": 0,
@@ -697,6 +707,16 @@
 		"oAP": "\/assets\/js\/navigation-min.js",
 		"oF": 0,
 		"sC": 0,
+		"tS": 0
+		},
+	"\/assets\/js\/nextparticle-interaction-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/nextparticle-interaction-min-min.js",
+		"oF": 0,
+		"sC": 1,
 		"tS": 0
 		},
 	"\/assets\/js\/nextparticle-interaction.js": {
@@ -872,6 +892,16 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
+		},
+	"\/assets\/js\/pace.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/assets\/js\/pace.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/assets\/js\/parallax.js": {
 		"ft": 64,

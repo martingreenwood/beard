@@ -26,13 +26,6 @@
 <body <?php body_class($pagename); ?> id="thebody">
 <div id="page" class="site">
 
-	<div id="loader">
-		<div id="loading">
-			<div id="progstat"></div>
-			<div id="progress"></div>
-		</div>
-	</div>
-
 	<?php 
 	$terms = wp_get_post_terms( $post->ID, 'project-attribute' );
 	$header_mode = "";

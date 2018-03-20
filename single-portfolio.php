@@ -26,11 +26,11 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 			<div class="table">
 				<div class="cell middle">
 					<center>
-						<h1><?php the_title(); ?></h1>
+						<h1 class="animated slideInUp"><?php the_title(); ?></h1>
 					</center>
 				</div>
 			</div>
-			<div class="arrow bouce">
+			<div class="arrow animated infinite bouce">
 				<a href="#">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/down-arrow.svg" alt="" width="60">
 				</a>
@@ -42,11 +42,11 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 		<div class="table">
 			<div class="cell middle">
 				<center>
-					<h1><?php the_title(); ?></h1>
+					<h1 class="animated slideInUp"><?php the_title(); ?></h1>
 				</center>
 			</div>
 		</div>
-		<div class="arrow bouce">
+		<div class="arrow">
 			<a href="#">
 				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/down-arrow.svg" alt="" width="60"></div>
 			</a>
@@ -94,7 +94,7 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 										$file = get_sub_field('image');
 
 										?>
-										<img data-src="<?php echo $file['url'] ?>" src="<?php echo $file['url'] ?>" alt="">
+										<img data-src="<?php echo $file['url'] ?>" width="<?php echo $file['width'] ?>" height="<?php echo $file['height'] ?>" alt="">
 										<?php
 
 									elseif( get_row_layout() == 'text' ): 
@@ -165,7 +165,7 @@ $featureimage = get_the_post_thumbnail_url($post->ID, 'feat');
 					<?php foreach( $portfolio_gallery as $image ): ?>
 					<div class="row">
 						<div class="columns twelve">
-							<img data-src="<?php echo $image['url'] ?>" src="<?php echo $image['url'] ?>" alt="">
+							<img data-src="<?php echo $image['url'] ?>" width="<?php echo $image['width'] ?>" height="<?php echo $image['height'] ?>" alt="">
 						</div>
 					</div>
 					<?php endforeach; ?>

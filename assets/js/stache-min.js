@@ -21,41 +21,41 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 =            LOADER            =
 ==============================*/
 
-(function($){
+// (function($){
 
-	function id(v){ return document.getElementById(v); }
-	function loadbar() {
-		var ovrl = id("loader"),
-			prog = id("progress"),
-			stat = id("progstat"),
-			thebody = id("thebody"),
-			img = document.images,
-			c = 0,
-			tot = img.length;
-		if(tot == 0) return doneLoading();
+// 	function id(v){ return document.getElementById(v); }
+// 	function loadbar() {
+// 		var ovrl = id("loader"),
+// 			prog = id("progress"),
+// 			stat = id("progstat"),
+// 			thebody = id("thebody"),
+// 			img = document.images,
+// 			c = 0,
+// 			tot = img.length;
+// 		if(tot == 0) return doneLoading();
 
-		function imgLoaded(){
-			c += 1;
-			var perc = ((100/tot*c) << 0) +"%";
-			prog.style.width = perc;
-			stat.innerHTML = "Loading "+ perc;
-			if(c===tot) return doneLoading();
-		}
-		function doneLoading(){
-			ovrl.style.opacity = 0;
-			setTimeout(function(){ 
-				ovrl.style.display = "none";
-				thebody.style.overflow = "auto";
-			}, 1200);
-		}
-		for(var i=0; i<tot; i++) {
-			var tImg     = new Image();
-			tImg.onload  = imgLoaded;
-			tImg.onerror = imgLoaded;
-			tImg.src     = img[i].src;
-		}
-	}
-	document.addEventListener('DOMContentLoaded', loadbar, false);
+// 		function imgLoaded(){
+// 			c += 1;
+// 			var perc = ((100/tot*c) << 0) +"%";
+// 			prog.style.width = perc;
+// 			stat.innerHTML = "Loading "+ perc;
+// 			if(c===tot) return doneLoading();
+// 		}
+// 		function doneLoading(){
+// 			ovrl.style.opacity = 0;
+// 			setTimeout(function(){ 
+// 				ovrl.style.display = "none";
+// 				thebody.style.overflow = "auto";
+// 			}, 1200);
+// 		}
+// 		for(var i=0; i<tot; i++) {
+// 			var tImg     = new Image();
+// 			tImg.onload  = imgLoaded;
+// 			tImg.onerror = imgLoaded;
+// 			tImg.src     = img[i].src;
+// 		}
+// 	}
+// 	document.addEventListener('DOMContentLoaded', loadbar, false);
 
 	// nextParticle = document.all.logo.nextParticle;
 	// nextParticle.width = window.innerWidth;
@@ -67,7 +67,7 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 	//   nextParticle.start();
 	// };
 
-})(jQuery);
+// })(jQuery);
 
 /*===============================
 =            HEADER             =
@@ -100,6 +100,32 @@ Modernizr.addTest("cssreflections",y("boxReflect","above",!0)),Modernizr.addTest
 
 })(jQuery);
 
+
+/*================================
+=            INVIEW              =
+================================*/
+
+//animated fadeInUp
+
+(function ($) {
+
+	// $("body").on("inview", "img[data-src]", function() {
+	// var $this = $(this);
+	// 	$this.attr("src", $this.attr("data-src"));
+	// 	// Remove it from the set of matching elements in order to avoid that the handler gets re-executed
+	// 	$this.removeAttr("data-src");
+	// });
+
+	// $('.grid-item').on('inview', function(event, isInView) {
+	// 	if (isInView) {
+	// 		$(this).removeClass('fadeOutUp');
+	// 		$(this).addClass('animated fadeInUp');
+	// 	} else {
+	// 		$(this).removeClass('fadeInUp');
+	// 		$(this).addClass('fadeOutUp');
+	// 	}
+	// });
+})(jQuery);
 
 /*================================
 =            MEMBERS             =

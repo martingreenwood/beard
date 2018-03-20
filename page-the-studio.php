@@ -40,7 +40,7 @@ get_header(); ?>
 					<?php $teamimage = wp_get_attachment_url( get_post_thumbnail_id($team->ID)); ?>
 					<div class="image"">
 						<?php //the_post_thumbnail( 'snap' ); ?>
-						<img data-src="<?php echo $teamimage; ?>" src="<?php echo $teamimage; ?>" alt="">
+						<img data-src="<?php echo $teamimage; ?>" alt="" width="1920" height="1280">
 					</div>
 
 					<div class="info">
@@ -118,13 +118,17 @@ get_header(); ?>
 				<?php if ($ig_post->videos->standard_resolution->url): ?>
 					<?php echo do_shortcode( '[video width="640" height="640" mp4="'.$ig_post->videos->standard_resolution->url.'" loop="true" autoplay="false"][/video]' ); ?>
 				<?php else: ?>
-					<img data-src="<?php echo $ig_post->images->standard_resolution->url; ?> ?>" src="<?php echo $ig_post->images->standard_resolution->url; ?>" alt="">
+					<img src="<?php echo $ig_post->images->standard_resolution->url; ?>" alt="">
 				<?php endif; ?>
 				<?php if(isset($ig_post->caption->text)): ?>
 				<div class="caption">
 					<div class="table">
 						<div class="cell middle">
-							<p><em style="font-size: 0.875em;"><?php echo date("d m Y", $ig_post->caption->created_time); ?></em><br><?php echo $ig_post->caption->text; ?></p>
+							<p>
+								<i class="fab fa-instagram"></i>
+								<br>
+								<em style="font-size: 0.875em;"><?php echo get_pretty_dates($r->caption->created_time); ?></em>
+							</p>
 						</div>
 					</div>
 				</div>

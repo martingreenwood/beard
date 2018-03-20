@@ -158,10 +158,10 @@ get_header(); ?>
 		<?php //feature_work ?>
 		<?php $i = 1; $work = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 4, 'meta_key' => 'feature_work', 'meta_value' => 1 ) ); ?>
 		<?php while ( $work->have_posts() ) : $work->the_post(); ?>
-			<?php $portfolio_image = get_field( 'portfolio_image' ); ?>
 			<div class="feature-work-item">
 				<a href="<?php the_permalink(); ?>">
-					<?php the_post_thumbnail( 'feat' ) ?>
+					<?php $projectimage = wp_get_attachment_url( get_post_thumbnail_id($work->ID)); ?>
+					<img data-src="<?php echo $projectimage; ?>" alt="" width="1920" height="1280">
 					<div class="info">
 						<div class="table"><div class="cell middle">
 							<h2><?php the_title( ); ?></h2>
@@ -192,7 +192,7 @@ get_header(); ?>
 			<?php $brands = get_field('brands', 'options'); if( $brands ): $i = 1; ?>
 			<div class="brandicons row">
 			<?php foreach( $brands as $brand ): ?>
-				<div class='brandicon'>
+				<div class='brandicon animated fadeInUp'>
 					<img data-src="<?php echo $brand['url'] ?>" src="<?php echo $brand['url']; ?>" alt="<?php echo $brand['alt']; ?>" />
 				</div>
 				<?php if($i % 5 == 0) {echo '</div><div class="brandicons row">';} ?>

@@ -42,34 +42,14 @@ get_header(); ?>
 	<div id="sections">
 		<?php while ( $child_query->have_posts() ) : $child_query->the_post(); $counter++; ?>
 
-		<?php if($counter == 1) { ?>
-			<div class="service odd">
+			<div class="service">
 				<div class="wrapper">
-					<div class="table">
-						<div class="cell middle">
 
-							<div class="half" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>)">
-								<img data-src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>" alt="">
-							</div>
-							
-							<div class="half text">
-								<?php the_content( ); ?>
-							</div>
-
-						</div>
+					<div class="half image">
+						<img data-src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>" width="1920" height="1280" alt="">
 					</div>
-				</div>
-			</div>
-			<?php }
-			// If the second item in the loop
-			elseif($counter == 2) { 
-			// Reset the counter
-			$counter = 0; 
-			?>
-			<div class="service even">
-				<div class="wrapper">
 					
-					<div class="half text">
+					<div class="half info">
 						<div class="table">
 							<div class="cell middle">
 								<?php the_content( ); ?>
@@ -77,13 +57,8 @@ get_header(); ?>
 						</div>
 					</div>
 
-					<div class="half" style="background-image: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>)">
-						<img data-src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>" src="<?php echo wp_get_attachment_url( get_post_thumbnail_id($post->ID)); ?>" alt="">
-					</div>
-
 				</div>
 			</div>
-			<?php } //end the elseif $counter ?>
 
 		<?php endwhile; ?>
 

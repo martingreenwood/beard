@@ -67,3 +67,30 @@ function get_id_by_slug($page_slug) {
 		return null;
 	}
 }
+
+
+function get_pretty_dates($date) {
+		$return = '';
+		// $date = strtotime($date);
+		$diff = time() - $date;
+		
+		if ($diff < 86400) {
+			if ($diff < 3600) { // Output e.g. 35 minutes ago
+				$return = $mins = floor($diff / 60);
+				$return .= ' minute';
+				if ($mins > 1 || $mins === 0) $return .= 's';
+				$return .= ' ago';
+			}
+			else { // Output e.g. 5 hours ago
+				$return = $hours = floor($diff / 3600);
+				$return .= ' hour';
+				if ($hours > 1 || $hours === 0) $return .= 's';
+				$return .= ' ago';
+			}
+		}
+		else { // Output e.g. 1 Dec
+			$return = date('j M', $date);
+		}
+		
+		return $return;
+}
