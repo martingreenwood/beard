@@ -223,11 +223,12 @@ button.fs-continue,
 	margin: 1em 0 2em;
 	padding: 0 0 2em 0;
 	border-bottom: 2px solid rgba(0,0,0,0.1);
+	position: relative;
 }
 
 /* Labels & info */
 .fs-fields > li label {
-	position: relative;
+	position: absolute;
 }
 
 .fs-fields > li label.fs-field-label {

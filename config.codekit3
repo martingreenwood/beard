@@ -7,7 +7,7 @@
 		"uuidString": "784E2474-D17D-4C2C-984F-F9D8D6568706"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/404.php": {
 		"cB": 0,
@@ -169,6 +169,7 @@
 	"\/assets\/hp\/background-mobile.jpg": {
 		"ft": 16384,
 		"iS": 394285,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/hp\/background-mobile.jpg",
 		"oF": 0,
@@ -179,6 +180,7 @@
 	"\/assets\/hp\/background.jpg": {
 		"ft": 16384,
 		"iS": 2609564,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/hp\/background.jpg",
 		"oF": 0,
@@ -419,7 +421,8 @@
 		},
 	"\/assets\/images\/404.jpg": {
 		"ft": 16384,
-		"iS": 245992,
+		"iS": 594092,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/404-min.jpg",
 		"oF": 0,
@@ -542,6 +545,7 @@
 	"\/assets\/images\/search.jpg": {
 		"ft": 16384,
 		"iS": 1776716,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/images\/search.jpg",
 		"oF": 0,
@@ -645,16 +649,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/assets\/js\/fullform-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/assets\/js\/game-min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/assets\/js\/game-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -3308,7 +3302,8 @@
 	"creationDate": 510664819,
 	"displayValue": "wearebeard",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "meme-krieger"
+	"iconImageName": "meme-krieger",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -5111,6 +5106,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {

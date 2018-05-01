@@ -128,10 +128,6 @@ function beard_scripts() {
 	if (is_page( 'work-with-us' )) {
 		wp_enqueue_script( 'fform-js', get_template_directory_uri() . '/assets/js/fform.js','','',true );
 	}
-
-	if ( is_404() ) {
-		wp_enqueue_script( 'game-js', get_template_directory_uri() . '/assets/js/game.js','','',true );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'beard_scripts' );
 

@@ -3026,10 +3026,10 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 
 .js .fs-form-full .fs-fields > li { position: absolute; width: 100%; }
 
-.fs-form-overview .fs-fields > li, .no-js .fs-form .fs-fields > li { margin: 1em 0 2em; padding: 0 0 2em 0; border-bottom: 2px solid rgba(0, 0, 0, 0.1); }
+.fs-form-overview .fs-fields > li, .no-js .fs-form .fs-fields > li { margin: 1em 0 2em; padding: 0 0 2em 0; border-bottom: 2px solid rgba(0, 0, 0, 0.1); position: relative; }
 
 /* Labels & info */
-.fs-fields > li label { position: relative; }
+.fs-fields > li label { position: absolute; }
 
 .fs-fields > li label.fs-field-label { display: inline-block; padding: 0 0 15px 0; font-size: 1.4em; line-height: 1; pointer-events: none; font-family: "nimbus-sans-condensed", sans-serif; text-transform: uppercase; }
 
